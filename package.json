@@ -1,0 +1,30 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "author": "weCode",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-redux": "^8.0.1",
+    "react-router-dom": "^6.3.0",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
+    "save": "^2.5.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "buffer": "^6.0.3",
+    "parcel": "^2.5.0",
+    "postcss": "^8.4.14",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.0.24"
+  }
+}
