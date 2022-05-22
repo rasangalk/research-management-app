@@ -11,7 +11,11 @@ function Home() {
 					<Menu />
 				</div>
 				<div className='col-span-3 mx-auto mt-12'>
-					<img src={chart} alt='' className='w-[14em]' />
+					<img
+						src={chart}
+						alt=''
+						className='w-[14em] ml-[8rem] 2xl:ml-[8rem] xl:ml-[8rem]'
+					/>
 				</div>
 				<div className='col-span-8 mx-auto  my-auto 2xl:mt-12'>
 					<div className='w-[45rem] h-[17rem] bg-white rounded-xl'>

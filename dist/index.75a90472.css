@@ -349,6 +349,10 @@ img, video {
   margin-bottom: .5rem;
 }
 
+.ml-\[8rem\] {
+  margin-left: 8rem;
+}
+
 .block {
   display: block;
 }
@@ -739,9 +743,19 @@ code {
   }
 }
 
+@media (min-width: 1280px) {
+  .xl\:ml-\[8rem\] {
+    margin-left: 8rem;
+  }
+}
+
 @media (min-width: 1536px) {
   .\32 xl\:mt-12 {
     margin-top: 3rem;
+  }
+
+  .\32 xl\:ml-\[8rem\] {
+    margin-left: 8rem;
   }
 
   .\32 xl\:w-\[69rem\] {
