@@ -34120,7 +34120,7 @@ function Home() {
                     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
                         src: _delChartPngDefault.default,
                         alt: "",
-                        className: "w-[14em]"
+                        className: "w-[14em] ml-[8rem] 2xl:ml-[8rem] xl:ml-[8rem]"
                     }, void 0, false, {
                         fileName: "src/containers/StudentHome/Home.jsx",
                         lineNumber: 14,
@@ -34141,7 +34141,7 @@ function Home() {
                                 children: "Progress"
                             }, void 0, false, {
                                 fileName: "src/containers/StudentHome/Home.jsx",
-                                lineNumber: 18,
+                                lineNumber: 22,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34156,38 +34156,12 @@ function Home() {
                                                 className: "h-5"
                                             }, void 0, false, {
                                                 fileName: "src/containers/StudentHome/Home.jsx",
-                                                lineNumber: 21,
-                                                columnNumber: 9
-                                            }, this),
-                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
-                                                className: "uppercase",
-                                                children: "topic registration"
-                                            }, void 0, false, {
-                                                fileName: "src/containers/StudentHome/Home.jsx",
-                                                lineNumber: 22,
-                                                columnNumber: 9
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/containers/StudentHome/Home.jsx",
-                                        lineNumber: 20,
-                                        columnNumber: 8
-                                    }, this),
-                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                        className: "flex items-center gap-2 mt-3 ml-8",
-                                        children: [
-                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                                                src: _doneIconPngDefault.default,
-                                                alt: "done-icon",
-                                                className: "h-5"
-                                            }, void 0, false, {
-                                                fileName: "src/containers/StudentHome/Home.jsx",
                                                 lineNumber: 25,
                                                 columnNumber: 9
                                             }, this),
                                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                                 className: "uppercase",
-                                                children: "topic evaluation"
+                                                children: "topic registration"
                                             }, void 0, false, {
                                                 fileName: "src/containers/StudentHome/Home.jsx",
                                                 lineNumber: 26,
@@ -34213,7 +34187,7 @@ function Home() {
                                             }, this),
                                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                                 className: "uppercase",
-                                                children: "supervisor approval"
+                                                children: "topic evaluation"
                                             }, void 0, false, {
                                                 fileName: "src/containers/StudentHome/Home.jsx",
                                                 lineNumber: 30,
@@ -34239,7 +34213,7 @@ function Home() {
                                             }, this),
                                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                                 className: "uppercase",
-                                                children: "feedback"
+                                                children: "supervisor approval"
                                             }, void 0, false, {
                                                 fileName: "src/containers/StudentHome/Home.jsx",
                                                 lineNumber: 34,
@@ -34265,7 +34239,7 @@ function Home() {
                                             }, this),
                                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                                 className: "uppercase",
-                                                children: "co-supervisor selection"
+                                                children: "feedback"
                                             }, void 0, false, {
                                                 fileName: "src/containers/StudentHome/Home.jsx",
                                                 lineNumber: 38,
@@ -34291,7 +34265,7 @@ function Home() {
                                             }, this),
                                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                                 className: "uppercase",
-                                                children: "presentation evaluation"
+                                                children: "co-supervisor selection"
                                             }, void 0, false, {
                                                 fileName: "src/containers/StudentHome/Home.jsx",
                                                 lineNumber: 42,
@@ -34317,7 +34291,7 @@ function Home() {
                                             }, this),
                                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                                 className: "uppercase",
-                                                children: "co-supervisor approval"
+                                                children: "presentation evaluation"
                                             }, void 0, false, {
                                                 fileName: "src/containers/StudentHome/Home.jsx",
                                                 lineNumber: 46,
@@ -34343,7 +34317,7 @@ function Home() {
                                             }, this),
                                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                                 className: "uppercase",
-                                                children: "thesis evaluation"
+                                                children: "co-supervisor approval"
                                             }, void 0, false, {
                                                 fileName: "src/containers/StudentHome/Home.jsx",
                                                 lineNumber: 50,
@@ -34369,7 +34343,7 @@ function Home() {
                                             }, this),
                                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                                 className: "uppercase",
-                                                children: "topic details submission"
+                                                children: "thesis evaluation"
                                             }, void 0, false, {
                                                 fileName: "src/containers/StudentHome/Home.jsx",
                                                 lineNumber: 54,
@@ -34395,7 +34369,7 @@ function Home() {
                                             }, this),
                                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                                 className: "uppercase",
-                                                children: "complete"
+                                                children: "topic details submission"
                                             }, void 0, false, {
                                                 fileName: "src/containers/StudentHome/Home.jsx",
                                                 lineNumber: 58,
@@ -34406,22 +34380,48 @@ function Home() {
                                         fileName: "src/containers/StudentHome/Home.jsx",
                                         lineNumber: 56,
                                         columnNumber: 8
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "flex items-center gap-2 mt-3 ml-8",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                                                src: _doneIconPngDefault.default,
+                                                alt: "done-icon",
+                                                className: "h-5"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 61,
+                                                columnNumber: 9
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                                                className: "uppercase",
+                                                children: "complete"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 62,
+                                                columnNumber: 9
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/containers/StudentHome/Home.jsx",
+                                        lineNumber: 60,
+                                        columnNumber: 8
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/containers/StudentHome/Home.jsx",
-                                lineNumber: 19,
+                                lineNumber: 23,
                                 columnNumber: 7
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/containers/StudentHome/Home.jsx",
-                        lineNumber: 17,
+                        lineNumber: 21,
                         columnNumber: 6
                     }, this)
                 }, void 0, false, {
                     fileName: "src/containers/StudentHome/Home.jsx",
-                    lineNumber: 16,
+                    lineNumber: 20,
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34432,7 +34432,7 @@ function Home() {
                             children: "group"
                         }, void 0, false, {
                             fileName: "src/containers/StudentHome/Home.jsx",
-                            lineNumber: 64,
+                            lineNumber: 68,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34443,7 +34443,7 @@ function Home() {
                                     children: "name"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 66,
+                                    lineNumber: 70,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34451,7 +34451,7 @@ function Home() {
                                     children: "id"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 67,
+                                    lineNumber: 71,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34459,7 +34459,7 @@ function Home() {
                                     children: "email"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 68,
+                                    lineNumber: 72,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34467,7 +34467,7 @@ function Home() {
                                     children: "phone"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 69,
+                                    lineNumber: 73,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34475,7 +34475,7 @@ function Home() {
                                     children: "specialization"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 70,
+                                    lineNumber: 74,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34483,7 +34483,7 @@ function Home() {
                                     children: "kariyawasam k. g. p. c."
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 72,
+                                    lineNumber: 76,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34491,7 +34491,7 @@ function Home() {
                                     children: "it20172978"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 75,
+                                    lineNumber: 79,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34499,7 +34499,7 @@ function Home() {
                                     children: "it20172978@my.sliit.lk"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 76,
+                                    lineNumber: 80,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34507,7 +34507,7 @@ function Home() {
                                     children: "0771543736"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 79,
+                                    lineNumber: 83,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34515,7 +34515,7 @@ function Home() {
                                     children: "se"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 80,
+                                    lineNumber: 84,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34523,7 +34523,7 @@ function Home() {
                                     children: "lakshith g. p. r."
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 82,
+                                    lineNumber: 86,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34531,7 +34531,7 @@ function Home() {
                                     children: "it20165666"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 83,
+                                    lineNumber: 87,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34539,7 +34539,7 @@ function Home() {
                                     children: "it20165666@my.sliit.lk"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 84,
+                                    lineNumber: 88,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34547,7 +34547,7 @@ function Home() {
                                     children: "0701864774"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 87,
+                                    lineNumber: 91,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34555,7 +34555,7 @@ function Home() {
                                     children: "se"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 88,
+                                    lineNumber: 92,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34563,7 +34563,7 @@ function Home() {
                                     children: "muthukumarana m. w. a. n. c."
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 90,
+                                    lineNumber: 94,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34571,7 +34571,7 @@ function Home() {
                                     children: "it20227890"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 93,
+                                    lineNumber: 97,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34579,7 +34579,7 @@ function Home() {
                                     children: "it20227890@my.sliit.lk"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 94,
+                                    lineNumber: 98,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34587,7 +34587,7 @@ function Home() {
                                     children: "0771543736"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 97,
+                                    lineNumber: 101,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34595,7 +34595,7 @@ function Home() {
                                     children: "se"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 98,
+                                    lineNumber: 102,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34603,7 +34603,7 @@ function Home() {
                                     children: "perera h. a. n. s."
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 100,
+                                    lineNumber: 104,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34611,7 +34611,7 @@ function Home() {
                                     children: "it20166106"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 101,
+                                    lineNumber: 105,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34619,7 +34619,7 @@ function Home() {
                                     children: "it20166106@my.sliit.lk"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 102,
+                                    lineNumber: 106,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34627,7 +34627,7 @@ function Home() {
                                     children: "0771543736"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 105,
+                                    lineNumber: 109,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -34635,19 +34635,19 @@ function Home() {
                                     children: "se"
                                 }, void 0, false, {
                                     fileName: "src/containers/StudentHome/Home.jsx",
-                                    lineNumber: 106,
+                                    lineNumber: 110,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/containers/StudentHome/Home.jsx",
-                            lineNumber: 65,
+                            lineNumber: 69,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/containers/StudentHome/Home.jsx",
-                    lineNumber: 63,
+                    lineNumber: 67,
                     columnNumber: 5
                 }, this)
             ]
