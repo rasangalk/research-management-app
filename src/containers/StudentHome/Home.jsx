@@ -5,7 +5,7 @@ import done from "../../images/done-icon.png";
 
 function Home() {
 	return (
-		<div className='bg-bk-white h-screen w-screen'>
+		<div className='bg-blue-200 h-screen w-screen'>
 			<div className='grid grid-cols-12 h-full w-full grid-rows-2'>
 				<div className='h-full w-[10px]'>
 					<Menu />
