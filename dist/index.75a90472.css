@@ -149,16 +149,6 @@ textarea {
   resize: vertical;
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder {
-  opacity: 1;
-  color: #9ca3af;
-}
-
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  opacity: 1;
-  color: #9ca3af;
-}
-
 input::placeholder, textarea::placeholder {
   opacity: 1;
   color: #9ca3af;
@@ -522,7 +512,6 @@ img, video {
 }
 
 .object-cover {
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -740,17 +729,7 @@ code {
   }
 }
 
-@media (min-width: 768px) {
-  .md\:mt-12 {
-    margin-top: 3rem;
-  }
-}
-
 @media (min-width: 1024px) {
-  .lg\:mt-12 {
-    margin-top: 3rem;
-  }
-
   .lg\:w-96 {
     width: 24rem;
   }
@@ -761,16 +740,8 @@ code {
 }
 
 @media (min-width: 1536px) {
-  .\32 xl\:col-span-8 {
-    grid-column: span 8 / span 8;
-  }
-
   .\32 xl\:mt-12 {
     margin-top: 3rem;
-  }
-
-  .\32 xl\:w-\[67rem\] {
-    width: 67rem;
   }
 
   .\32 xl\:w-\[69rem\] {

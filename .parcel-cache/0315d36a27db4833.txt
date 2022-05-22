@@ -87,7 +87,7 @@
 130C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\htmlnano\docs\versioned_docs\version-1.1.1\030-config.md132976813228402882 0
 112C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\htmlnano\lib\modules\removeComments.js132976813228752697 0
 71C:\Users\Rasanga\Documents\Research-management-tool-frontend\src\images132976813268913592 1
-65C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist132976815983539555 1
+65C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist132976834499205879 1
 102C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\normalize-range\package.json132976813238841709 0
 88C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\merge2\LICENSE132976813235740949 0
 105C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\caniuse-lite\data\regions\AG.js132976813198180947 0
@@ -226,7 +226,7 @@
 79C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\acorn132976813187892106 1
 104C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\autoprefixer\lib\resolution.js132976813189968109 0
 91C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\reusify\README.md132976813251928099 0
-96C:\Users\Rasanga\Documents\Research-management-tool-frontend\src\containers\StudentHome\Home.jsx132976813268533810 0
+96C:\Users\Rasanga\Documents\Research-management-tool-frontend\src\containers\StudentHome\Home.jsx132976834490235923 0
 96C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\fast-glob\out\index.js132976813223673991 0
 104C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\@parcel\core\lib\buildCache.js132976813115914277 0
 106C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\chokidar\lib\fsevents-handler.js132976813211313863 0
@@ -6098,7 +6098,7 @@
 147C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-alias\foo.js132976813121420231 0
 139C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\foo\index.js132976813121330458 0
 137C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\foo\nested132976813121340308 1
-88C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\index.75a90472.css.map132976815979611804 0
+88C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\index.75a90472.css.map132976834499065997 0
 144C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\foo\nested\baz.js132976813121340308 0
 148C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\aliased-file\index.js132976813121270506 0
 152C:\Users\Rasanga\Documents\Research-management-tool-frontend\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\aliased-file\package.json132976813121290339 0
@@ -6525,9 +6525,9 @@
 90C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\chat-typing.11c64c48.png132976815981230871 0
 88C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\documents.c04e8477.png132976815981240867 0
 88C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\done-icon.9504deea.png132976815981230871 0
-84C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\index.75a90472.css132976815979541856 0
-83C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\index.f54bfa54.js132976815982839954 0
-87C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\index.f54bfa54.js.map132976815983089816 0
+84C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\index.75a90472.css132976834499065997 0
+83C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\index.f54bfa54.js132976834499075959 0
+87C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\index.f54bfa54.js.map132976834499185938 0
 76C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\index.html132976815983099807 0
 83C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\logo.c493797d.png132976815981250877 0
 85C:\Users\Rasanga\Documents\Research-management-tool-frontend\dist\logout.3a30b144.png132976815981240867 0
