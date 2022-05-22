@@ -9,20 +9,20 @@ import StudentRegister from "./src/containers/StudentRegister";
 import StudentHome from "./src/containers/StudentHome/Home";
 
 import { Provider } from "react-redux";
-import store from "./store";
+import store from "./src/store";
 import "./app.css";
 
 render(
-  <Provider store={store}>
-    <Router>
-      <Routes>
-        <Route path="/" element={<StudentHome />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/landing-page" element={<LandingPage />} />
-        <Route path="/student/signup" element={<StudentRegister />} />
-      </Routes>
-    </Router>
-  </Provider>,
-  document.getElementById("app")
+	<Provider store={store}>
+		<Router>
+			<Routes>
+				<Route path='/' element={<StudentHome />} />
+				<Route path='/signin' element={<Signin />} />
+				<Route path='/signup' element={<Signup />} />
+				<Route path='/landing-page' element={<LandingPage />} />
+				<Route path='/student/signup' element={<StudentRegister />} />
+			</Routes>
+		</Router>
+	</Provider>,
+	document.getElementById("app"),
 );
