@@ -60,7 +60,7 @@ function Home() {
 						</div>
 					</div>
 				</div>
-				<div className='col-span-11 h-[18rem] 2xl:w-[67rem] w-[67rem] mx-auto bg-white col-start-2 rounded-xl'>
+				<div className='col-span-11 h-[18rem] 2xl:w-[69rem] w-[67rem] mx-auto bg-white col-start-2 rounded-xl'>
 					<h2 className='capitalize text-xl font-bold ml-5 pt-2'>group</h2>
 					<div className='grid grid-cols-7 mx-8 mt-4'>
 						<div className='uppercase col-span-2 font-bold mb-2'>name</div>
