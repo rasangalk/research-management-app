@@ -66,7 +66,7 @@ function StudentSubmission() {
 							<div className='uppercase font-bold mx-auto'>deadline</div>
 							<div className='uppercase font-bold mx-auto'>time</div>
 						</div>
-						<div className='example grid grid-cols-4 mx-6 overflow-y-auto h-[6rem]'>
+						<div className='grid grid-cols-4 mx-6 overflow-y-auto h-[6rem] '>
 							<div className='flex gap-2 items-center	 col-span-2'>
 								<img src={submit} alt='submit' className='h-3   ' />
 								<p className='capitalize mt-2'>topic details submission</p>

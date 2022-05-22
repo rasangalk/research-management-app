@@ -31,7 +31,7 @@ render(
 	<Provider store={store}>
 		<Router>
 			<Routes>
-				<Route path='/r1' element={<StudentSubmission />} />
+				<Route path='/r' element={<StudentSubmission />} />
 				<Route path='/' element={<StudentHome />} />
 				<Route path='/signin' element={<Signin />} />
 				<Route path='/signup' element={<Signup />} />
