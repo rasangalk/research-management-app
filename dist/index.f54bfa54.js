@@ -1019,6 +1019,8 @@ var _landingPage = require("./src/containers/LandingPage");
 var _landingPageDefault = parcelHelpers.interopDefault(_landingPage);
 var _studentRegister = require("./src/containers/StudentRegister");
 var _studentRegisterDefault = parcelHelpers.interopDefault(_studentRegister);
+var _home = require("./src/containers/StudentHome/Home");
+var _homeDefault = parcelHelpers.interopDefault(_home);
 var _reactRedux = require("react-redux");
 var _store = require("./store");
 var _storeDefault = parcelHelpers.interopDefault(_store);
@@ -1029,11 +1031,19 @@ _reactDom.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRedux.Provider, {
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
             children: [
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                    path: "/",
+                    element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_homeDefault.default, {}, void 0, false, void 0, void 0)
+                }, void 0, false, {
+                    fileName: "app.jsx",
+                    lineNumber: 19,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
                     path: "/signin",
                     element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_signinDefault.default, {}, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "app.jsx",
-                    lineNumber: 17,
+                    lineNumber: 20,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -1041,7 +1051,7 @@ _reactDom.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRedux.Provider, {
                     element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_registerDefault.default, {}, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "app.jsx",
-                    lineNumber: 18,
+                    lineNumber: 21,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -1049,7 +1059,7 @@ _reactDom.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRedux.Provider, {
                     element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_landingPageDefault.default, {}, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "app.jsx",
-                    lineNumber: 19,
+                    lineNumber: 22,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -1057,23 +1067,23 @@ _reactDom.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRedux.Provider, {
                     element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_studentRegisterDefault.default, {}, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "app.jsx",
-                    lineNumber: 20,
+                    lineNumber: 23,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "app.jsx",
-            lineNumber: 16,
+            lineNumber: 18,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "app.jsx",
-        lineNumber: 15,
+        lineNumber: 17,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "app.jsx",
-    lineNumber: 14,
+    lineNumber: 16,
     columnNumber: 3
 }, undefined), document.getElementById("app"));
 
@@ -1082,7 +1092,7 @@ _reactDom.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRedux.Provider, {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-redux":"bdVon","./store":"71t6G","./src/containers/Register":"4aiL8","./src/containers/LandingPage":"9aKZ0","./src/containers/StudentRegister":"daRTN","./src/containers/Signin":"axKDq","./app.css":"4slL4"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-redux":"bdVon","./store":"71t6G","./src/containers/Signin":"axKDq","./src/containers/Register":"4aiL8","./src/containers/LandingPage":"9aKZ0","./src/containers/StudentRegister":"daRTN","./app.css":"4slL4","./src/containers/StudentHome/Home":"irTcY"}],"iTorj":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-dev-runtime.development.js');
 
@@ -29615,512 +29625,11 @@ exports.default = (state = initState, action)=>{
     return state;
 };
 
-},{"../actions/constants":"fdWfs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4aiL8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$705e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"../actions/constants":"fdWfs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"axKDq":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$da49 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$705e.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _studentJpg = require("../../images/student.jpg");
-var _studentJpgDefault = parcelHelpers.interopDefault(_studentJpg);
-var _registerPageLeader = require("../../components/RegisterPageLeader");
-var _registerPageLeaderDefault = parcelHelpers.interopDefault(_registerPageLeader);
-var _layoutRight = require("../../components/LayoutRight");
-var _layoutRightDefault = parcelHelpers.interopDefault(_layoutRight);
-const Signin = (props)=>{
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "grid grid-cols-2 h-screen lg:grid-cols-2 sm:grid-cols-1",
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                className: "h-full",
-                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                    className: "ml-32 mr-8",
-                    children: [
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_registerPageLeaderDefault.default, {}, void 0, false, {
-                            fileName: "src/containers/Register/index.jsx",
-                            lineNumber: 11,
-                            columnNumber: 6
-                        }, undefined),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                            className: "mt-5 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
-                            children: "Next"
-                        }, void 0, false, {
-                            fileName: "src/containers/Register/index.jsx",
-                            lineNumber: 12,
-                            columnNumber: 6
-                        }, undefined),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                            className: "mt-2 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
-                            children: "Previous"
-                        }, void 0, false, {
-                            fileName: "src/containers/Register/index.jsx",
-                            lineNumber: 15,
-                            columnNumber: 6
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/containers/Register/index.jsx",
-                    lineNumber: 10,
-                    columnNumber: 5
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/containers/Register/index.jsx",
-                lineNumber: 9,
-                columnNumber: 4
-            }, undefined),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_layoutRightDefault.default, {}, void 0, false, {
-                fileName: "src/containers/Register/index.jsx",
-                lineNumber: 20,
-                columnNumber: 4
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/containers/Register/index.jsx",
-        lineNumber: 8,
-        columnNumber: 3
-    }, undefined);
-};
-_c = Signin;
-exports.default = Signin;
-var _c;
-$RefreshReg$(_c, "Signin");
-
-  $parcel$ReactRefreshHelpers$705e.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../images/student.jpg":"dAIAZ","../../components/RegisterPageLeader":"i8cBt","../../components/LayoutRight":"4n8Md","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dAIAZ":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('7ffZl') + "student.b999f822.jpg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ('' + err.stack).match(/(https?|file|ftp|(chrome|moz)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return '/';
-}
-function getBaseURL(url) {
-    return ('' + url).replace(/^((?:https?|file|ftp|(chrome|moz)-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ('' + url).match(/(https?|file|ftp|(chrome|moz)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error('Origin not found');
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"i8cBt":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$c5d8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c5d8.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-function RegisterPageLeader({ leaderFormData , setLeaderFormData  }) {
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                className: "font-bold text-xl font-Nunito font-bold text-xl text-black mt-14 mb-4",
-                children: "Leader Details"
-            }, void 0, false, {
-                fileName: "src/components/RegisterPageLeader.jsx",
-                lineNumber: 6,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "text-base text-slate-700 font-normal font-Nunito after:content-['*'] after:ml-0.5 after:text-red-500 ",
-                children: "Name with Initials"
-            }, void 0, false, {
-                fileName: "src/components/RegisterPageLeader.jsx",
-                lineNumber: 9,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "text",
-                name: "username",
-                value: leaderFormData.nameWithInitials,
-                onChange: (e)=>setLeaderFormData({
-                        ...leaderFormData,
-                        nameWithInitials: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterPageLeader.jsx",
-                lineNumber: 12,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Student ID"
-            }, void 0, false, {
-                fileName: "src/components/RegisterPageLeader.jsx",
-                lineNumber: 25,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "text",
-                name: "studentID",
-                value: leaderFormData.studentId,
-                onChange: (e)=>setLeaderFormData({
-                        ...leaderFormData,
-                        studentId: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterPageLeader.jsx",
-                lineNumber: 28,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Phone"
-            }, void 0, false, {
-                fileName: "src/components/RegisterPageLeader.jsx",
-                lineNumber: 41,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "tel",
-                name: "phone",
-                value: leaderFormData.phone,
-                onChange: (e)=>setLeaderFormData({
-                        ...leaderFormData,
-                        phone: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterPageLeader.jsx",
-                lineNumber: 44,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Email"
-            }, void 0, false, {
-                fileName: "src/components/RegisterPageLeader.jsx",
-                lineNumber: 57,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "email",
-                name: "email",
-                value: leaderFormData.email,
-                onChange: (e)=>setLeaderFormData({
-                        ...leaderFormData,
-                        email: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterPageLeader.jsx",
-                lineNumber: 60,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Specialization"
-            }, void 0, false, {
-                fileName: "src/components/RegisterPageLeader.jsx",
-                lineNumber: 73,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("select", {
-                name: "specialization",
-                value: leaderFormData.specialization,
-                onChange: (e)=>setLeaderFormData({
-                        ...leaderFormData,
-                        specialization: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold hover:bg-sky-700 mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md focus:ring-1",
-                children: [
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "",
-                        disabled: true,
-                        selected: true,
-                        hidden: true,
-                        children: "Select your specialization"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterPageLeader.jsx",
-                        lineNumber: 87,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "SE",
-                        children: "SE"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterPageLeader.jsx",
-                        lineNumber: 90,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "CSNE",
-                        children: "CSNE"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterPageLeader.jsx",
-                        lineNumber: 91,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "DS",
-                        children: "DS"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterPageLeader.jsx",
-                        lineNumber: 92,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "ISE",
-                        children: "ISE"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterPageLeader.jsx",
-                        lineNumber: 93,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "ISE",
-                        children: "CS"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterPageLeader.jsx",
-                        lineNumber: 94,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RegisterPageLeader.jsx",
-                lineNumber: 76,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/RegisterPageLeader.jsx",
-        lineNumber: 5,
-        columnNumber: 5
-    }, this);
-}
-_c = RegisterPageLeader;
-exports.default = RegisterPageLeader;
-var _c;
-$RefreshReg$(_c, "RegisterPageLeader");
-
-  $parcel$ReactRefreshHelpers$c5d8.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4n8Md":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$fc4d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$fc4d.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _studentJpg = require("../images/student.jpg");
-var _studentJpgDefault = parcelHelpers.interopDefault(_studentJpg);
-function LayoutRight() {
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "bg-slate-300 h-full relative",
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                className: "absolute w-100 text-center bottom-48 font-bold text-xl py-10 text-left font-Nunito text-white",
-                children: "Research Portal"
-            }, void 0, false, {
-                fileName: "src/components/LayoutRight.jsx",
-                lineNumber: 7,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
-                className: "absolute font-medium text-center text-white px-10 bottom-28 text-left font-Nunito",
-                children: "As a leading tertiary educational Institute in Sri Lanka, research is an integral part of SLIIT.We strive for a vibrant research culture and numerous initiatives are in place for programming research among the academic and student communities."
-            }, void 0, false, {
-                fileName: "src/components/LayoutRight.jsx",
-                lineNumber: 10,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                src: _studentJpgDefault.default,
-                className: "bg-sky-500 h-full object-cover"
-            }, void 0, false, {
-                fileName: "src/components/LayoutRight.jsx",
-                lineNumber: 16,
-                columnNumber: 4
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/LayoutRight.jsx",
-        lineNumber: 6,
-        columnNumber: 3
-    }, this);
-}
-_c = LayoutRight;
-exports.default = LayoutRight;
-var _c;
-$RefreshReg$(_c, "LayoutRight");
-
-  $parcel$ReactRefreshHelpers$fc4d.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/student.jpg":"dAIAZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9aKZ0":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7c85 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7c85.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _layoutRight = require("../../components/LayoutRight");
-var _layoutRightDefault = parcelHelpers.interopDefault(_layoutRight);
-var _reactRouterDom = require("react-router-dom");
-function LandingPage() {
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "grid grid-cols-2 h-screen lg:grid-cols-2 sm:grid-cols-1",
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                className: "h-full",
-                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                    className: "ml-32 mr-8",
-                    children: [
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            to: "/student/signup",
-                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                                className: "mt-5 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
-                                children: "Student"
-                            }, void 0, false, {
-                                fileName: "src/containers/LandingPage/index.jsx",
-                                lineNumber: 11,
-                                columnNumber: 7
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/containers/LandingPage/index.jsx",
-                            lineNumber: 10,
-                            columnNumber: 6
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            to: "/supervisor/signup",
-                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                                className: "mt-2 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
-                                children: "Supervisor"
-                            }, void 0, false, {
-                                fileName: "src/containers/LandingPage/index.jsx",
-                                lineNumber: 17,
-                                columnNumber: 7
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/containers/LandingPage/index.jsx",
-                            lineNumber: 16,
-                            columnNumber: 6
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            to: "/co-supervisor/signup",
-                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                                className: "mt-2 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
-                                children: "Co-Supervisor"
-                            }, void 0, false, {
-                                fileName: "src/containers/LandingPage/index.jsx",
-                                lineNumber: 23,
-                                columnNumber: 7
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/containers/LandingPage/index.jsx",
-                            lineNumber: 22,
-                            columnNumber: 6
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            to: "/staff/signup",
-                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                                className: "mt-2 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
-                                children: "Staff"
-                            }, void 0, false, {
-                                fileName: "src/containers/LandingPage/index.jsx",
-                                lineNumber: 29,
-                                columnNumber: 7
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/containers/LandingPage/index.jsx",
-                            lineNumber: 28,
-                            columnNumber: 6
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/containers/LandingPage/index.jsx",
-                    lineNumber: 9,
-                    columnNumber: 5
-                }, this)
-            }, void 0, false, {
-                fileName: "src/containers/LandingPage/index.jsx",
-                lineNumber: 8,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_layoutRightDefault.default, {}, void 0, false, {
-                fileName: "src/containers/LandingPage/index.jsx",
-                lineNumber: 35,
-                columnNumber: 4
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/containers/LandingPage/index.jsx",
-        lineNumber: 7,
-        columnNumber: 3
-    }, this);
-}
-_c = LandingPage;
-exports.default = LandingPage;
-var _c;
-$RefreshReg$(_c, "LandingPage");
-
-  $parcel$ReactRefreshHelpers$7c85.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/LayoutRight":"4n8Md","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"daRTN":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$c1e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c1e7.prelude(module);
+$parcel$ReactRefreshHelpers$da49.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -30130,224 +29639,56 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _registerPageOne = require("../../components/RegisterPageOne");
 var _registerPageOneDefault = parcelHelpers.interopDefault(_registerPageOne);
+var _loginPage = require("../../components/LoginPage");
+var _loginPageDefault = parcelHelpers.interopDefault(_loginPage);
 var _layoutRight = require("../../components/LayoutRight");
 var _layoutRightDefault = parcelHelpers.interopDefault(_layoutRight);
-var _registerPageLeader = require("../../components/RegisterPageLeader");
-var _registerPageLeaderDefault = parcelHelpers.interopDefault(_registerPageLeader);
-var _registerFirstMember = require("../../components/RegisterFirstMember");
-var _registerFirstMemberDefault = parcelHelpers.interopDefault(_registerFirstMember);
-var _registerSecondMember = require("../../components/RegisterSecondMember");
-var _registerSecondMemberDefault = parcelHelpers.interopDefault(_registerSecondMember);
-var _registerThirdMember = require("../../components/RegisterThirdMember");
-var _registerThirdMemberDefault = parcelHelpers.interopDefault(_registerThirdMember);
-var _reactRouterDom = require("react-router-dom");
-var _reactRedux = require("react-redux");
-var _userActions = require("../../actions/user.actions");
-var _s = $RefreshSig$();
-function StudentRegister() {
-    _s();
-    const [page, setPage] = _react.useState(0);
-    const Forms = [
-        "register",
-        "leader",
-        "member1",
-        "member2",
-        "member3"
-    ];
-    const [loginInfo, setLoginInfo] = _react.useState({
-        username: "",
-        password: "",
-        rePassword: ""
-    });
-    const [leaderFormData, setLeaderFormData] = _react.useState({
-        nameWithInitials: "",
-        studentId: "",
-        phone: "",
-        email: "",
-        specialization: ""
-    });
-    const [firstMemberFormData, setFirstMemberFormData] = _react.useState({
-        nameWithInitials: "",
-        studentId: "",
-        phone: "",
-        email: "",
-        specialization: ""
-    });
-    const [secondMemberFormData, setSecondMemberFormData] = _react.useState({
-        nameWithInitials: "",
-        studentId: "",
-        phone: "",
-        email: "",
-        specialization: ""
-    });
-    const [thirdMemberFormData, setThirdMemberFormData] = _react.useState({
-        nameWithInitials: "",
-        studentId: "",
-        phone: "",
-        email: "",
-        specialization: ""
-    });
-    let navigate = _reactRouterDom.useNavigate();
-    const routeChange = ()=>{
-        let path = `/landing-page`;
-        navigate(path);
-    };
-    const PageDisplay = ()=>{
-        if (page === 0) return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_registerPageOneDefault.default, {
-            loginInfo: loginInfo,
-            setLoginInfo: setLoginInfo
-        }, void 0, false, {
-            fileName: "src/containers/StudentRegister/index.jsx",
-            lineNumber: 61,
-            columnNumber: 9
-        }, this);
-        else if (page === 1) return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_registerPageLeaderDefault.default, {
-            leaderFormData: leaderFormData,
-            setLeaderFormData: setLeaderFormData
-        }, void 0, false, {
-            fileName: "src/containers/StudentRegister/index.jsx",
-            lineNumber: 65,
-            columnNumber: 9
-        }, this);
-        else if (page === 2) return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_registerFirstMemberDefault.default, {
-            firstMemberFormData: firstMemberFormData,
-            setFirstMemberFormData: setFirstMemberFormData
-        }, void 0, false, {
-            fileName: "src/containers/StudentRegister/index.jsx",
-            lineNumber: 72,
-            columnNumber: 9
-        }, this);
-        else if (page === 3) return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_registerSecondMemberDefault.default, {
-            secondMemberFormData: secondMemberFormData,
-            setSecondMemberFormData: setSecondMemberFormData
-        }, void 0, false, {
-            fileName: "src/containers/StudentRegister/index.jsx",
-            lineNumber: 79,
-            columnNumber: 9
-        }, this);
-        else return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_registerThirdMemberDefault.default, {
-            thirdMemberFormData: thirdMemberFormData,
-            setThirdMemberFormData: setThirdMemberFormData
-        }, void 0, false, {
-            fileName: "src/containers/StudentRegister/index.jsx",
-            lineNumber: 86,
-            columnNumber: 9
-        }, this);
-    };
-    const dispatch = _reactRedux.useDispatch();
-    const studentSignup = ()=>{
-        const user = {
-            username: loginInfo.username,
-            password: loginInfo.password,
-            re_hash_password: loginInfo.rePassword,
-            role: "student",
-            students: {
-                leader: {
-                    fullName: leaderFormData.nameWithInitials,
-                    sliit_id: leaderFormData.studentId,
-                    phone: leaderFormData.phone,
-                    email: leaderFormData.email,
-                    specialization: leaderFormData.specialization
-                },
-                member1: {
-                    fullName: firstMemberFormData.nameWithInitials,
-                    sliit_id: firstMemberFormData.studentId,
-                    phone: firstMemberFormData.phone,
-                    email: firstMemberFormData.email,
-                    specialization: firstMemberFormData.specialization
-                },
-                member2: {
-                    fullName: secondMemberFormData.nameWithInitials,
-                    sliit_id: secondMemberFormData.studentId,
-                    phone: secondMemberFormData.phone,
-                    email: secondMemberFormData.email,
-                    specialization: secondMemberFormData.specialization
-                },
-                member3: {
-                    fullName: thirdMemberFormData.nameWithInitials,
-                    sliit_id: thirdMemberFormData.studentId,
-                    phone: thirdMemberFormData.phone,
-                    email: thirdMemberFormData.email,
-                    specialization: thirdMemberFormData.specialization
-                }
-            }
-        };
-        console.log(thirdMemberFormData);
-        dispatch(_userActions.signup(user));
-    };
+const Signup = (props)=>{
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "grid grid-cols-2 h-screen lg:grid-cols-2 sm:grid-cols-1",
+        className: "grid grid-cols-2 h-screen lg:grid-cols-2 sm:grid-cols-1 sm:gap-4",
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                 className: "h-full",
                 children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                     className: "ml-32 mr-8",
-                    children: [
-                        PageDisplay(),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                            className: "mt-5 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active disabled:opacity-75 disabled:hover:bg-regal-blue disabled:hover:opacity-75",
-                            onClick: ()=>{
-                                if (page === Forms.length - 1) studentSignup();
-                                else setPage(page + 1);
-                            },
-                            children: page === Forms.length - 1 ? "Submit" : "Next"
-                        }, void 0, false, {
-                            fileName: "src/containers/StudentRegister/index.jsx",
-                            lineNumber: 145,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                            className: "mt-2 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active disabled:opacity-75 disabled:hover:bg-regal-blue disabled:hover:opacity-75",
-                            onClick: ()=>{
-                                if (page === 0) routeChange();
-                                else setPage(page - 1);
-                            },
-                            children: "Previous"
-                        }, void 0, false, {
-                            fileName: "src/containers/StudentRegister/index.jsx",
-                            lineNumber: 157,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/containers/StudentRegister/index.jsx",
-                    lineNumber: 142,
+                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_loginPageDefault.default, {}, void 0, false, {
+                        fileName: "src/containers/Signin/index.jsx",
+                        lineNumber: 10,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/containers/Signin/index.jsx",
+                    lineNumber: 9,
                     columnNumber: 9
-                }, this)
+                }, undefined)
             }, void 0, false, {
-                fileName: "src/containers/StudentRegister/index.jsx",
-                lineNumber: 141,
+                fileName: "src/containers/Signin/index.jsx",
+                lineNumber: 8,
                 columnNumber: 7
-            }, this),
+            }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_layoutRightDefault.default, {}, void 0, false, {
-                fileName: "src/containers/StudentRegister/index.jsx",
-                lineNumber: 171,
+                fileName: "src/containers/Signin/index.jsx",
+                lineNumber: 13,
                 columnNumber: 7
-            }, this)
+            }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/containers/StudentRegister/index.jsx",
-        lineNumber: 140,
+        fileName: "src/containers/Signin/index.jsx",
+        lineNumber: 7,
         columnNumber: 5
-    }, this);
-}
-_s(StudentRegister, "sVipDQ49UW32Vg4ykGQhzqfQfuM=", false, function() {
-    return [
-        _reactRouterDom.useNavigate,
-        _reactRedux.useDispatch
-    ];
-});
-_c = StudentRegister;
-exports.default = StudentRegister;
+    }, undefined);
+};
+_c = Signup;
+exports.default = Signup;
 var _c;
-$RefreshReg$(_c, "StudentRegister");
+$RefreshReg$(_c, "Signup");
 
-  $parcel$ReactRefreshHelpers$c1e7.postlude(module);
+  $parcel$ReactRefreshHelpers$da49.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/RegisterPageOne":"5zmRT","../../components/LayoutRight":"4n8Md","../../components/RegisterPageLeader":"i8cBt","../../components/RegisterFirstMember":"817Pi","../../components/RegisterSecondMember":"hM79I","../../components/RegisterThirdMember":"cghNs","react-router-dom":"fdOAw","react-redux":"bdVon","../../actions/user.actions":"6aDPW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5zmRT":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/RegisterPageOne":"5zmRT","../../components/LoginPage":"dk2RD","../../components/LayoutRight":"4n8Md","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5zmRT":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$d993 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30454,11 +29795,11 @@ $RefreshReg$(_c, "RegisterPageOne");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"817Pi":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$55a0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dk2RD":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8c30 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$55a0.prelude(module);
+$parcel$ReactRefreshHelpers$8c30.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -30466,702 +29807,201 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-function RegisterFirstMember({ firstMemberFormData , setFirstMemberFormData  }) {
+var _reactRedux = require("react-redux");
+var _authActions = require("../actions/auth.actions");
+var _s = $RefreshSig$();
+function RegisterPageOne() {
+    _s();
+    const [username, setUsername] = _react.useState("");
+    const [password, setPassword] = _react.useState("");
+    //   const auth = useSelector((state) => state.auth);
+    const dispatch = _reactRedux.useDispatch();
+    const userLogin = (e)=>{
+        e.preventDefault();
+        const user = {
+            username,
+            password
+        };
+        dispatch(_authActions.login(user));
+    };
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                className: "font-bold text-xl font-Nunito font-bold text-xl text-black mt-14 mb-4",
-                children: "Member Details"
-            }, void 0, false, {
-                fileName: "src/components/RegisterFirstMember.jsx",
-                lineNumber: 6,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "text-base text-slate-700 font-normal font-Nunito after:content-['*'] after:ml-0.5 after:text-red-500 ",
-                children: "Name with Initials"
-            }, void 0, false, {
-                fileName: "src/components/RegisterFirstMember.jsx",
-                lineNumber: 9,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "text",
-                name: "username",
-                value: firstMemberFormData.nameWithInitials,
-                onChange: (e)=>setFirstMemberFormData({
-                        ...firstMemberFormData,
-                        nameWithInitials: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterFirstMember.jsx",
-                lineNumber: 12,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Student ID"
-            }, void 0, false, {
-                fileName: "src/components/RegisterFirstMember.jsx",
-                lineNumber: 25,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "text",
-                name: "studentID",
-                value: firstMemberFormData.studentId,
-                onChange: (e)=>setFirstMemberFormData({
-                        ...firstMemberFormData,
-                        studentId: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterFirstMember.jsx",
-                lineNumber: 28,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Phone"
-            }, void 0, false, {
-                fileName: "src/components/RegisterFirstMember.jsx",
-                lineNumber: 41,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "tel",
-                name: "phone",
-                value: firstMemberFormData.phone,
-                onChange: (e)=>setFirstMemberFormData({
-                        ...firstMemberFormData,
-                        phone: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterFirstMember.jsx",
-                lineNumber: 44,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Email"
-            }, void 0, false, {
-                fileName: "src/components/RegisterFirstMember.jsx",
-                lineNumber: 57,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "email",
-                name: "email",
-                value: firstMemberFormData.email,
-                onChange: (e)=>setFirstMemberFormData({
-                        ...firstMemberFormData,
-                        email: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterFirstMember.jsx",
-                lineNumber: 60,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Specialization"
-            }, void 0, false, {
-                fileName: "src/components/RegisterFirstMember.jsx",
-                lineNumber: 73,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("select", {
-                name: "specialization",
-                value: firstMemberFormData.specialization,
-                onChange: (e)=>setFirstMemberFormData({
-                        ...firstMemberFormData,
-                        specialization: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold hover:bg-sky-700 mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md focus:ring-1",
-                children: [
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "",
-                        disabled: true,
-                        selected: true,
-                        hidden: true,
-                        children: "Select your specialization"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterFirstMember.jsx",
-                        lineNumber: 87,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "SE",
-                        children: "SE"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterFirstMember.jsx",
-                        lineNumber: 90,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "CSNE",
-                        children: "CSNE"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterFirstMember.jsx",
-                        lineNumber: 91,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "DS",
-                        children: "DS"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterFirstMember.jsx",
-                        lineNumber: 92,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "ISE",
-                        children: "ISE"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterFirstMember.jsx",
-                        lineNumber: 93,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "ISE",
-                        children: "CS"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterFirstMember.jsx",
-                        lineNumber: 94,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RegisterFirstMember.jsx",
-                lineNumber: 76,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/RegisterFirstMember.jsx",
-        lineNumber: 5,
-        columnNumber: 5
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
+            onSubmit: userLogin,
+            children: [
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                    className: "font-bold text-xl font-Nunito font-bold text-xl text-black mt-32 mb-4",
+                    children: "Login"
+                }, void 0, false, {
+                    fileName: "src/components/LoginPage.jsx",
+                    lineNumber: 24,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                    className: "text-lg text-slate-700 font-normal font-Nunito after:content-['*'] after:ml-0.5 after:text-red-500 ",
+                    children: "Username"
+                }, void 0, false, {
+                    fileName: "src/components/LoginPage.jsx",
+                    lineNumber: 27,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                    type: "text",
+                    name: "username",
+                    value: username,
+                    onChange: (e)=>setUsername(e.target.value)
+                    ,
+                    className: "font-Nunito font-semibold mt-1 px-3 py-2 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+                }, void 0, false, {
+                    fileName: "src/components/LoginPage.jsx",
+                    lineNumber: 32,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                    className: "font-normal font-Nunito mt-4 text-lg text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                    children: "Password"
+                }, void 0, false, {
+                    fileName: "src/components/LoginPage.jsx",
+                    lineNumber: 40,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                    type: "password",
+                    value: password,
+                    onChange: (e)=>setPassword(e.target.value)
+                    ,
+                    className: "font-Nunito font-semibold mt-1 px-3 py-2 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md focus:ring-1"
+                }, void 0, false, {
+                    fileName: "src/components/LoginPage.jsx",
+                    lineNumber: 43,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                    className: "mt-5 font-normal text-lg mt-1 px-3 py-2 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
+                    children: "Login"
+                }, void 0, false, {
+                    fileName: "src/components/LoginPage.jsx",
+                    lineNumber: 50,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                    className: "font-Nunito mt-2",
+                    children: [
+                        "Don't have an account?",
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                            className: "font-Nunito font-bold ml-2 hover:underline hover:underline-offset-1",
+                            children: "Register"
+                        }, void 0, false, {
+                            fileName: "src/components/LoginPage.jsx",
+                            lineNumber: 55,
+                            columnNumber: 6
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/LoginPage.jsx",
+                    lineNumber: 53,
+                    columnNumber: 5
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/LoginPage.jsx",
+            lineNumber: 23,
+            columnNumber: 4
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/LoginPage.jsx",
+        lineNumber: 22,
+        columnNumber: 3
     }, this);
 }
-_c = RegisterFirstMember;
-exports.default = RegisterFirstMember;
+_s(RegisterPageOne, "hfLFCx16V4K1m8kS4JbFPmLkqZE=", false, function() {
+    return [
+        _reactRedux.useDispatch
+    ];
+});
+_c = RegisterPageOne;
+exports.default = RegisterPageOne;
 var _c;
-$RefreshReg$(_c, "RegisterFirstMember");
+$RefreshReg$(_c, "RegisterPageOne");
 
-  $parcel$ReactRefreshHelpers$55a0.postlude(module);
+  $parcel$ReactRefreshHelpers$8c30.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hM79I":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$491b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$491b.prelude(module);
-
-try {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","../actions/auth.actions":"3Lwuu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3Lwuu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-function RegisterSecondMember({ secondMemberFormData , setSecondMemberFormData ,  }) {
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                className: "font-bold text-xl font-Nunito font-bold text-xl text-black mt-14 mb-4",
-                children: "Member Details"
-            }, void 0, false, {
-                fileName: "src/components/RegisterSecondMember.jsx",
-                lineNumber: 9,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "text-base text-slate-700 font-normal font-Nunito after:content-['*'] after:ml-0.5 after:text-red-500 ",
-                children: "Name with Initials"
-            }, void 0, false, {
-                fileName: "src/components/RegisterSecondMember.jsx",
-                lineNumber: 12,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "text",
-                name: "username",
-                value: secondMemberFormData.nameWithInitials,
-                onChange: (e)=>setSecondMemberFormData({
-                        ...secondMemberFormData,
-                        nameWithInitials: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterSecondMember.jsx",
-                lineNumber: 15,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Student ID"
-            }, void 0, false, {
-                fileName: "src/components/RegisterSecondMember.jsx",
-                lineNumber: 28,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "text",
-                name: "studentID",
-                value: secondMemberFormData.studentId,
-                onChange: (e)=>setSecondMemberFormData({
-                        ...secondMemberFormData,
-                        studentId: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterSecondMember.jsx",
-                lineNumber: 31,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Phone"
-            }, void 0, false, {
-                fileName: "src/components/RegisterSecondMember.jsx",
-                lineNumber: 44,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "tel",
-                name: "phone",
-                value: secondMemberFormData.phone,
-                onChange: (e)=>setSecondMemberFormData({
-                        ...secondMemberFormData,
-                        phone: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterSecondMember.jsx",
-                lineNumber: 47,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Email"
-            }, void 0, false, {
-                fileName: "src/components/RegisterSecondMember.jsx",
-                lineNumber: 60,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "email",
-                name: "email",
-                value: secondMemberFormData.email,
-                onChange: (e)=>setSecondMemberFormData({
-                        ...secondMemberFormData,
-                        email: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterSecondMember.jsx",
-                lineNumber: 63,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Specialization"
-            }, void 0, false, {
-                fileName: "src/components/RegisterSecondMember.jsx",
-                lineNumber: 76,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("select", {
-                name: "specialization",
-                value: secondMemberFormData.specialization,
-                onChange: (e)=>setSecondMemberFormData({
-                        ...secondMemberFormData,
-                        specialization: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold hover:bg-sky-700 mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md focus:ring-1",
-                children: [
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "",
-                        disabled: true,
-                        selected: true,
-                        hidden: true,
-                        children: "Select your specialization"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterSecondMember.jsx",
-                        lineNumber: 90,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "SE",
-                        children: "SE"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterSecondMember.jsx",
-                        lineNumber: 93,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "CSNE",
-                        children: "CSNE"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterSecondMember.jsx",
-                        lineNumber: 94,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "DS",
-                        children: "DS"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterSecondMember.jsx",
-                        lineNumber: 95,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "ISE",
-                        children: "ISE"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterSecondMember.jsx",
-                        lineNumber: 96,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "ISE",
-                        children: "CS"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterSecondMember.jsx",
-                        lineNumber: 97,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RegisterSecondMember.jsx",
-                lineNumber: 79,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/RegisterSecondMember.jsx",
-        lineNumber: 8,
-        columnNumber: 5
-    }, this);
-}
-_c = RegisterSecondMember;
-exports.default = RegisterSecondMember;
-var _c;
-$RefreshReg$(_c, "RegisterSecondMember");
-
-  $parcel$ReactRefreshHelpers$491b.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cghNs":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$d68b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d68b.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-function RegisterThirdMember({ thirdMemberFormData , setThirdMemberFormData  }) {
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                className: "font-bold text-xl font-Nunito font-bold text-xl text-black mt-14 mb-4",
-                children: "Member Details"
-            }, void 0, false, {
-                fileName: "src/components/RegisterThirdMember.jsx",
-                lineNumber: 6,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "text-base text-slate-700 font-normal font-Nunito after:content-['*'] after:ml-0.5 after:text-red-500 ",
-                children: "Name with Initials"
-            }, void 0, false, {
-                fileName: "src/components/RegisterThirdMember.jsx",
-                lineNumber: 9,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "text",
-                name: "username",
-                value: thirdMemberFormData.nameWithInitials,
-                onChange: (e)=>setThirdMemberFormData({
-                        ...thirdMemberFormData,
-                        nameWithInitials: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterThirdMember.jsx",
-                lineNumber: 12,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Student ID"
-            }, void 0, false, {
-                fileName: "src/components/RegisterThirdMember.jsx",
-                lineNumber: 25,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "text",
-                name: "studentID",
-                value: thirdMemberFormData.studentId,
-                onChange: (e)=>setThirdMemberFormData({
-                        ...thirdMemberFormData,
-                        studentId: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterThirdMember.jsx",
-                lineNumber: 28,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Phone"
-            }, void 0, false, {
-                fileName: "src/components/RegisterThirdMember.jsx",
-                lineNumber: 41,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "tel",
-                name: "phone",
-                value: thirdMemberFormData.phone,
-                onChange: (e)=>setThirdMemberFormData({
-                        ...thirdMemberFormData,
-                        phone: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterThirdMember.jsx",
-                lineNumber: 44,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Email"
-            }, void 0, false, {
-                fileName: "src/components/RegisterThirdMember.jsx",
-                lineNumber: 57,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                type: "email",
-                name: "email",
-                value: thirdMemberFormData.email,
-                onChange: (e)=>setThirdMemberFormData({
-                        ...thirdMemberFormData,
-                        email: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-            }, void 0, false, {
-                fileName: "src/components/RegisterThirdMember.jsx",
-                lineNumber: 60,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                children: "Specialization"
-            }, void 0, false, {
-                fileName: "src/components/RegisterThirdMember.jsx",
-                lineNumber: 72,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("select", {
-                name: "specialization",
-                value: thirdMemberFormData.specialization,
-                onChange: (e)=>setThirdMemberFormData({
-                        ...thirdMemberFormData,
-                        specialization: e.target.value
-                    })
-                ,
-                className: "font-Nunito font-semibold hover:bg-sky-700 mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md focus:ring-1",
-                children: [
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "",
-                        disabled: true,
-                        selected: true,
-                        hidden: true,
-                        children: "Select your specialization"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterThirdMember.jsx",
-                        lineNumber: 86,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "SE",
-                        children: "SE"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterThirdMember.jsx",
-                        lineNumber: 89,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "CSNE",
-                        children: "CSNE"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterThirdMember.jsx",
-                        lineNumber: 90,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "DS",
-                        children: "DS"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterThirdMember.jsx",
-                        lineNumber: 91,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "ISE",
-                        children: "ISE"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterThirdMember.jsx",
-                        lineNumber: 92,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
-                        value: "ISE",
-                        children: "CS"
-                    }, void 0, false, {
-                        fileName: "src/components/RegisterThirdMember.jsx",
-                        lineNumber: 93,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RegisterThirdMember.jsx",
-                lineNumber: 75,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/RegisterThirdMember.jsx",
-        lineNumber: 5,
-        columnNumber: 5
-    }, this);
-}
-_c = RegisterThirdMember;
-exports.default = RegisterThirdMember;
-var _c;
-$RefreshReg$(_c, "RegisterThirdMember");
-
-  $parcel$ReactRefreshHelpers$d68b.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6aDPW":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "signup", ()=>signup
+parcelHelpers.export(exports, "login", ()=>login
 );
-var _constants = require("./constants");
 var _axios = require("../helpers/axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
-const signup = (user)=>{
-    console.log(user);
+var _constants = require("./constants");
+const login = (user1)=>{
+    console.log(user1);
     return async (dispatch)=>{
         dispatch({
-            type: _constants.userConstants.USER_REGISTER_REQUEST
+            type: _constants.authConstants.LOGIN_REQUEST
         });
-        const res = await _axiosDefault.default.post("/student/signup", {
-            ...user
+        const res = await _axiosDefault.default.post("/signin", {
+            ...user1
         });
-        if (res.status === 201) {
-            const { message  } = res.data;
+        if (res.status === 200) {
+            const { token , user  } = res.data;
+            localStorage.setItem("token", token);
+            localStorage.setItem("user", JSON.stringify(user));
             dispatch({
-                type: _constants.userConstants.USER_REGISTER_SUCCESS,
+                type: _constants.authConstants.LOGIN_SUCCESS,
                 payload: {
-                    message
+                    token,
+                    user
                 }
             });
         } else if (res.status === 400) dispatch({
-            type: _constants.userConstants.USER_REGISTER_FAILURE,
+            type: _constants.authConstants.LOGIN_FAILURE,
             payload: {
                 error: res.data.error
             }
         });
     };
-};
-
-},{"./constants":"ltJCH","../helpers/axios":"1dipA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ltJCH":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "authConstants", ()=>authConstants
-);
-parcelHelpers.export(exports, "userConstants", ()=>userConstants
-);
-const authConstants = {
-    LOGIN_REQUEST: "LOGIN_REQUEST",
-    LOGIN_FAILURE: "LOGIN_FAILURE",
-    LOGIN_SUCCESS: "LOGIN_SUCCESS",
-    LOGOUT_REQUEST: "LOGOUT_REQUEST",
-    LOGOUT_SUCCESS: "LOGOUT_SUCCESS",
-    LOGOUT_FAILURE: "LOGOUT_FAILURE"
-};
-const userConstants = {
-    USER_REGISTER_REQUEST: "USER_REGISTER_REQUEST",
-    USER_REGISTER_SUCCESS: "USER_REGISTER_SUCCESS",
-    USER_REGISTER_FAILURE: "USER_REGISTER_FAILURE"
-}; // export const categoryConstants = {
- //     GET_ALL_CATEGORY_REQUEST:'GET_ALL_CATEGORY_REQUEST',
- //     GET_ALL_CATEGORY_SUCCESS:'GET_ALL_CATEGORY_SUCCESS',
- //     GET_ALL_CATEGORY_FAILURE:'GET_ALL_CATEGORY_FAILURE',
- //     ADD_NEW_CATEGORY_REQUEST:'ADD_NEW_CATEGORY_REQUEST',
- //     ADD_NEW_CATEGORY_SUCCESS:'ADD_NEW_CATEGORY_SUCCESS',
- //     ADD_NEW_CATEGORY_FAILURE:'ADD_NEW_CATEGORY_FAILURE',
- //     UPDATE_CATEGORY_REQUEST:'UPDATE_CATEGORY_REQUEST',
- //     UPDATE_CATEGORY_SUCCESS:'UPDATE_CATEGORY_SUCCESS',
- //     UPDATE_CATEGORY_FAILURE:'UPDATE_CATEGORY_FAILURE',
- //     DELETE_CATEGORY_REQUEST:'DELETE_CATEGORY_REQUEST',
- //     DELETE_CATEGORY_SUCCESS:'DELETE_CATEGORY_SUCCESS',
- //     DELETE_CATEGORY_FAILURE:'DELETE_CATEGORY_FAILURE'
- // }
- // export const productConstants = {
- //     GET_ALL_PRODUCT_REQUEST:'GET_ALL_PRODUCT_REQUEST',
- //     GET_ALL_PRODUCT_SUCCESS:'GET_ALL_PRODUCT_SUCCESS',
- //     GET_ALL_PRODUCT_FAILURE:'GET_ALL_PRODUCT_FAILURE',
- //     ADD_NEW_PRODUCT_REQUEST:'ADD_NEW_PRODUCT_REQUEST',
- //     ADD_NEW_PRODUCT_SUCCESS:'ADD_NEW_PRODUCT_SUCCESS',
- //     ADD_NEW_PRODUCT_FAILURE:'ADD_NEW_PRODUCT_FAILURE'
- // }
- // export const initialDataConstants = {
- //     GET_ALL_initialData_REQUEST:'GET_ALL_initialData_REQUEST',
- //     GET_ALL_initialData_SUCCESS:'GET_ALL_initialData_SUCCESS',
- //     GET_ALL_initialData_FAILURE:'GET_ALL_initialData_FAILURE'
- // }
- // export const pageConstants = {
- //     CREATE_PAGE_REQUEST:'CREATE_PAGE_REQUEST',
- //     CREATE_PAGE_SUCCESS:'CREATE_PAGE_SUCCESS',
- //     CREATE_PAGE_FAILURE:'CREATE_PAGE_FAILURE'
+}; // export const isUserLoggedIn = () => {
+ //   return async (dispatch) => {
+ //     const token = localStorage.getItem("token");
+ //     if (token) {
+ //       const user = JSON.parse(localStorage.getItem("user"));
+ //       dispatch({
+ //         type: authConstants.LOGIN_SUCCESS,
+ //         payload: {
+ //           token,
+ //           user,
+ //         },
+ //       });
+ //     } else {
+ //       dispatch({
+ //         type: authConstants.LOGIN_FAILURE,
+ //         payload: { error: "Failed to login" },
+ //       });
+ //     }
+ //   };
+ // };
+ // export const signout = () => {
+ //   return async (dispatch) => {
+ //     dispatch({ type: authConstants.LOGOUT_REQUEST });
+ //     const res = await axios.post("/admin/signout");
+ //     if (res.status === 200) {
+ //       localStorage.clear();
+ //       dispatch({
+ //         type: authConstants.LOGOUT_SUCCESS,
+ //       });
+ //     } else {
+ //       dispatch({
+ //         type: authConstants.LOGOUT_FAILURE,
+ //         payload: { error: res.data.error },
+ //       });
+ //     }
+ //   };
  // };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1dipA":[function(require,module,exports) {
+},{"../helpers/axios":"1dipA","./constants":"ltJCH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1dipA":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _axios = require("axios");
@@ -34565,11 +33405,564 @@ const api = "http://localhost:2022/api"; // export const imgURL = (fileName) => 
  //     return `http://localhost:2000/public/${fileName}`
  // }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"axKDq":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$da49 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ltJCH":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "authConstants", ()=>authConstants
+);
+parcelHelpers.export(exports, "userConstants", ()=>userConstants
+);
+const authConstants = {
+    LOGIN_REQUEST: "LOGIN_REQUEST",
+    LOGIN_FAILURE: "LOGIN_FAILURE",
+    LOGIN_SUCCESS: "LOGIN_SUCCESS",
+    LOGOUT_REQUEST: "LOGOUT_REQUEST",
+    LOGOUT_SUCCESS: "LOGOUT_SUCCESS",
+    LOGOUT_FAILURE: "LOGOUT_FAILURE"
+};
+const userConstants = {
+    USER_REGISTER_REQUEST: "USER_REGISTER_REQUEST",
+    USER_REGISTER_SUCCESS: "USER_REGISTER_SUCCESS",
+    USER_REGISTER_FAILURE: "USER_REGISTER_FAILURE"
+}; // export const categoryConstants = {
+ //     GET_ALL_CATEGORY_REQUEST:'GET_ALL_CATEGORY_REQUEST',
+ //     GET_ALL_CATEGORY_SUCCESS:'GET_ALL_CATEGORY_SUCCESS',
+ //     GET_ALL_CATEGORY_FAILURE:'GET_ALL_CATEGORY_FAILURE',
+ //     ADD_NEW_CATEGORY_REQUEST:'ADD_NEW_CATEGORY_REQUEST',
+ //     ADD_NEW_CATEGORY_SUCCESS:'ADD_NEW_CATEGORY_SUCCESS',
+ //     ADD_NEW_CATEGORY_FAILURE:'ADD_NEW_CATEGORY_FAILURE',
+ //     UPDATE_CATEGORY_REQUEST:'UPDATE_CATEGORY_REQUEST',
+ //     UPDATE_CATEGORY_SUCCESS:'UPDATE_CATEGORY_SUCCESS',
+ //     UPDATE_CATEGORY_FAILURE:'UPDATE_CATEGORY_FAILURE',
+ //     DELETE_CATEGORY_REQUEST:'DELETE_CATEGORY_REQUEST',
+ //     DELETE_CATEGORY_SUCCESS:'DELETE_CATEGORY_SUCCESS',
+ //     DELETE_CATEGORY_FAILURE:'DELETE_CATEGORY_FAILURE'
+ // }
+ // export const productConstants = {
+ //     GET_ALL_PRODUCT_REQUEST:'GET_ALL_PRODUCT_REQUEST',
+ //     GET_ALL_PRODUCT_SUCCESS:'GET_ALL_PRODUCT_SUCCESS',
+ //     GET_ALL_PRODUCT_FAILURE:'GET_ALL_PRODUCT_FAILURE',
+ //     ADD_NEW_PRODUCT_REQUEST:'ADD_NEW_PRODUCT_REQUEST',
+ //     ADD_NEW_PRODUCT_SUCCESS:'ADD_NEW_PRODUCT_SUCCESS',
+ //     ADD_NEW_PRODUCT_FAILURE:'ADD_NEW_PRODUCT_FAILURE'
+ // }
+ // export const initialDataConstants = {
+ //     GET_ALL_initialData_REQUEST:'GET_ALL_initialData_REQUEST',
+ //     GET_ALL_initialData_SUCCESS:'GET_ALL_initialData_SUCCESS',
+ //     GET_ALL_initialData_FAILURE:'GET_ALL_initialData_FAILURE'
+ // }
+ // export const pageConstants = {
+ //     CREATE_PAGE_REQUEST:'CREATE_PAGE_REQUEST',
+ //     CREATE_PAGE_SUCCESS:'CREATE_PAGE_SUCCESS',
+ //     CREATE_PAGE_FAILURE:'CREATE_PAGE_FAILURE'
+ // };
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4n8Md":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$fc4d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$da49.prelude(module);
+$parcel$ReactRefreshHelpers$fc4d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _studentJpg = require("../images/student.jpg");
+var _studentJpgDefault = parcelHelpers.interopDefault(_studentJpg);
+function LayoutRight() {
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "bg-slate-300 h-full relative",
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                className: "absolute w-100 text-center bottom-48 font-bold text-xl py-10 text-left font-Nunito text-white",
+                children: "Research Portal"
+            }, void 0, false, {
+                fileName: "src/components/LayoutRight.jsx",
+                lineNumber: 7,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                className: "absolute font-medium text-center text-white px-10 bottom-28 text-left font-Nunito",
+                children: "As a leading tertiary educational Institute in Sri Lanka, research is an integral part of SLIIT.We strive for a vibrant research culture and numerous initiatives are in place for programming research among the academic and student communities."
+            }, void 0, false, {
+                fileName: "src/components/LayoutRight.jsx",
+                lineNumber: 10,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                src: _studentJpgDefault.default,
+                className: "bg-sky-500 h-full object-cover"
+            }, void 0, false, {
+                fileName: "src/components/LayoutRight.jsx",
+                lineNumber: 16,
+                columnNumber: 4
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/LayoutRight.jsx",
+        lineNumber: 6,
+        columnNumber: 3
+    }, this);
+}
+_c = LayoutRight;
+exports.default = LayoutRight;
+var _c;
+$RefreshReg$(_c, "LayoutRight");
+
+  $parcel$ReactRefreshHelpers$fc4d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/student.jpg":"dAIAZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dAIAZ":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('7ffZl') + "student.b999f822.jpg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp|(chrome|moz)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp|(chrome|moz)-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp|(chrome|moz)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"4aiL8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$705e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$705e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _studentJpg = require("../../images/student.jpg");
+var _studentJpgDefault = parcelHelpers.interopDefault(_studentJpg);
+var _registerPageLeader = require("../../components/RegisterPageLeader");
+var _registerPageLeaderDefault = parcelHelpers.interopDefault(_registerPageLeader);
+var _layoutRight = require("../../components/LayoutRight");
+var _layoutRightDefault = parcelHelpers.interopDefault(_layoutRight);
+const Signin = (props)=>{
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "grid grid-cols-2 h-screen lg:grid-cols-2 sm:grid-cols-1",
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                className: "h-full",
+                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                    className: "ml-32 mr-8",
+                    children: [
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_registerPageLeaderDefault.default, {}, void 0, false, {
+                            fileName: "src/containers/Register/index.jsx",
+                            lineNumber: 11,
+                            columnNumber: 6
+                        }, undefined),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                            className: "mt-5 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
+                            children: "Next"
+                        }, void 0, false, {
+                            fileName: "src/containers/Register/index.jsx",
+                            lineNumber: 12,
+                            columnNumber: 6
+                        }, undefined),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                            className: "mt-2 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
+                            children: "Previous"
+                        }, void 0, false, {
+                            fileName: "src/containers/Register/index.jsx",
+                            lineNumber: 15,
+                            columnNumber: 6
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/containers/Register/index.jsx",
+                    lineNumber: 10,
+                    columnNumber: 5
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/containers/Register/index.jsx",
+                lineNumber: 9,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_layoutRightDefault.default, {}, void 0, false, {
+                fileName: "src/containers/Register/index.jsx",
+                lineNumber: 20,
+                columnNumber: 4
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/containers/Register/index.jsx",
+        lineNumber: 8,
+        columnNumber: 3
+    }, undefined);
+};
+_c = Signin;
+exports.default = Signin;
+var _c;
+$RefreshReg$(_c, "Signin");
+
+  $parcel$ReactRefreshHelpers$705e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../images/student.jpg":"dAIAZ","../../components/RegisterPageLeader":"i8cBt","../../components/LayoutRight":"4n8Md","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"i8cBt":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c5d8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c5d8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function RegisterPageLeader({ leaderFormData , setLeaderFormData  }) {
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                className: "font-bold text-xl font-Nunito font-bold text-xl text-black mt-14 mb-4",
+                children: "Leader Details"
+            }, void 0, false, {
+                fileName: "src/components/RegisterPageLeader.jsx",
+                lineNumber: 6,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "text-base text-slate-700 font-normal font-Nunito after:content-['*'] after:ml-0.5 after:text-red-500 ",
+                children: "Name with Initials"
+            }, void 0, false, {
+                fileName: "src/components/RegisterPageLeader.jsx",
+                lineNumber: 9,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "text",
+                name: "username",
+                value: leaderFormData.nameWithInitials,
+                onChange: (e)=>setLeaderFormData({
+                        ...leaderFormData,
+                        nameWithInitials: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterPageLeader.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Student ID"
+            }, void 0, false, {
+                fileName: "src/components/RegisterPageLeader.jsx",
+                lineNumber: 25,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "text",
+                name: "studentID",
+                value: leaderFormData.studentId,
+                onChange: (e)=>setLeaderFormData({
+                        ...leaderFormData,
+                        studentId: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterPageLeader.jsx",
+                lineNumber: 28,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Phone"
+            }, void 0, false, {
+                fileName: "src/components/RegisterPageLeader.jsx",
+                lineNumber: 41,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "tel",
+                name: "phone",
+                value: leaderFormData.phone,
+                onChange: (e)=>setLeaderFormData({
+                        ...leaderFormData,
+                        phone: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterPageLeader.jsx",
+                lineNumber: 44,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Email"
+            }, void 0, false, {
+                fileName: "src/components/RegisterPageLeader.jsx",
+                lineNumber: 57,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "email",
+                name: "email",
+                value: leaderFormData.email,
+                onChange: (e)=>setLeaderFormData({
+                        ...leaderFormData,
+                        email: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterPageLeader.jsx",
+                lineNumber: 60,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Specialization"
+            }, void 0, false, {
+                fileName: "src/components/RegisterPageLeader.jsx",
+                lineNumber: 73,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("select", {
+                name: "specialization",
+                value: leaderFormData.specialization,
+                onChange: (e)=>setLeaderFormData({
+                        ...leaderFormData,
+                        specialization: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold hover:bg-sky-700 mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md focus:ring-1",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "",
+                        disabled: true,
+                        selected: true,
+                        hidden: true,
+                        children: "Select your specialization"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterPageLeader.jsx",
+                        lineNumber: 87,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "SE",
+                        children: "SE"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterPageLeader.jsx",
+                        lineNumber: 90,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "CSNE",
+                        children: "CSNE"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterPageLeader.jsx",
+                        lineNumber: 91,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "DS",
+                        children: "DS"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterPageLeader.jsx",
+                        lineNumber: 92,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "ISE",
+                        children: "ISE"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterPageLeader.jsx",
+                        lineNumber: 93,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "ISE",
+                        children: "CS"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterPageLeader.jsx",
+                        lineNumber: 94,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RegisterPageLeader.jsx",
+                lineNumber: 76,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RegisterPageLeader.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = RegisterPageLeader;
+exports.default = RegisterPageLeader;
+var _c;
+$RefreshReg$(_c, "RegisterPageLeader");
+
+  $parcel$ReactRefreshHelpers$c5d8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9aKZ0":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7c85 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7c85.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _layoutRight = require("../../components/LayoutRight");
+var _layoutRightDefault = parcelHelpers.interopDefault(_layoutRight);
+var _reactRouterDom = require("react-router-dom");
+function LandingPage() {
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "grid grid-cols-2 h-screen lg:grid-cols-2 sm:grid-cols-1",
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                className: "h-full",
+                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                    className: "ml-32 mr-8",
+                    children: [
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                            to: "/student/signup",
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                                className: "mt-5 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
+                                children: "Student"
+                            }, void 0, false, {
+                                fileName: "src/containers/LandingPage/index.jsx",
+                                lineNumber: 11,
+                                columnNumber: 7
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/containers/LandingPage/index.jsx",
+                            lineNumber: 10,
+                            columnNumber: 6
+                        }, this),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                            to: "/supervisor/signup",
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                                className: "mt-2 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
+                                children: "Supervisor"
+                            }, void 0, false, {
+                                fileName: "src/containers/LandingPage/index.jsx",
+                                lineNumber: 17,
+                                columnNumber: 7
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/containers/LandingPage/index.jsx",
+                            lineNumber: 16,
+                            columnNumber: 6
+                        }, this),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                            to: "/co-supervisor/signup",
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                                className: "mt-2 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
+                                children: "Co-Supervisor"
+                            }, void 0, false, {
+                                fileName: "src/containers/LandingPage/index.jsx",
+                                lineNumber: 23,
+                                columnNumber: 7
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/containers/LandingPage/index.jsx",
+                            lineNumber: 22,
+                            columnNumber: 6
+                        }, this),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                            to: "/staff/signup",
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                                className: "mt-2 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
+                                children: "Staff"
+                            }, void 0, false, {
+                                fileName: "src/containers/LandingPage/index.jsx",
+                                lineNumber: 29,
+                                columnNumber: 7
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/containers/LandingPage/index.jsx",
+                            lineNumber: 28,
+                            columnNumber: 6
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/containers/LandingPage/index.jsx",
+                    lineNumber: 9,
+                    columnNumber: 5
+                }, this)
+            }, void 0, false, {
+                fileName: "src/containers/LandingPage/index.jsx",
+                lineNumber: 8,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_layoutRightDefault.default, {}, void 0, false, {
+                fileName: "src/containers/LandingPage/index.jsx",
+                lineNumber: 35,
+                columnNumber: 4
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/containers/LandingPage/index.jsx",
+        lineNumber: 7,
+        columnNumber: 3
+    }, this);
+}
+_c = LandingPage;
+exports.default = LandingPage;
+var _c;
+$RefreshReg$(_c, "LandingPage");
+
+  $parcel$ReactRefreshHelpers$7c85.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/LayoutRight":"4n8Md","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"daRTN":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c1e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c1e7.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -34579,60 +33972,228 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _registerPageOne = require("../../components/RegisterPageOne");
 var _registerPageOneDefault = parcelHelpers.interopDefault(_registerPageOne);
-var _loginPage = require("../../components/LoginPage");
-var _loginPageDefault = parcelHelpers.interopDefault(_loginPage);
 var _layoutRight = require("../../components/LayoutRight");
 var _layoutRightDefault = parcelHelpers.interopDefault(_layoutRight);
-const Signup = (props)=>{
+var _registerPageLeader = require("../../components/RegisterPageLeader");
+var _registerPageLeaderDefault = parcelHelpers.interopDefault(_registerPageLeader);
+var _registerFirstMember = require("../../components/RegisterFirstMember");
+var _registerFirstMemberDefault = parcelHelpers.interopDefault(_registerFirstMember);
+var _registerSecondMember = require("../../components/RegisterSecondMember");
+var _registerSecondMemberDefault = parcelHelpers.interopDefault(_registerSecondMember);
+var _registerThirdMember = require("../../components/RegisterThirdMember");
+var _registerThirdMemberDefault = parcelHelpers.interopDefault(_registerThirdMember);
+var _reactRouterDom = require("react-router-dom");
+var _reactRedux = require("react-redux");
+var _userActions = require("../../actions/user.actions");
+var _s = $RefreshSig$();
+function StudentRegister() {
+    _s();
+    const [page, setPage] = _react.useState(0);
+    const Forms = [
+        "register",
+        "leader",
+        "member1",
+        "member2",
+        "member3"
+    ];
+    const [loginInfo, setLoginInfo] = _react.useState({
+        username: "",
+        password: "",
+        rePassword: ""
+    });
+    const [leaderFormData, setLeaderFormData] = _react.useState({
+        nameWithInitials: "",
+        studentId: "",
+        phone: "",
+        email: "",
+        specialization: ""
+    });
+    const [firstMemberFormData, setFirstMemberFormData] = _react.useState({
+        nameWithInitials: "",
+        studentId: "",
+        phone: "",
+        email: "",
+        specialization: ""
+    });
+    const [secondMemberFormData, setSecondMemberFormData] = _react.useState({
+        nameWithInitials: "",
+        studentId: "",
+        phone: "",
+        email: "",
+        specialization: ""
+    });
+    const [thirdMemberFormData, setThirdMemberFormData] = _react.useState({
+        nameWithInitials: "",
+        studentId: "",
+        phone: "",
+        email: "",
+        specialization: ""
+    });
+    let navigate = _reactRouterDom.useNavigate();
+    const routeChange = ()=>{
+        let path = `/landing-page`;
+        navigate(path);
+    };
+    const PageDisplay = ()=>{
+        if (page === 0) return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_registerPageOneDefault.default, {
+            loginInfo: loginInfo,
+            setLoginInfo: setLoginInfo
+        }, void 0, false, {
+            fileName: "src/containers/StudentRegister/index.jsx",
+            lineNumber: 61,
+            columnNumber: 9
+        }, this);
+        else if (page === 1) return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_registerPageLeaderDefault.default, {
+            leaderFormData: leaderFormData,
+            setLeaderFormData: setLeaderFormData
+        }, void 0, false, {
+            fileName: "src/containers/StudentRegister/index.jsx",
+            lineNumber: 65,
+            columnNumber: 9
+        }, this);
+        else if (page === 2) return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_registerFirstMemberDefault.default, {
+            firstMemberFormData: firstMemberFormData,
+            setFirstMemberFormData: setFirstMemberFormData
+        }, void 0, false, {
+            fileName: "src/containers/StudentRegister/index.jsx",
+            lineNumber: 72,
+            columnNumber: 9
+        }, this);
+        else if (page === 3) return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_registerSecondMemberDefault.default, {
+            secondMemberFormData: secondMemberFormData,
+            setSecondMemberFormData: setSecondMemberFormData
+        }, void 0, false, {
+            fileName: "src/containers/StudentRegister/index.jsx",
+            lineNumber: 79,
+            columnNumber: 9
+        }, this);
+        else return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_registerThirdMemberDefault.default, {
+            thirdMemberFormData: thirdMemberFormData,
+            setThirdMemberFormData: setThirdMemberFormData
+        }, void 0, false, {
+            fileName: "src/containers/StudentRegister/index.jsx",
+            lineNumber: 86,
+            columnNumber: 9
+        }, this);
+    };
+    const dispatch = _reactRedux.useDispatch();
+    const studentSignup = ()=>{
+        const user = {
+            username: loginInfo.username,
+            password: loginInfo.password,
+            re_hash_password: loginInfo.rePassword,
+            role: "student",
+            students: {
+                leader: {
+                    fullName: leaderFormData.nameWithInitials,
+                    sliit_id: leaderFormData.studentId,
+                    phone: leaderFormData.phone,
+                    email: leaderFormData.email,
+                    specialization: leaderFormData.specialization
+                },
+                member1: {
+                    fullName: firstMemberFormData.nameWithInitials,
+                    sliit_id: firstMemberFormData.studentId,
+                    phone: firstMemberFormData.phone,
+                    email: firstMemberFormData.email,
+                    specialization: firstMemberFormData.specialization
+                },
+                member2: {
+                    fullName: secondMemberFormData.nameWithInitials,
+                    sliit_id: secondMemberFormData.studentId,
+                    phone: secondMemberFormData.phone,
+                    email: secondMemberFormData.email,
+                    specialization: secondMemberFormData.specialization
+                },
+                member3: {
+                    fullName: thirdMemberFormData.nameWithInitials,
+                    sliit_id: thirdMemberFormData.studentId,
+                    phone: thirdMemberFormData.phone,
+                    email: thirdMemberFormData.email,
+                    specialization: thirdMemberFormData.specialization
+                }
+            }
+        };
+        console.log(thirdMemberFormData);
+        dispatch(_userActions.signup(user));
+    };
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "grid grid-cols-2 h-screen lg:grid-cols-2 sm:grid-cols-1 sm:gap-4",
+        className: "grid grid-cols-2 h-screen lg:grid-cols-2 sm:grid-cols-1",
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                 className: "h-full",
                 children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                     className: "ml-32 mr-8",
-                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_loginPageDefault.default, {}, void 0, false, {
-                        fileName: "src/containers/Signin/index.jsx",
-                        lineNumber: 10,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/containers/Signin/index.jsx",
-                    lineNumber: 9,
+                    children: [
+                        PageDisplay(),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                            className: "mt-5 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active disabled:opacity-75 disabled:hover:bg-regal-blue disabled:hover:opacity-75",
+                            onClick: ()=>{
+                                if (page === Forms.length - 1) studentSignup();
+                                else setPage(page + 1);
+                            },
+                            children: page === Forms.length - 1 ? "Submit" : "Next"
+                        }, void 0, false, {
+                            fileName: "src/containers/StudentRegister/index.jsx",
+                            lineNumber: 145,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                            className: "mt-2 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active disabled:opacity-75 disabled:hover:bg-regal-blue disabled:hover:opacity-75",
+                            onClick: ()=>{
+                                if (page === 0) routeChange();
+                                else setPage(page - 1);
+                            },
+                            children: "Previous"
+                        }, void 0, false, {
+                            fileName: "src/containers/StudentRegister/index.jsx",
+                            lineNumber: 157,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/containers/StudentRegister/index.jsx",
+                    lineNumber: 142,
                     columnNumber: 9
-                }, undefined)
+                }, this)
             }, void 0, false, {
-                fileName: "src/containers/Signin/index.jsx",
-                lineNumber: 8,
+                fileName: "src/containers/StudentRegister/index.jsx",
+                lineNumber: 141,
                 columnNumber: 7
-            }, undefined),
+            }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_layoutRightDefault.default, {}, void 0, false, {
-                fileName: "src/containers/Signin/index.jsx",
-                lineNumber: 13,
+                fileName: "src/containers/StudentRegister/index.jsx",
+                lineNumber: 171,
                 columnNumber: 7
-            }, undefined)
+            }, this)
         ]
     }, void 0, true, {
-        fileName: "src/containers/Signin/index.jsx",
-        lineNumber: 7,
+        fileName: "src/containers/StudentRegister/index.jsx",
+        lineNumber: 140,
         columnNumber: 5
-    }, undefined);
-};
-_c = Signup;
-exports.default = Signup;
+    }, this);
+}
+_s(StudentRegister, "sVipDQ49UW32Vg4ykGQhzqfQfuM=", false, function() {
+    return [
+        _reactRouterDom.useNavigate,
+        _reactRedux.useDispatch
+    ];
+});
+_c = StudentRegister;
+exports.default = StudentRegister;
 var _c;
-$RefreshReg$(_c, "Signup");
+$RefreshReg$(_c, "StudentRegister");
 
-  $parcel$ReactRefreshHelpers$da49.postlude(module);
+  $parcel$ReactRefreshHelpers$c1e7.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/RegisterPageOne":"5zmRT","../../components/LoginPage":"dk2RD","../../components/LayoutRight":"4n8Md","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dk2RD":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8c30 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/RegisterPageOne":"5zmRT","../../components/LayoutRight":"4n8Md","../../components/RegisterPageLeader":"i8cBt","../../components/RegisterFirstMember":"817Pi","../../components/RegisterSecondMember":"hM79I","../../components/RegisterThirdMember":"cghNs","react-router-dom":"fdOAw","react-redux":"bdVon","../../actions/user.actions":"6aDPW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"817Pi":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$55a0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8c30.prelude(module);
+$parcel$ReactRefreshHelpers$55a0.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -34640,200 +34201,1400 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRedux = require("react-redux");
-var _authActions = require("../actions/auth.actions");
-var _s = $RefreshSig$();
-function RegisterPageOne() {
-    _s();
-    const [username, setUsername] = _react.useState("");
-    const [password, setPassword] = _react.useState("");
-    //   const auth = useSelector((state) => state.auth);
-    const dispatch = _reactRedux.useDispatch();
-    const userLogin = (e)=>{
-        e.preventDefault();
-        const user = {
-            username,
-            password
-        };
-        dispatch(_authActions.login(user));
-    };
+function RegisterFirstMember({ firstMemberFormData , setFirstMemberFormData  }) {
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
-            onSubmit: userLogin,
-            children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                    className: "font-bold text-xl font-Nunito font-bold text-xl text-black mt-32 mb-4",
-                    children: "Login"
-                }, void 0, false, {
-                    fileName: "src/components/LoginPage.jsx",
-                    lineNumber: 24,
-                    columnNumber: 5
-                }, this),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                    className: "text-lg text-slate-700 font-normal font-Nunito after:content-['*'] after:ml-0.5 after:text-red-500 ",
-                    children: "Username"
-                }, void 0, false, {
-                    fileName: "src/components/LoginPage.jsx",
-                    lineNumber: 27,
-                    columnNumber: 5
-                }, this),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                    type: "text",
-                    name: "username",
-                    value: username,
-                    onChange: (e)=>setUsername(e.target.value)
-                    ,
-                    className: "font-Nunito font-semibold mt-1 px-3 py-2 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
-                }, void 0, false, {
-                    fileName: "src/components/LoginPage.jsx",
-                    lineNumber: 32,
-                    columnNumber: 5
-                }, this),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                    className: "font-normal font-Nunito mt-4 text-lg text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
-                    children: "Password"
-                }, void 0, false, {
-                    fileName: "src/components/LoginPage.jsx",
-                    lineNumber: 40,
-                    columnNumber: 5
-                }, this),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                    type: "password",
-                    value: password,
-                    onChange: (e)=>setPassword(e.target.value)
-                    ,
-                    className: "font-Nunito font-semibold mt-1 px-3 py-2 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md focus:ring-1"
-                }, void 0, false, {
-                    fileName: "src/components/LoginPage.jsx",
-                    lineNumber: 43,
-                    columnNumber: 5
-                }, this),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                    className: "mt-5 font-normal text-lg mt-1 px-3 py-2 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active",
-                    children: "Login"
-                }, void 0, false, {
-                    fileName: "src/components/LoginPage.jsx",
-                    lineNumber: 50,
-                    columnNumber: 5
-                }, this),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
-                    className: "font-Nunito mt-2",
-                    children: [
-                        "Don't have an account?",
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                            className: "font-Nunito font-bold ml-2 hover:underline hover:underline-offset-1",
-                            children: "Register"
-                        }, void 0, false, {
-                            fileName: "src/components/LoginPage.jsx",
-                            lineNumber: 55,
-                            columnNumber: 6
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/LoginPage.jsx",
-                    lineNumber: 53,
-                    columnNumber: 5
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/LoginPage.jsx",
-            lineNumber: 23,
-            columnNumber: 4
-        }, this)
-    }, void 0, false, {
-        fileName: "src/components/LoginPage.jsx",
-        lineNumber: 22,
-        columnNumber: 3
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                className: "font-bold text-xl font-Nunito font-bold text-xl text-black mt-14 mb-4",
+                children: "Member Details"
+            }, void 0, false, {
+                fileName: "src/components/RegisterFirstMember.jsx",
+                lineNumber: 6,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "text-base text-slate-700 font-normal font-Nunito after:content-['*'] after:ml-0.5 after:text-red-500 ",
+                children: "Name with Initials"
+            }, void 0, false, {
+                fileName: "src/components/RegisterFirstMember.jsx",
+                lineNumber: 9,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "text",
+                name: "username",
+                value: firstMemberFormData.nameWithInitials,
+                onChange: (e)=>setFirstMemberFormData({
+                        ...firstMemberFormData,
+                        nameWithInitials: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterFirstMember.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Student ID"
+            }, void 0, false, {
+                fileName: "src/components/RegisterFirstMember.jsx",
+                lineNumber: 25,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "text",
+                name: "studentID",
+                value: firstMemberFormData.studentId,
+                onChange: (e)=>setFirstMemberFormData({
+                        ...firstMemberFormData,
+                        studentId: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterFirstMember.jsx",
+                lineNumber: 28,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Phone"
+            }, void 0, false, {
+                fileName: "src/components/RegisterFirstMember.jsx",
+                lineNumber: 41,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "tel",
+                name: "phone",
+                value: firstMemberFormData.phone,
+                onChange: (e)=>setFirstMemberFormData({
+                        ...firstMemberFormData,
+                        phone: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterFirstMember.jsx",
+                lineNumber: 44,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Email"
+            }, void 0, false, {
+                fileName: "src/components/RegisterFirstMember.jsx",
+                lineNumber: 57,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "email",
+                name: "email",
+                value: firstMemberFormData.email,
+                onChange: (e)=>setFirstMemberFormData({
+                        ...firstMemberFormData,
+                        email: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterFirstMember.jsx",
+                lineNumber: 60,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Specialization"
+            }, void 0, false, {
+                fileName: "src/components/RegisterFirstMember.jsx",
+                lineNumber: 73,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("select", {
+                name: "specialization",
+                value: firstMemberFormData.specialization,
+                onChange: (e)=>setFirstMemberFormData({
+                        ...firstMemberFormData,
+                        specialization: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold hover:bg-sky-700 mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md focus:ring-1",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "",
+                        disabled: true,
+                        selected: true,
+                        hidden: true,
+                        children: "Select your specialization"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterFirstMember.jsx",
+                        lineNumber: 87,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "SE",
+                        children: "SE"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterFirstMember.jsx",
+                        lineNumber: 90,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "CSNE",
+                        children: "CSNE"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterFirstMember.jsx",
+                        lineNumber: 91,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "DS",
+                        children: "DS"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterFirstMember.jsx",
+                        lineNumber: 92,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "ISE",
+                        children: "ISE"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterFirstMember.jsx",
+                        lineNumber: 93,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "ISE",
+                        children: "CS"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterFirstMember.jsx",
+                        lineNumber: 94,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RegisterFirstMember.jsx",
+                lineNumber: 76,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RegisterFirstMember.jsx",
+        lineNumber: 5,
+        columnNumber: 5
     }, this);
 }
-_s(RegisterPageOne, "hfLFCx16V4K1m8kS4JbFPmLkqZE=", false, function() {
-    return [
-        _reactRedux.useDispatch
-    ];
-});
-_c = RegisterPageOne;
-exports.default = RegisterPageOne;
+_c = RegisterFirstMember;
+exports.default = RegisterFirstMember;
 var _c;
-$RefreshReg$(_c, "RegisterPageOne");
+$RefreshReg$(_c, "RegisterFirstMember");
 
-  $parcel$ReactRefreshHelpers$8c30.postlude(module);
+  $parcel$ReactRefreshHelpers$55a0.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","../actions/auth.actions":"3Lwuu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3Lwuu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hM79I":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$491b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$491b.prelude(module);
+
+try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "login", ()=>login
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function RegisterSecondMember({ secondMemberFormData , setSecondMemberFormData ,  }) {
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                className: "font-bold text-xl font-Nunito font-bold text-xl text-black mt-14 mb-4",
+                children: "Member Details"
+            }, void 0, false, {
+                fileName: "src/components/RegisterSecondMember.jsx",
+                lineNumber: 9,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "text-base text-slate-700 font-normal font-Nunito after:content-['*'] after:ml-0.5 after:text-red-500 ",
+                children: "Name with Initials"
+            }, void 0, false, {
+                fileName: "src/components/RegisterSecondMember.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "text",
+                name: "username",
+                value: secondMemberFormData.nameWithInitials,
+                onChange: (e)=>setSecondMemberFormData({
+                        ...secondMemberFormData,
+                        nameWithInitials: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterSecondMember.jsx",
+                lineNumber: 15,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Student ID"
+            }, void 0, false, {
+                fileName: "src/components/RegisterSecondMember.jsx",
+                lineNumber: 28,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "text",
+                name: "studentID",
+                value: secondMemberFormData.studentId,
+                onChange: (e)=>setSecondMemberFormData({
+                        ...secondMemberFormData,
+                        studentId: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterSecondMember.jsx",
+                lineNumber: 31,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Phone"
+            }, void 0, false, {
+                fileName: "src/components/RegisterSecondMember.jsx",
+                lineNumber: 44,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "tel",
+                name: "phone",
+                value: secondMemberFormData.phone,
+                onChange: (e)=>setSecondMemberFormData({
+                        ...secondMemberFormData,
+                        phone: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterSecondMember.jsx",
+                lineNumber: 47,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Email"
+            }, void 0, false, {
+                fileName: "src/components/RegisterSecondMember.jsx",
+                lineNumber: 60,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "email",
+                name: "email",
+                value: secondMemberFormData.email,
+                onChange: (e)=>setSecondMemberFormData({
+                        ...secondMemberFormData,
+                        email: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterSecondMember.jsx",
+                lineNumber: 63,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Specialization"
+            }, void 0, false, {
+                fileName: "src/components/RegisterSecondMember.jsx",
+                lineNumber: 76,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("select", {
+                name: "specialization",
+                value: secondMemberFormData.specialization,
+                onChange: (e)=>setSecondMemberFormData({
+                        ...secondMemberFormData,
+                        specialization: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold hover:bg-sky-700 mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md focus:ring-1",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "",
+                        disabled: true,
+                        selected: true,
+                        hidden: true,
+                        children: "Select your specialization"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterSecondMember.jsx",
+                        lineNumber: 90,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "SE",
+                        children: "SE"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterSecondMember.jsx",
+                        lineNumber: 93,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "CSNE",
+                        children: "CSNE"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterSecondMember.jsx",
+                        lineNumber: 94,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "DS",
+                        children: "DS"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterSecondMember.jsx",
+                        lineNumber: 95,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "ISE",
+                        children: "ISE"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterSecondMember.jsx",
+                        lineNumber: 96,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "ISE",
+                        children: "CS"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterSecondMember.jsx",
+                        lineNumber: 97,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RegisterSecondMember.jsx",
+                lineNumber: 79,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RegisterSecondMember.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, this);
+}
+_c = RegisterSecondMember;
+exports.default = RegisterSecondMember;
+var _c;
+$RefreshReg$(_c, "RegisterSecondMember");
+
+  $parcel$ReactRefreshHelpers$491b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cghNs":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d68b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d68b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function RegisterThirdMember({ thirdMemberFormData , setThirdMemberFormData  }) {
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                className: "font-bold text-xl font-Nunito font-bold text-xl text-black mt-14 mb-4",
+                children: "Member Details"
+            }, void 0, false, {
+                fileName: "src/components/RegisterThirdMember.jsx",
+                lineNumber: 6,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "text-base text-slate-700 font-normal font-Nunito after:content-['*'] after:ml-0.5 after:text-red-500 ",
+                children: "Name with Initials"
+            }, void 0, false, {
+                fileName: "src/components/RegisterThirdMember.jsx",
+                lineNumber: 9,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "text",
+                name: "username",
+                value: thirdMemberFormData.nameWithInitials,
+                onChange: (e)=>setThirdMemberFormData({
+                        ...thirdMemberFormData,
+                        nameWithInitials: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterThirdMember.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Student ID"
+            }, void 0, false, {
+                fileName: "src/components/RegisterThirdMember.jsx",
+                lineNumber: 25,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "text",
+                name: "studentID",
+                value: thirdMemberFormData.studentId,
+                onChange: (e)=>setThirdMemberFormData({
+                        ...thirdMemberFormData,
+                        studentId: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterThirdMember.jsx",
+                lineNumber: 28,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Phone"
+            }, void 0, false, {
+                fileName: "src/components/RegisterThirdMember.jsx",
+                lineNumber: 41,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "tel",
+                name: "phone",
+                value: thirdMemberFormData.phone,
+                onChange: (e)=>setThirdMemberFormData({
+                        ...thirdMemberFormData,
+                        phone: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterThirdMember.jsx",
+                lineNumber: 44,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Email"
+            }, void 0, false, {
+                fileName: "src/components/RegisterThirdMember.jsx",
+                lineNumber: 57,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                type: "email",
+                name: "email",
+                value: thirdMemberFormData.email,
+                onChange: (e)=>setThirdMemberFormData({
+                        ...thirdMemberFormData,
+                        email: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md text-base focus:ring-1"
+            }, void 0, false, {
+                fileName: "src/components/RegisterThirdMember.jsx",
+                lineNumber: 60,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                className: "font-normal font-Nunito mt-3 text-base text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block",
+                children: "Specialization"
+            }, void 0, false, {
+                fileName: "src/components/RegisterThirdMember.jsx",
+                lineNumber: 72,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("select", {
+                name: "specialization",
+                value: thirdMemberFormData.specialization,
+                onChange: (e)=>setThirdMemberFormData({
+                        ...thirdMemberFormData,
+                        specialization: e.target.value
+                    })
+                ,
+                className: "font-Nunito font-semibold hover:bg-sky-700 mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md focus:ring-1",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "",
+                        disabled: true,
+                        selected: true,
+                        hidden: true,
+                        children: "Select your specialization"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterThirdMember.jsx",
+                        lineNumber: 86,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "SE",
+                        children: "SE"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterThirdMember.jsx",
+                        lineNumber: 89,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "CSNE",
+                        children: "CSNE"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterThirdMember.jsx",
+                        lineNumber: 90,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "DS",
+                        children: "DS"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterThirdMember.jsx",
+                        lineNumber: 91,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "ISE",
+                        children: "ISE"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterThirdMember.jsx",
+                        lineNumber: 92,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
+                        value: "ISE",
+                        children: "CS"
+                    }, void 0, false, {
+                        fileName: "src/components/RegisterThirdMember.jsx",
+                        lineNumber: 93,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RegisterThirdMember.jsx",
+                lineNumber: 75,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RegisterThirdMember.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = RegisterThirdMember;
+exports.default = RegisterThirdMember;
+var _c;
+$RefreshReg$(_c, "RegisterThirdMember");
+
+  $parcel$ReactRefreshHelpers$d68b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6aDPW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "signup", ()=>signup
 );
+var _constants = require("./constants");
 var _axios = require("../helpers/axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _constants = require("./constants");
-const login = (user1)=>{
-    console.log(user1);
+const signup = (user)=>{
+    console.log(user);
     return async (dispatch)=>{
         dispatch({
-            type: _constants.authConstants.LOGIN_REQUEST
+            type: _constants.userConstants.USER_REGISTER_REQUEST
         });
-        const res = await _axiosDefault.default.post("/signin", {
-            ...user1
+        const res = await _axiosDefault.default.post("/student/signup", {
+            ...user
         });
-        if (res.status === 200) {
-            const { token , user  } = res.data;
-            localStorage.setItem("token", token);
-            localStorage.setItem("user", JSON.stringify(user));
+        if (res.status === 201) {
+            const { message  } = res.data;
             dispatch({
-                type: _constants.authConstants.LOGIN_SUCCESS,
+                type: _constants.userConstants.USER_REGISTER_SUCCESS,
                 payload: {
-                    token,
-                    user
+                    message
                 }
             });
         } else if (res.status === 400) dispatch({
-            type: _constants.authConstants.LOGIN_FAILURE,
+            type: _constants.userConstants.USER_REGISTER_FAILURE,
             payload: {
                 error: res.data.error
             }
         });
     };
-}; // export const isUserLoggedIn = () => {
- //   return async (dispatch) => {
- //     const token = localStorage.getItem("token");
- //     if (token) {
- //       const user = JSON.parse(localStorage.getItem("user"));
- //       dispatch({
- //         type: authConstants.LOGIN_SUCCESS,
- //         payload: {
- //           token,
- //           user,
- //         },
- //       });
- //     } else {
- //       dispatch({
- //         type: authConstants.LOGIN_FAILURE,
- //         payload: { error: "Failed to login" },
- //       });
- //     }
- //   };
- // };
- // export const signout = () => {
- //   return async (dispatch) => {
- //     dispatch({ type: authConstants.LOGOUT_REQUEST });
- //     const res = await axios.post("/admin/signout");
- //     if (res.status === 200) {
- //       localStorage.clear();
- //       dispatch({
- //         type: authConstants.LOGOUT_SUCCESS,
- //       });
- //     } else {
- //       dispatch({
- //         type: authConstants.LOGOUT_FAILURE,
- //         payload: { error: res.data.error },
- //       });
- //     }
- //   };
- // };
+};
 
-},{"../helpers/axios":"1dipA","./constants":"ltJCH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4slL4":[function() {},{}]},["kn9T2","3feGU","aSihg"], "aSihg", "parcelRequire8d29")
+},{"./constants":"ltJCH","../helpers/axios":"1dipA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4slL4":[function() {},{}],"irTcY":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3287 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3287.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _studentMenu = require("../../components/StudentMenu");
+var _studentMenuDefault = parcelHelpers.interopDefault(_studentMenu);
+var _delChartPng = require("../../images/del-chart.png");
+var _delChartPngDefault = parcelHelpers.interopDefault(_delChartPng);
+var _doneIconPng = require("../../images/done-icon.png");
+var _doneIconPngDefault = parcelHelpers.interopDefault(_doneIconPng);
+function Home() {
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "bg-bk-white h-screen w-screen",
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+            className: "grid grid-cols-12 h-full w-full grid-rows-2",
+            children: [
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                    className: "h-full w-[10px]",
+                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_studentMenuDefault.default, {}, void 0, false, {
+                        fileName: "src/containers/StudentHome/Home.jsx",
+                        lineNumber: 11,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/containers/StudentHome/Home.jsx",
+                    lineNumber: 10,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                    className: "col-span-3 mx-auto mt-12",
+                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                        src: _delChartPngDefault.default,
+                        alt: "",
+                        className: "w-[14em]"
+                    }, void 0, false, {
+                        fileName: "src/containers/StudentHome/Home.jsx",
+                        lineNumber: 14,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/containers/StudentHome/Home.jsx",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                    className: "col-span-8 mx-auto my-auto mt-12",
+                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        className: "w-[45rem] h-[17rem] bg-white rounded-xl",
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                                className: "text-xl font-bold ml-5 pt-2",
+                                children: "Progress"
+                            }, void 0, false, {
+                                fileName: "src/containers/StudentHome/Home.jsx",
+                                lineNumber: 18,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                className: "grid grid-cols-2 grid-rows-5",
+                                children: [
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "flex items-center gap-2 mt-3 ml-8",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                                                src: _doneIconPngDefault.default,
+                                                alt: "done-icon",
+                                                className: "h-5"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 21,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                                                className: "uppercase",
+                                                children: "topic registration"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 22,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/containers/StudentHome/Home.jsx",
+                                        lineNumber: 20,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "flex items-center gap-2 mt-3 ml-8",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                                                src: _doneIconPngDefault.default,
+                                                alt: "done-icon",
+                                                className: "h-5"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 25,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                                                className: "uppercase",
+                                                children: "topic evaluation"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 26,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/containers/StudentHome/Home.jsx",
+                                        lineNumber: 24,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "flex items-center gap-2 mt-3 ml-8",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                                                src: _doneIconPngDefault.default,
+                                                alt: "done-icon",
+                                                className: "h-5"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 29,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                                                className: "uppercase",
+                                                children: "supervisor approval"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 30,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/containers/StudentHome/Home.jsx",
+                                        lineNumber: 28,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "flex items-center gap-2 mt-3 ml-8",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                                                src: _doneIconPngDefault.default,
+                                                alt: "done-icon",
+                                                className: "h-5"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 33,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                                                className: "uppercase",
+                                                children: "feedback"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 34,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/containers/StudentHome/Home.jsx",
+                                        lineNumber: 32,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "flex items-center gap-2 mt-3 ml-8",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                                                src: _doneIconPngDefault.default,
+                                                alt: "done-icon",
+                                                className: "h-5"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 37,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                                                className: "uppercase",
+                                                children: "co-supervisor selection"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 38,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/containers/StudentHome/Home.jsx",
+                                        lineNumber: 36,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "flex items-center gap-2 mt-3 ml-8",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                                                src: _doneIconPngDefault.default,
+                                                alt: "done-icon",
+                                                className: "h-5"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 41,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                                                className: "uppercase",
+                                                children: "presentation evaluation"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 42,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/containers/StudentHome/Home.jsx",
+                                        lineNumber: 40,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "flex items-center gap-2 mt-3 ml-8",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                                                src: _doneIconPngDefault.default,
+                                                alt: "done-icon",
+                                                className: "h-5"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 45,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                                                className: "uppercase",
+                                                children: "co-supervisor approval"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 46,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/containers/StudentHome/Home.jsx",
+                                        lineNumber: 44,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "flex items-center gap-2 mt-3 ml-8",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                                                src: _doneIconPngDefault.default,
+                                                alt: "done-icon",
+                                                className: "h-5"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 49,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                                                className: "uppercase",
+                                                children: "thesis evaluation"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 50,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/containers/StudentHome/Home.jsx",
+                                        lineNumber: 48,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "flex items-center gap-2 mt-3 ml-8",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                                                src: _doneIconPngDefault.default,
+                                                alt: "done-icon",
+                                                className: "h-5"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 53,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                                                className: "uppercase",
+                                                children: "topic details submission"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 54,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/containers/StudentHome/Home.jsx",
+                                        lineNumber: 52,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "flex items-center gap-2 mt-3 ml-8",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                                                src: _doneIconPngDefault.default,
+                                                alt: "done-icon",
+                                                className: "h-5"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 57,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                                                className: "uppercase",
+                                                children: "complete"
+                                            }, void 0, false, {
+                                                fileName: "src/containers/StudentHome/Home.jsx",
+                                                lineNumber: 58,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/containers/StudentHome/Home.jsx",
+                                        lineNumber: 56,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/containers/StudentHome/Home.jsx",
+                                lineNumber: 19,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/containers/StudentHome/Home.jsx",
+                        lineNumber: 17,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/containers/StudentHome/Home.jsx",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                    className: "col-span-11 h-[18rem] w-[67rem] mx-auto bg-white col-start-2 rounded-xl",
+                    children: [
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
+                            className: "capitalize text-xl font-bold ml-5 pt-2",
+                            children: "group"
+                        }, void 0, false, {
+                            fileName: "src/containers/StudentHome/Home.jsx",
+                            lineNumber: 64,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                            className: "grid grid-cols-7 mx-8 mt-4",
+                            children: [
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase col-span-2 font-bold mb-2",
+                                    children: "name"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 66,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase font-bold",
+                                    children: "id"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 67,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase col-span-2 font-bold",
+                                    children: "email"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 68,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase font-bold",
+                                    children: "phone"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 69,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase font-bold",
+                                    children: "specialization"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 70,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "capitalize col-span-2 ",
+                                    children: "kariyawasam k. g. p. c."
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 72,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase ",
+                                    children: "it20172978"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 75,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "capiatalize col-span-2 ",
+                                    children: "it20172978@my.sliit.lk"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 76,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase ",
+                                    children: "0771543736"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 79,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase ",
+                                    children: "se"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 80,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "capitalize col-span-2 ",
+                                    children: "lakshith g. p. r."
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 82,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase ",
+                                    children: "it20165666"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 83,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "capiatalize col-span-2 ",
+                                    children: "it20165666@my.sliit.lk"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 84,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase ",
+                                    children: "0701864774"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 87,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase ",
+                                    children: "se"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 88,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "capitalize col-span-2 ",
+                                    children: "muthukumarana m. w. a. n. c."
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 90,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase ",
+                                    children: "it20227890"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 93,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "capiatalize col-span-2 ",
+                                    children: "it20227890@my.sliit.lk"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 94,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase ",
+                                    children: "0771543736"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 97,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase ",
+                                    children: "se"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 98,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "capitalize col-span-2 ",
+                                    children: "perera h. a. n. s."
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 100,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase ",
+                                    children: "it20166106"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 101,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "capiatalize col-span-2 ",
+                                    children: "it20166106@my.sliit.lk"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 102,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase ",
+                                    children: "0771543736"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 105,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "uppercase ",
+                                    children: "se"
+                                }, void 0, false, {
+                                    fileName: "src/containers/StudentHome/Home.jsx",
+                                    lineNumber: 106,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/containers/StudentHome/Home.jsx",
+                            lineNumber: 65,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/containers/StudentHome/Home.jsx",
+                    lineNumber: 63,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/containers/StudentHome/Home.jsx",
+            lineNumber: 9,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "src/containers/StudentHome/Home.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, this);
+}
+_c = Home;
+exports.default = Home;
+var _c;
+$RefreshReg$(_c, "Home");
+
+  $parcel$ReactRefreshHelpers$3287.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/StudentMenu":"03zyL","../../images/del-chart.png":"hcNb4","../../images/done-icon.png":"jwN9x","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"03zyL":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b855 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b855.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _logoPng = require("../images/logo.png");
+var _logoPngDefault = parcelHelpers.interopDefault(_logoPng);
+var _homePng = require("../images/home.png");
+var _homePngDefault = parcelHelpers.interopDefault(_homePng);
+var _bookPng = require("../images/book.png");
+var _bookPngDefault = parcelHelpers.interopDefault(_bookPng);
+var _documentsPng = require("../images/documents.png");
+var _documentsPngDefault = parcelHelpers.interopDefault(_documentsPng);
+var _usersPng = require("../images/users.png");
+var _usersPngDefault = parcelHelpers.interopDefault(_usersPng);
+var _chatTypingPng = require("../images/chat-typing.png");
+var _chatTypingPngDefault = parcelHelpers.interopDefault(_chatTypingPng);
+var _logoutPng = require("../images/logout.png");
+var _logoutPngDefault = parcelHelpers.interopDefault(_logoutPng);
+function StudentMenu() {
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "flex flex-col items-center w-[114px] bg-white h-screen rounded-tr-xl rounded-br-xl ",
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                className: "my-8 ",
+                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                    src: _logoPngDefault.default,
+                    alt: "logo"
+                }, void 0, false, {
+                    fileName: "src/components/StudentMenu.jsx",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/StudentMenu.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                className: "w-full h-[244px] mt-16 flex flex-col items-center justify-center",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                        src: _homePngDefault.default,
+                        alt: "home",
+                        className: "cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue"
+                    }, void 0, false, {
+                        fileName: "src/components/StudentMenu.jsx",
+                        lineNumber: 17,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                        src: _bookPngDefault.default,
+                        alt: "book",
+                        className: "cursor-pointer py-2 hover:bg-white-blue px-[3rem] mt-2 rounded-tr-xl rounded-br-xl active:bg-white-blue"
+                    }, void 0, false, {
+                        fileName: "src/components/StudentMenu.jsx",
+                        lineNumber: 22,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                        src: _documentsPngDefault.default,
+                        alt: "document",
+                        className: "cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue"
+                    }, void 0, false, {
+                        fileName: "src/components/StudentMenu.jsx",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                        src: _usersPngDefault.default,
+                        alt: "users",
+                        className: "cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue"
+                    }, void 0, false, {
+                        fileName: "src/components/StudentMenu.jsx",
+                        lineNumber: 32,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                        src: _chatTypingPngDefault.default,
+                        alt: "chat",
+                        className: "cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue"
+                    }, void 0, false, {
+                        fileName: "src/components/StudentMenu.jsx",
+                        lineNumber: 37,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/StudentMenu.jsx",
+                lineNumber: 16,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                className: "cursor-pointer mt-36",
+                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                    src: _logoutPngDefault.default,
+                    alt: "logout"
+                }, void 0, false, {
+                    fileName: "src/components/StudentMenu.jsx",
+                    lineNumber: 44,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/StudentMenu.jsx",
+                lineNumber: 43,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/StudentMenu.jsx",
+        lineNumber: 12,
+        columnNumber: 5
+    }, this);
+}
+_c = StudentMenu;
+exports.default = StudentMenu;
+var _c;
+$RefreshReg$(_c, "StudentMenu");
+
+  $parcel$ReactRefreshHelpers$b855.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/logo.png":"6ESp9","../images/home.png":"fkYQf","../images/book.png":"hKAqi","../images/documents.png":"1IF9M","../images/users.png":"khJEy","../images/chat-typing.png":"fzhSI","../images/logout.png":"gDkMK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6ESp9":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('7ffZl') + "logo.c493797d.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"fkYQf":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('7ffZl') + "home.0f9f72cf.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"hKAqi":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('7ffZl') + "book.bee0f846.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"1IF9M":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('7ffZl') + "documents.c04e8477.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"khJEy":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('7ffZl') + "users.42645c78.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"fzhSI":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('7ffZl') + "chat-typing.11c64c48.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"gDkMK":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('7ffZl') + "logout.3a30b144.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"hcNb4":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('7ffZl') + "del-chart.8d94a50d.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"jwN9x":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('7ffZl') + "done-icon.9504deea.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}]},["kn9T2","3feGU","aSihg"], "aSihg", "parcelRequire8d29")
 
 //# sourceMappingURL=index.f54bfa54.js.map
