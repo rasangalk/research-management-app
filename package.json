@@ -20,7 +20,6 @@
     "save": "^2.5.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
     "buffer": "^6.0.3",
     "parcel": "^2.5.0",
     "postcss": "^8.4.14",
