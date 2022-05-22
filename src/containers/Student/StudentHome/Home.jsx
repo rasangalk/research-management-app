@@ -1,8 +1,13 @@
-import React, { useEffect } from "react";
-import Menu from "../../../components/Student/StudentMenu";
-import chart from "../../images/del-chart.png";
-import done from "../../images/done-icon.png";
+import React, { useEffect, useState } from "react";
+
+import Menu from "../../../components/StudentMenu";
+
+import chart from "../../../images/del-chart.png";
+
+import done from "../../../images/done-icon.png";
+
 import { useDispatch, useSelector } from "react-redux";
+
 import { getGroupDetails } from "../../../actions/student.action";
 
 function Home() {
