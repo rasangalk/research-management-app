@@ -10,6 +10,7 @@ import LandingPage from "./src/containers/LandingPage";
 import StudentRegister from "./src/containers/Student/StudentRegister";
 import StudentHome from "./src/containers/Student/StudentHome/Home";
 import StudentSubmission from "./src/containers/Student/StudentSubmission/StudentSubmission";
+import StudentTemplateList from "./src/containers/Student/StudentTemplateList";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/landing-page" element={<LandingPage />} />
         <Route path="/student/signup" element={<StudentRegister />} />
+        <Route path="/student/templates" element={<StudentTemplateList />} />
         <Route path="/student-home" exact element={<PrivateWrapper />}>
           <Route path="/student-home" element={<StudentHome />} />
         </Route>

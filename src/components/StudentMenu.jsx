@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 import home from "../images/home.png";
 import book from "../images/book.png";
@@ -24,11 +25,13 @@ function StudentMenu() {
           alt="book"
           className="cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl active:bg-white-blue"
         />
-        <img
-          src={document}
-          alt="document"
-          className="cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl  hover:bg-white-blue active:bg-white-blue"
-        />
+        <Link to="/student/templates">
+          <img
+            src={document}
+            alt="document"
+            className="cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl  hover:bg-white-blue active:bg-white-blue"
+          />
+        </Link>
         <img
           src={users}
           alt="users"
