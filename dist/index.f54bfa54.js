@@ -34425,7 +34425,7 @@ function Home() {
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                    className: "col-span-11 h-[18rem] 2xl:w-[67rem] w-[67rem] mx-auto bg-white col-start-2 rounded-xl",
+                    className: "col-span-11 h-[18rem] 2xl:w-[69rem] w-[67rem] mx-auto bg-white col-start-2 rounded-xl",
                     children: [
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
                             className: "capitalize text-xl font-bold ml-5 pt-2",
