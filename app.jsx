@@ -8,12 +8,12 @@ import "./app.css";
 import App from "./testApp";
 
 render(
-	<Provider store={store}>
-		<Router>
-			<React.StrictMode>
-				<App />
-			</React.StrictMode>
-		</Router>
-	</Provider>,
-	document.getElementById("app"),
+  <Provider store={store}>
+    <Router>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Router>
+  </Provider>,
+  document.getElementById("app")
 );
