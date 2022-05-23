@@ -11,19 +11,20 @@ import StudentRegister from "./src/containers/Student/StudentRegister";
 import StudentHome from "./src/containers/Student/StudentHome/Home";
 import StudentSubmission from "./src/containers/Student/StudentSubmission/StudentSubmission";
 import StudentTemplateList from "./src/containers/Student/StudentTemplateList";
+import TopicRegistration from './src/containers/Student/StudentTopicRegister/TopicRegistration'
 
 function App() {
-  const dispatch = useDispatch();
-  const auth = useSelector((state) => state.auth);
+  const dispatch = useDispatch()
+  const auth = useSelector((state) => state.auth)
 
   useEffect(() => {
     if (!auth.authenticate) {
-      dispatch(isUserLoggedIn());
+      dispatch(isUserLoggedIn())
     }
-  }, [auth.authenticate]);
+  }, [auth.authenticate])
 
   return (
-    <div className="App">
+    <div className='App'>
       <Routes>
         <Route path="/r" element={<StudentSubmission />} />
         <Route path="/signin" element={<Signin />} />
@@ -31,12 +32,15 @@ function App() {
         <Route path="/landing-page" element={<LandingPage />} />
         <Route path="/student/signup" element={<StudentRegister />} />
         <Route path="/student/templates" element={<StudentTemplateList />} />
+          <Route
+          path='/student/topic-registration'
+          element={<TopicRegistration />}
+        />
         <Route path="/student-home" exact element={<PrivateWrapper />}>
           <Route path="/student-home" element={<StudentHome />} />
-        </Route>
       </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
