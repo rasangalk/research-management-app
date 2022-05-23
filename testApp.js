@@ -11,31 +11,36 @@ import StudentRegister from "./src/containers/Student/StudentRegister";
 import StudentHome from "./src/containers/Student/StudentHome/Home";
 import StudentSubmission from "./src/containers/Student/StudentSubmission/StudentSubmission";
 import StudentFeedbackAccept from "./src/containers/Student/FeedbackAccepted/FeedbackAccepted";
+import TopicRegistration from "./src/containers/Student/StudentTopicRegister/TopicRegistration";
 function App() {
-	const dispatch = useDispatch();
-	const auth = useSelector(state => state.auth);
+  const dispatch = useDispatch();
+  const auth = useSelector((state) => state.auth);
 
-	useEffect(() => {
-		if (!auth.authenticate) {
-			dispatch(isUserLoggedIn());
-		}
-	}, [auth.authenticate]);
+  useEffect(() => {
+    if (!auth.authenticate) {
+      dispatch(isUserLoggedIn());
+    }
+  }, [auth.authenticate]);
 
-	return (
-		<div className='App'>
-			<Routes>
-				<Route path='/r' element={<StudentSubmission />} />
-				<Route path='/signin' element={<Signin />} />
-				<Route path='/signup' element={<Signup />} />
-				<Route path='/landing-page' element={<LandingPage />} />
-				<Route path='/student/signup' element={<StudentRegister />} />
-				<Route path='/student-home' exact element={<PrivateWrapper />}>
-					<Route path='/student-home' element={<StudentHome />} />
-				</Route>
-				<Route path='/r2' element={<StudentFeedbackAccept />} />
-			</Routes>
-		</div>
-	);
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/submission" element={<StudentSubmission />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/landing-page" element={<LandingPage />} />
+        <Route path="/student/signup" element={<StudentRegister />} />
+        <Route path="/student-home" exact element={<PrivateWrapper />}>
+          <Route path="/student-home" element={<StudentHome />} />
+        </Route>
+        <Route path="/r2" element={<StudentFeedbackAccept />} />
+        <Route
+          path="/student/topic-registration"
+          element={<TopicRegistration />}
+        />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
