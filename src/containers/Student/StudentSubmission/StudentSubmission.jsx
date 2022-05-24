@@ -76,6 +76,7 @@ function StudentSubmission() {
               <div className="uppercase font-bold mx-auto">deadline</div>
               <div className="uppercase font-bold mx-auto">time</div>
             </div>
+
             <div className="grid grid-rows-10 mx-6 overflow-y-auto h-[6rem] ">
               {submissions.submissions.length > 0
                 ? submissions.submissions.map((submission) => (
