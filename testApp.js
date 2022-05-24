@@ -17,6 +17,7 @@ import TopicRegistration from './src/containers/Student/StudentTopicRegister/Top
 import AdminHome from './src/containers/Admin/Members/Members'
 import MembersStudent from './src/containers/Admin/Members-Student/MembersStudent'
 import MembersStudentUpdate from './src/containers/Admin/Members-Student/MembersStudentUpdate'
+import MembersStudentCreate from './src/containers/Admin/Members-Student/MembersStudentCreate'
 
 function App() {
   const dispatch = useDispatch()
@@ -55,6 +56,10 @@ function App() {
         <Route
           path='/Members-Student/MemberStudentUpdate'
           element={<MembersStudentUpdate />}
+        />
+        <Route
+          path='/Members-Student/MemberStudentCreate'
+          element={<MembersStudentCreate />}
         />
       </Routes>
     </div>
