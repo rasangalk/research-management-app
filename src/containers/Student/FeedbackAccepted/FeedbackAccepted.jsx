@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Menu from "../../../components/StudentMenu";
 import Container from "../../../components/StudentContainer";
 
 function FeedbackAccepted() {
+	const [reject, setReject] = useState(false);
+
+	const showBtn = () => {
+		if (reject === true) {
+			return (
+				<div className=''>
+					<button className='font-bold capitalize mt-[1.5rem] text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right mr-[5.5rem] text-sm'>
+						re-submit topic
+					</button>
+				</div>
+			);
+		} else {
+			return <div className=''></div>;
+		}
+	};
+
 	return (
 		<div>
 			<div className='w-screen h-screen grid grid-cols-12 bg-bk-white'>
@@ -37,6 +53,7 @@ function FeedbackAccepted() {
 									</p>
 								</div>
 							</div>
+							{showBtn()}
 						</div>
 					</div>
 				</div>

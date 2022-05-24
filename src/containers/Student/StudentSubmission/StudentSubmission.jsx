@@ -3,7 +3,8 @@ import Menu from "../../../components/StudentMenu";
 import submit from "../../../images/submit-icon.png";
 import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getSubmissions } from "../../../actions/submissions.action";
+import { getSubmissions } from "../../../actions/submissions.actions";
+import { Link } from "react-router-dom";
 
 function StudentSubmission() {
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ function StudentSubmission() {
               supervisor or the panel.
             </p>
             <button className="capitalize bg-regal-blue hover:bg-regal-blue-active ml-5 mt-12 px-5 py-2 text-sm rounded-md font-bold text-white">
-              register button
+              <Link to="/student/topic-registration">register button</Link>
             </button>
           </div>
         </div>
@@ -66,7 +67,7 @@ function StudentSubmission() {
           </div>
         </div>
         <div className="col-start-2 col-span-11 ml-4">
-          <div className="bg-white w-[74rem] h-[17rem] mt-8 rounded-xl drop-shadow-lg">
+          <div className="bg-white w-[74rem] h-[17rem] mt-8 rounded-xl drop-shadow-xl">
             <h2 className="capitalize text-xl font-bold ml-5 pt-2">
               submission
             </h2>
@@ -75,11 +76,12 @@ function StudentSubmission() {
               <div className="uppercase font-bold mx-auto">deadline</div>
               <div className="uppercase font-bold mx-auto">time</div>
             </div>
-            <div className="grid grid-cols-4 mx-6 overflow-y-auto h-[6rem] ">
+
+            <div className="grid grid-rows-10 mx-6 overflow-y-auto h-[6rem] ">
               {submissions.submissions.length > 0
                 ? submissions.submissions.map((submission) => (
-                    <div className="flex flex-col">
-                      <div className="flex gap-2 items-center col-span-2">
+                    <div className="grid grid-cols-4">
+                      <div className="flex col-span-2 gap-2 items-center ">
                         <img src={submit} alt="submit" className="h-3   " />
                         <p className="capitalize mt-2">{submission.caption}</p>
                       </div>
@@ -92,43 +94,6 @@ function StudentSubmission() {
                     </div>
                   ))
                 : null}
-
-              {/* <Table responsive="sm">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {submissions.submissions.length > 0
-                    ? submissions.submissions.map((product) => (
-                        <tr>
-                          <td>{product.caption}</td>
-                          <td>{product.deadlineDate}</td>
-                          <td>{product.deadlineTime}</td>
-                        </tr>
-                      ))
-                    : null}
-                </tbody>
-              </Table> */}
-
-              {/* <div className="flex gap-2 items-center col-span-2">
-                <img src={submit} alt="submit" className="h-3   " />
-                <p className="capitalize mt-2">
-                  research presentation submission
-                </p>
-              </div>
-              <div className="mx-auto mt-2">2022/11/22</div>
-              <div className="mx-auto mt-2">23:30</div>
-
-              <div className="flex gap-2 items-center col-span-2">
-                <img src={submit} alt="submit" className="h-3   " />
-                <p className="capitalize mt-2">final thesis submission</p>
-              </div>
-              <div className="mx-auto mt-2">2022/11/22</div>
-              <div className="mx-auto mt-2">23:30</div> */}
             </div>
           </div>
         </div>

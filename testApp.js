@@ -13,6 +13,10 @@ import StudentSubmission from "./src/containers/Student/StudentSubmission/Studen
 import StudentFeedbackAccept from "./src/containers/Student/FeedbackAccepted/FeedbackAccepted";
 import StudentTemplateList from "./src/containers/Student/StudentTemplateList";
 import StudentFileSubmission from "./src/containers/Student/StudentFileSubmission/StudentFileSubmission";
+import TopicRegistration from "./src/containers/Student/StudentTopicRegister/TopicRegistration";
+import AdminHome from "./src/containers/Admin/Members/Members";
+import MembersStudent from "./src/containers/Admin/Members-Student/MembersStudent";
+
 function App() {
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
@@ -35,6 +39,7 @@ function App() {
           <Route path="/student-home" element={<StudentHome />} />
         </Route>
         <Route path="/r2" element={<StudentFeedbackAccept />} />
+        <Route path="/r3" element={<AdminHome />} />
         <Route path="/student/templates" element={<StudentTemplateList />} />
         <Route path="/student/file-submission" element={<PrivateWrapper />}>
           <Route
@@ -42,6 +47,10 @@ function App() {
             element={<StudentFileSubmission />}
           />
         </Route>
+        <Route
+          path="/Members-Student/MembersStudent"
+          element={<MembersStudent />}
+        />
       </Routes>
     </div>
   );
