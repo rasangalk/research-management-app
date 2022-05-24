@@ -20,6 +20,51 @@ export const getSubmissions = () => {
   };
 };
 
+export const getSubmissionByID = (id) => {
+  return async (dispatch) => {
+    dispatch({ type: submissionConstants.GET_ONE_SUBMISSION_DETAIL_REQUEST });
+
+    const res = await axios.get("admin/submissions/" + id);
+
+    if (res.status === 201) {
+      dispatch({
+        type: submissionConstants.GET_ONE_SUBMISSION_DETAIL_SUCCESS,
+        payload: res.data,
+      });
+    } else {
+      dispatch({
+        type: submissionConstants.GET_ONE_SUBMISSION_DETAIL_FAILURE,
+        payload: { error: res.data.error },
+      });
+    }
+  };
+};
+
+export const AddFileSubmission = (submission) => {
+  for (var value of submission.values()) {
+    console.log(value);
+  }
+  return async (dispatch) => {
+    dispatch({ type: submissionConstants.ADD_SUBMISSION_FILE_REQUEST });
+    const res = await axios.post("/student/submission/add", submission);
+
+    if (res.status === 201) {
+      const { message } = res.data;
+      dispatch({
+        type: submissionConstants.ADD_SUBMISSION_FILE_SUCCESS,
+        payload: {
+          message,
+        },
+      });
+    } else {
+      dispatch({
+        type: submissionConstants.ADD_SUBMISSION_FILE_FAILURE,
+        payload: { error: res.data.error },
+      });
+    }
+  };
+};
+
 // export const getMovie = (id) => {
 //   return async (dispatch) => {
 //     dispatch({ type: movieConstants.GET_MOVIE_REQUEST });

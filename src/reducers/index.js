@@ -4,6 +4,7 @@ import authReducer from "./auth.reducers";
 import studentReducer from "./student.reducers";
 import submissionReducer from "./submission.reducers";
 import templateReducer from "./template.reducers";
+import submissionByIdReducer from "./submissionById.reducers";
 
 const rootReducer = combineReducers({
   user: userReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   students: studentReducer,
   templates: templateReducer,
   submissions: submissionReducer,
+  submission: submissionByIdReducer,
 });
 
 export default rootReducer;
