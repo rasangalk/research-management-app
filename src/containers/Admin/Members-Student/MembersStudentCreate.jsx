@@ -37,11 +37,21 @@ function MembersStudentCreate() {
                   </div>
                   <div>
                     <p className='capitalize text-base text-slate-700 text-sm mb-1'>
-                      Group ID
+                      Username
                     </p>
                     <input
                       type='text'
-                      name='Group ID'
+                      name='Username'
+                      className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
+                    />
+                  </div>
+                  <div>
+                    <p className='capitalize text-base text-slate-700 text-sm mb-1'>
+                      Re-Password
+                    </p>
+                    <input
+                      type='Password'
+                      name='Re-Password'
                       className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
                     />
                   </div>
@@ -69,25 +79,17 @@ function MembersStudentCreate() {
                   </div>
                   <div>
                     <p className='capitalize text-base text-slate-700 text-sm mb-1'>
-                      Specailization
+                      Password
                     </p>
-                    <select
-                      name='Specailization'
-                      className=' font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-2'
-                    >
-                      <option value='' disabled selected hidden>
-                        Select Your Specailization
-                      </option>
-                      <option value='bla'>Software Engineering</option>
-                      <option value='blaa'>blaa</option>
-                      <option value='blaaa'>blaaa</option>
-                      <option value='blaaaa'>blaaaa</option>
-                      <option value='blaaaaa'>blaaaaa</option>
-                    </select>
+                    <input
+                      type='Password'
+                      name='Password'
+                      className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
+                    />
                   </div>
                 </div>
               </div>
-              <div className='mt-[5.3rem]  ml-[58.3rem] '>
+              <div className='mt-[0.2rem]  ml-[58.3rem] '>
                 <button className=' text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm'>
                   Create
                 </button>
