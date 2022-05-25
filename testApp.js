@@ -13,11 +13,13 @@ import StudentSubmission from "./src/containers/Student/StudentSubmission/Studen
 import StudentFeedbackAccept from "./src/containers/Student/FeedbackAccepted/FeedbackAccepted";
 import StudentTemplateList from "./src/containers/Student/StudentTemplateList";
 import StudentFileSubmission from "./src/containers/Student/StudentFileSubmission/StudentFileSubmission";
-import TopicRegistration from "./src/containers/Student/StudentTopicRegister/TopicRegistration";
 import AdminHome from "./src/containers/Admin/Members/Members";
 import MembersStudent from "./src/containers/Admin/Members-Student/MembersStudent";
 import CreateSubmission from "./src/containers/Admin/CreateSubmission/CreateSubmission";
 import ViewSubmission from "./src/containers/Admin/ViewSubmission/ViewSubmission";
+import MembersStudentUpdate from "./src/containers/Admin/Members-Student/MembersStudentUpdate";
+import MembersStudentCreate from "./src/containers/Admin/Members-Student/MembersStudentCreate";
+import TopicRegistration from "./src/containers/Student/StudentTopicRegister/TopicRegistration";
 
 function App() {
   const dispatch = useDispatch();
@@ -32,16 +34,19 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/r" element={<StudentSubmission />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/landing-page" element={<LandingPage />} />
-        <Route path="/student/signup" element={<StudentRegister />} />
         <Route path="/student-home" element={<PrivateWrapper />}>
           <Route path="/student-home" element={<StudentHome />} />
         </Route>
+        <Route path="/" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/landing-page" element={<LandingPage />} />
+        <Route path="/student/signup" element={<StudentRegister />} />
+
+        <Route path="/student/submission" element={<PrivateWrapper />}>
+          <Route path="/student/submission" element={<StudentSubmission />} />
+        </Route>
         <Route path="/r2" element={<StudentFeedbackAccept />} />
-        <Route path="/r3" element={<AdminHome />} />
+        <Route path="/admin/members" element={<AdminHome />} />
         <Route path="/student/templates" element={<StudentTemplateList />} />
         <Route
           path="/admin/submissions/create"
@@ -58,6 +63,20 @@ function App() {
           path="/Members-Student/MembersStudent"
           element={<MembersStudent />}
         />
+        <Route
+          path="/Members-Student/MemberStudentUpdate"
+          element={<MembersStudentUpdate />}
+        />
+        <Route
+          path="/Members-Student/MemberStudentCreate"
+          element={<MembersStudentCreate />}
+        />
+        <Route path="/student/topicRegistration" element={<PrivateWrapper />}>
+          <Route
+            path="/student/topicRegistration"
+            element={<TopicRegistration />}
+          />
+        </Route>
       </Routes>
     </div>
   );
