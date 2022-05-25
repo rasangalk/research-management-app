@@ -31,7 +31,7 @@ function StudentSubmission() {
               supervisor or the panel.
             </p>
             <button className="capitalize bg-regal-blue hover:bg-regal-blue-active ml-5 mt-12 px-5 py-2 text-sm rounded-md font-bold text-white">
-              <Link to="/student/topic-registration">register button</Link>
+              <Link to="/student/topicRegistration">register button</Link>
             </button>
           </div>
         </div>

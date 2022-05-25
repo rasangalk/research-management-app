@@ -32,14 +32,17 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        {/* <Route path="/student/submission" element={<PrivateWrapper />}> */}
-        <Route path="/student/submission" element={<StudentSubmission />} />
-        {/* </Route> */}
+        <Route path="/student-home" element={<PrivateWrapper />}>
+          <Route path="/student-home" element={<StudentHome />} />
+        </Route>
         <Route path="/" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/landing-page" element={<LandingPage />} />
         <Route path="/student/signup" element={<StudentRegister />} />
 
+        <Route path="/student/submission" element={<PrivateWrapper />}>
+          <Route path="/student/submission" element={<StudentSubmission />} />
+        </Route>
         <Route path="/r2" element={<StudentFeedbackAccept />} />
         <Route path="/r3" element={<AdminHome />} />
         <Route path="/student/templates" element={<StudentTemplateList />} />
@@ -61,9 +64,9 @@ function App() {
           path="/Members-Student/MemberStudentCreate"
           element={<MembersStudentCreate />}
         />
-        <Route path="/student/topic-registration" element={<PrivateWrapper />}>
+        <Route path="/student/topicRegistration" element={<PrivateWrapper />}>
           <Route
-            path="/student/topic-registration"
+            path="/student/topicRegistration"
             element={<TopicRegistration />}
           />
         </Route>
