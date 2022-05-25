@@ -37,3 +37,22 @@ export const getMember = (id) => {
     }
   };
 };
+
+export const deleteMember = (id) => {
+  return async (dispatch) => {
+    console.log("Hello I am here", id);
+    const res = await axios.delete(`/admin/members/delete/` + id);
+    console.log(res);
+    if (res.status === 200) {
+      dispatch({
+        // type: movieConstants.ADD_NEW_MOVIE_SUCCESS,
+        // payload: { categ: res.data.product }, //This "product" is in Backend --> Controllers --> Product.js --> 33 line
+      });
+    } else {
+      dispatch({
+        // type: movieConstants.ADD_NEW_MOVIE_FAILURE,
+        // payload: res.data.error,
+      });
+    }
+  };
+};

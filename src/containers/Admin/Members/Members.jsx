@@ -22,11 +22,6 @@ function Members() {
         <div className="col-span-11  ">
           <div className="grid grid-rows-6 h-full w-full">
             <div className="flex items-center gap-8">
-              <button className=" text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm">
-                <Link to="/Members-Student/MemberStudentCreate">
-                  Add Member
-                </Link>
-              </button>
               <div className="ml-[49rem]">
                 <input
                   type="search"
@@ -43,6 +38,11 @@ function Members() {
                   <option value="Staff">Staff</option>
                 </select>
               </div>
+              <button className=" text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm">
+                <Link to="/Members-Student/MemberStudentCreate">
+                  Add Member
+                </Link>
+              </button>
             </div>
             <div className="row-span-5 mx-auto bg-white w-[70.5rem] drop-shadow-xl rounded-xl mt-0 h-[33rem]">
               <h2 className="text-xl font-bold ml-5 pt-2">Members</h2>
