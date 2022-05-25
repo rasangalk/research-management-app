@@ -15,6 +15,8 @@ import StudentTemplateList from "./src/containers/Student/StudentTemplateList";
 import StudentFileSubmission from "./src/containers/Student/StudentFileSubmission/StudentFileSubmission";
 import AdminHome from "./src/containers/Admin/Members/Members";
 import MembersStudent from "./src/containers/Admin/Members-Student/MembersStudent";
+import CreateSubmission from "./src/containers/Admin/CreateSubmission/CreateSubmission";
+import ViewSubmission from "./src/containers/Admin/ViewSubmission/ViewSubmission";
 import MembersStudentUpdate from "./src/containers/Admin/Members-Student/MembersStudentUpdate";
 import MembersStudentCreate from "./src/containers/Admin/Members-Student/MembersStudentCreate";
 import TopicRegistration from "./src/containers/Student/StudentTopicRegister/TopicRegistration";
@@ -46,6 +48,11 @@ function App() {
         <Route path="/r2" element={<StudentFeedbackAccept />} />
         <Route path="/admin/members" element={<AdminHome />} />
         <Route path="/student/templates" element={<StudentTemplateList />} />
+        <Route
+          path="/admin/submissions/create"
+          element={<CreateSubmission />}
+        />
+        <Route path="/admin/submissions/view" element={<ViewSubmission />} />
         <Route path="/student/file-submission" element={<PrivateWrapper />}>
           <Route
             path="/student/file-submission"
