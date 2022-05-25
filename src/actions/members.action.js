@@ -1,5 +1,5 @@
 import axios from "../helpers/axios";
-import { memebersConstants, moviesConstants } from "./constants";
+import { memebersConstants, memberConstants } from "./constants";
 
 export const getAllMemebrs = () => {
   return async (dispatch) => {
@@ -20,20 +20,20 @@ export const getAllMemebrs = () => {
   };
 };
 
-// export const getMovie = (id) => {
-//   return async (dispatch) => {
-//     dispatch({ type: movieConstants.GET_MOVIE_REQUEST });
-//     const res = await axios.get(id);
-//     if (res.status === 201) {
-//       dispatch({
-//         type: movieConstants.GET_MOVIE_SUCCESS,
-//         payload: { movie: res.data.movie },
-//       });
-//     } else {
-//       dispatch({
-//         type: movieConstants.GET_MOVIE_FAILURE,
-//         payload: { error: res.data.error },
-//       });
-//     }
-//   };
-// };
+export const getMember = (id) => {
+  return async (dispatch) => {
+    dispatch({ type: memberConstants.GET_MEMBER_REQUEST });
+    const res = await axios.get("/admin/member/" + id);
+    if (res.status === 201) {
+      dispatch({
+        type: memberConstants.GET_MEMBER_SUCCESS,
+        payload: { member: res.data.member },
+      });
+    } else {
+      dispatch({
+        type: memberConstants.GET_MEMBER_FAILURE,
+        payload: { error: res.data.error },
+      });
+    }
+  };
+};

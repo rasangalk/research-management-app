@@ -14,7 +14,7 @@ import StudentFeedbackAccept from "./src/containers/Student/FeedbackAccepted/Fee
 import StudentTemplateList from "./src/containers/Student/StudentTemplateList";
 import StudentFileSubmission from "./src/containers/Student/StudentFileSubmission/StudentFileSubmission";
 import AdminHome from "./src/containers/Admin/Members/Members";
-import MembersStudent from "./src/containers/Admin/Members-Student/MembersStudent";
+import MemberDetails from "./src/containers/Admin/Members-Student/MembersStudent";
 import CreateSubmission from "./src/containers/Admin/CreateSubmission/CreateSubmission";
 import ViewSubmission from "./src/containers/Admin/ViewSubmission/ViewSubmission";
 import MembersStudentUpdate from "./src/containers/Admin/Members-Student/MembersStudentUpdate";
@@ -59,10 +59,7 @@ function App() {
             element={<StudentFileSubmission />}
           />
         </Route>
-        <Route
-          path="/Members-Student/MembersStudent"
-          element={<MembersStudent />}
-        />
+        <Route path="/admin/members/:memberId" element={<MemberDetails />} />
         <Route
           path="/Members-Student/MemberStudentUpdate"
           element={<MembersStudentUpdate />}
