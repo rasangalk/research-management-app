@@ -102,9 +102,6 @@ function TopicRegistration() {
             >
               Submit
             </button>
-            <button className='mt-2 font-normal text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right mr-6 text-sm'>
-              Submit
-            </button>
           </div>
         </div>
       </div>
