@@ -3,7 +3,7 @@ import Menu from "../../../components/StudentMenu";
 import submit from "../../../images/submit-icon.png";
 import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getSubmissions } from "../../../actions/submissions.actions";
+import { getSubmissions } from "../../../actions/submissions.action";
 import { Link } from "react-router-dom";
 
 function StudentSubmission() {

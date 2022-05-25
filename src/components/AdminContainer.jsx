@@ -9,7 +9,7 @@ function AdminContainer({ title, width }) {
         <h2 className="capitalize text-xl font-bold ml-5 pt-2">{title}</h2>
       </div>
       <div
-        className={`border-2 border-[#E2E8F0] ${width} h-[28rem] rounded-xl mt-6 mx-auto`}
+        className={`border-2 border-[#E2E8F0] ${width} h-[25rem] rounded-xl mt-6 mx-auto`}
       ></div>
     </div>
   );

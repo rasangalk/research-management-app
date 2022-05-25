@@ -16,6 +16,8 @@ import StudentFileSubmission from "./src/containers/Student/StudentFileSubmissio
 import TopicRegistration from "./src/containers/Student/StudentTopicRegister/TopicRegistration";
 import AdminHome from "./src/containers/Admin/Members/Members";
 import MembersStudent from "./src/containers/Admin/Members-Student/MembersStudent";
+import CreateSubmission from "./src/containers/Admin/CreateSubmission/CreateSubmission";
+import ViewSubmission from "./src/containers/Admin/ViewSubmission/ViewSubmission";
 
 function App() {
   const dispatch = useDispatch();
@@ -41,6 +43,11 @@ function App() {
         <Route path="/r2" element={<StudentFeedbackAccept />} />
         <Route path="/r3" element={<AdminHome />} />
         <Route path="/student/templates" element={<StudentTemplateList />} />
+        <Route
+          path="/admin/submissions/create"
+          element={<CreateSubmission />}
+        />
+        <Route path="/admin/submissions/view" element={<ViewSubmission />} />
         <Route path="/student/file-submission" element={<PrivateWrapper />}>
           <Route
             path="/student/file-submission"
