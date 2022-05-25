@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { getAllMemebrs } from "../../../actions/members.action";
 import Menu from "../../../components/AdminMenu";
 import tt from "../../../images/upload.png";
@@ -20,6 +21,11 @@ function Members() {
         <div className="col-span-11  ">
           <div className="grid grid-rows-6 h-full w-full">
             <div className="flex items-center gap-8">
+              <button className=" text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm">
+                <Link to="/Members-Student/MemberStudentCreate">
+                  Add Member
+                </Link>
+              </button>
               <div className="ml-[49rem]">
                 <input
                   type="search"
@@ -64,9 +70,11 @@ function Members() {
                     {members.members.length > 0
                       ? members.members.map((member) => (
                           <tr className="bg-white-blue">
-                            <td className="capitalize py-2 px-2">
-                              {member.fullName}
-                            </td>
+                            <Link to={"/" + member._id}>
+                              <td className="capitalize py-2 px-2">
+                                {member.fullName}{" "}
+                              </td>
+                            </Link>
                             <td className="uppercase py-2 px-2">
                               {member.sliit_id}
                             </td>

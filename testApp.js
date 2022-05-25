@@ -44,7 +44,7 @@ function App() {
           <Route path="/student/submission" element={<StudentSubmission />} />
         </Route>
         <Route path="/r2" element={<StudentFeedbackAccept />} />
-        <Route path="/r3" element={<AdminHome />} />
+        <Route path="/admin/members" element={<AdminHome />} />
         <Route path="/student/templates" element={<StudentTemplateList />} />
         <Route path="/student/file-submission" element={<PrivateWrapper />}>
           <Route
