@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import { getAllMemebrs } from "../../../actions/members.action";
 import Menu from "../../../components/AdminMenu";
 import tt from "../../../images/upload.png";
-
+import { useNavigate } from "react-router-dom";
 function Members() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const members = useSelector((state) => state.members);
   console.log(members);
   useEffect(() => {
@@ -69,12 +70,15 @@ function Members() {
                   <tbody>
                     {members.members.length > 0
                       ? members.members.map((member) => (
-                          <tr className="bg-white-blue">
-                            <Link to={"/" + member._id}>
-                              <td className="capitalize py-2 px-2">
-                                {member.fullName}{" "}
-                              </td>
-                            </Link>
+                          <tr
+                            className="even:bg-white odd:bg-slate-100 cursor-pointer"
+                            onClick={() => {
+                              navigate("/admin/members/" + member._id);
+                            }}
+                          >
+                            <td className="capitalize py-2 px-2">
+                              {member.fullName}{" "}
+                            </td>
                             <td className="uppercase py-2 px-2">
                               {member.sliit_id}
                             </td>

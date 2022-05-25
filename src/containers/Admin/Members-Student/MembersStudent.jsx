@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Menu from "../../../components/StudentMenu";
 import Container from "../../../components/StudentContainer";
+import { getMember } from "../../../actions/members.action";
+import { useParams } from "react-router-dom";
 
-function MembersStudent() {
+function MemberDetails() {
+  const dispatch = useDispatch();
+  const member = useSelector((state) => state.members);
+  const { memberId } = useParams();
+  useEffect(() => {
+    dispatch(getMember(memberId));
+  }, []);
+  console.log("Member", member);
   return (
     <div>
       <div className="w-screen h-screen grid grid-cols-12 bg-bk-white">
@@ -17,37 +27,56 @@ function MembersStudent() {
                 <div className="flex flex-col gap-8">
                   <div>
                     <p className="capitalize">Role:</p>
-                    <p className="capitalize font-bold text-lg">Student</p>
+                    <p className="capitalize font-bold text-lg">
+                      {member.member.role}
+                    </p>
                   </div>
                   <div>
                     <p className="capitalize">Name:</p>
                     <p className="capitalize font-bold text-lg">
-                      Kariyawasam K. G. P. C.
+                      {member.member.fullName}
                     </p>
                   </div>
                   <div>
                     <p className="capitalize">Email:</p>
                     <p className="capitalize font-bold text-lg">
-                      it20172978@my.sliit.lk
+                      {member.member.email}
                     </p>
                   </div>
-                  <div>
-                    <p className="capitalize">Specialization:</p>
-                    <p className="capitalize font-bold text-lg">SE</p>
-                  </div>
+                  {member.member.research_interest != null ? (
+                    <div>
+                      <p className="capitalize">Research interest:</p>
+                      <p className="capitalize font-bold text-lg">
+                        {member.member.research_interest}
+                      </p>
+                    </div>
+                  ) : (
+                    <div className="invisible">
+                      <p className="capitalize">Research interest:</p>
+                      <p className="capitalize font-bold text-lg">
+                        {member.member.fullName}
+                      </p>
+                    </div>
+                  )}
                 </div>
                 <div className="flex flex-col gap-8">
                   <div>
-                    <p className="capitalize">Group ID:</p>
-                    <p className="capitalize font-bold text-lg">RE_GR24</p>
+                    <p className="capitalize">Username:</p>
+                    <p className="capitalize font-bold text-lg">
+                      {member.member.username}
+                    </p>
                   </div>
                   <div>
                     <p className="capitalize">ID:</p>
-                    <p className="capitalize font-bold text-lg">IT20172978</p>
+                    <p className="capitalize font-bold text-lg">
+                      {member.member.sliit_id}
+                    </p>
                   </div>
                   <div>
                     <p className="capitalize">Phone:</p>
-                    <p className="capitalize font-bold text-lg">0771543736</p>
+                    <p className="capitalize font-bold text-lg">
+                      {member.member.phone}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -67,4 +96,4 @@ function MembersStudent() {
   );
 }
 
-export default MembersStudent;
+export default MemberDetails;
