@@ -13,7 +13,7 @@ function StudentFileSubmission() {
   const [submissionArray, setSubmissionArray] = useState([]);
 
   useEffect(() => {
-    dispatch(getSubmissionByID("628a8981e44e803003a29fd5"));
+    dispatch(getSubmissions("628a8981e44e803003a29fd5"));
   }, []);
 
   const submission = useSelector((state) => state.submission);

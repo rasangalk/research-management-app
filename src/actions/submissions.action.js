@@ -24,6 +24,29 @@ export const CreateSubmissions = (submission) => {
   };
 };
 
+export const UpdateSubmissions = (submission) => {
+  console.log(submission);
+  return async (dispatch) => {
+    dispatch({ type: submissionConstants.EDIT_SUBMISSION_DETAILS_REQUEST });
+    const res = await axios.post("/admin/submission/update", submission);
+
+    if (res.status === 202) {
+      const { message } = res.data;
+      dispatch({
+        type: submissionConstants.EDIT_SUBMISSION_DETAILS_SUCCESS,
+        payload: {
+          message,
+        },
+      });
+    } else {
+      dispatch({
+        type: submissionConstants.EDIT_SUBMISSION_DETAILS_FAILURE,
+        payload: { error: res.data.error },
+      });
+    }
+  };
+};
+
 export const getSubmissions = () => {
   return async (dispatch) => {
     dispatch({ type: submissionConstants.GET_SUBMISSION_DETAILS_REQUEST });

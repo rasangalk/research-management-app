@@ -25,6 +25,7 @@ import Panels from "./src/containers/Admin/Panels/Panels";
 import Groups from "./src/containers/Admin/Groups/Groups";
 import Templates from "./src/containers/Admin/Templates/Templates";
 import CreatePannel from "./src/containers/Admin/Panels/CreatePannel";
+import EditSubmission from "./src/containers/Admin/EditSubmission/EditSubmission";
 
 function App() {
   const dispatch = useDispatch();
@@ -105,6 +106,9 @@ function App() {
         </Route>
         <Route path="/admin/panels" element={<PrivateWrapper />}>
           <Route path="/admin/panels" element={<Panels />} />
+        </Route>
+        <Route path="/admin/submissions/edit" element={<PrivateWrapper />}>
+          <Route path="/admin/submissions/edit" element={<EditSubmission />} />
         </Route>
         //////////////////////////////Supervisor////////////////////////
         <Route
