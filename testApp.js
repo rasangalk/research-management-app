@@ -28,6 +28,7 @@ import CreatePannel from "./src/containers/Admin/Panels/CreatePannel";
 import EditSubmission from "./src/containers/Admin/EditSubmission/EditSubmission";
 import GroupManipulations from "./src/containers/Admin/Groups/GroupManipulations";
 import PannelView from "./src/containers/Admin/Panels/PannelView";
+import SupervisortopicsAcceptanceReject from "./src/containers/Supervisor/Supervisor-Topics/SupervisortopicsAcceptanceReject";
 
 function App() {
   const dispatch = useDispatch();
@@ -131,6 +132,10 @@ function App() {
             element={<SupervisorProfile />}
           />
         </Route>
+        <Route
+          path="/Supervisor/Supervisor-Topics-AcceptanceReject"
+          element={<SupervisortopicsAcceptanceReject />}
+        />
       </Routes>
     </div>
   );
