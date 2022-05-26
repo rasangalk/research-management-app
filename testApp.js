@@ -23,6 +23,7 @@ import TopicRegistration from "./src/containers/Student/StudentTopicRegister/Top
 import SupervisorProfile from "./src/containers/Supervisor/Supervisor-Profile/SupervisorProfile";
 import Panels from "./src/containers/Admin/Panels/Panels";
 import Groups from "./src/containers/Admin/Groups/Groups";
+import Templates from "./src/containers/Admin/Templates/Templates";
 
 function App() {
 	const dispatch = useDispatch();
@@ -87,6 +88,7 @@ function App() {
 					<Route path='/admin/panels' element={<Panels />} />
 				</Route>
 				<Route path='/r5' element={<Groups />} />
+				<Route path='/r6' element={<Templates />} />
 			</Routes>
 		</div>
 	);
