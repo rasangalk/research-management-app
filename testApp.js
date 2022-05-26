@@ -119,8 +119,8 @@ function App() {
             element={<GroupManipulations />}
           />
         </Route>
-        <Route path="/r9" element={<PrivateWrapper />}>
-          <Route path="/r9" element={<PannelView />} />
+        <Route path="/admin/panels/:panelId" element={<PrivateWrapper />}>
+          <Route path="/admin/panels/:panelId" element={<PannelView />} />
         </Route>
         //////////////////////////////Supervisor////////////////////////
         <Route

@@ -59,24 +59,24 @@ function Panels() {
                   </thead>
                   <tbody>
                     {panels.panels.length > 0
-                      ? panels.panels.map((member) => (
+                      ? panels.panels.map((panel) => (
                           <tr
                             className="even:bg-white odd:bg-slate-100 cursor-pointer"
                             onClick={() => {
-                              navigate("/admin/members/" + member._id);
+                              navigate("/admin/panels/" + panel._id);
                             }}
                           >
                             <td className="capitalize py-2 px-2">
-                              {member.panelId}
+                              {panel.panelId}
                             </td>
                             <td className="lowercase py-2 px-2">
-                              {member.panelMembers.member1.username}
+                              {panel.panelMembers.member1.username}
                             </td>
                             <td className="lowercase py-2 px-2">
-                              {member.panelMembers.member2.username}
+                              {panel.panelMembers.member2.username}
                             </td>
                             <td className="lowercase py-2 px-2">
-                              {member.panelMembers.member3.username}
+                              {panel.panelMembers.member3.username}
                             </td>
                           </tr>
                         ))

@@ -61,6 +61,24 @@ export const UpdateStudentGrpPanel = (form) => {
   };
 };
 
+export const getPanel = (id) => {
+  return async (dispatch) => {
+    dispatch({ type: panelConstants.GET_PANEL_REQUEST });
+    const res = await axios.get("/admin/panel-details/" + id);
+    if (res.status === 201) {
+      dispatch({
+        type: panelConstants.GET_PANEL_SUCCESS,
+        payload: { panel: res.data.panel },
+      });
+    } else {
+      dispatch({
+        type: panelConstants.GET_PANEL_FAILURE,
+        payload: { error: res.data.error },
+      });
+    }
+  };
+};
+
 // export const AddFileSubmission = (submission) => {
 //   for (var value of submission.values()) {
 //     console.log(value);

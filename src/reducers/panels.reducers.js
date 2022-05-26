@@ -2,6 +2,7 @@ import { panelConstants } from "../actions/constants";
 
 const initState = {
   panels: [],
+  panel: {},
   pageRequest: false,
   error: null,
   loading: false,
@@ -23,6 +24,27 @@ export default (state = initState, action) => {
       };
       break;
     case panelConstants.GET_ALL_PANEL_FAILURE:
+      state = {
+        ...state,
+        error: action.payload.error,
+        pageRequest: false,
+      };
+      break;
+
+    case panelConstants.GET_PANEL_REQUEST:
+      state = {
+        ...state,
+        pageRequest: true,
+      };
+      break;
+    case panelConstants.GET_PANEL_SUCCESS:
+      state = {
+        ...state,
+        panel: action.payload.panel,
+        pageRequest: false,
+      };
+      break;
+    case panelConstants.GET_PANEL_FAILURE:
       state = {
         ...state,
         error: action.payload.error,
