@@ -22,72 +22,74 @@ import MembersStudentCreate from "./src/containers/Admin/Members-Student/Members
 import TopicRegistration from "./src/containers/Student/StudentTopicRegister/TopicRegistration";
 import SupervisorProfile from "./src/containers/Supervisor/Supervisor-Profile/SupervisorProfile";
 import Panels from "./src/containers/Admin/Panels/Panels";
+import Groups from "./src/containers/Admin/Groups/Groups";
 
 function App() {
-  const dispatch = useDispatch();
-  const auth = useSelector((state) => state.auth);
+	const dispatch = useDispatch();
+	const auth = useSelector(state => state.auth);
 
-  useEffect(() => {
-    if (!auth.authenticate) {
-      dispatch(isUserLoggedIn());
-    }
-  }, [auth.authenticate]);
+	useEffect(() => {
+		if (!auth.authenticate) {
+			dispatch(isUserLoggedIn());
+		}
+	}, [auth.authenticate]);
 
-  return (
-    <div className="App">
-      <Routes>
-        <Route path="/student-home" element={<PrivateWrapper />}>
-          <Route path="/student-home" element={<StudentHome />} />
-        </Route>
-        <Route path="/" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/landing-page" element={<LandingPage />} />
-        <Route path="/student/signup" element={<StudentRegister />} />
+	return (
+		<div className='App'>
+			<Routes>
+				<Route path='/student-home' element={<PrivateWrapper />}>
+					<Route path='/student-home' element={<StudentHome />} />
+				</Route>
+				<Route path='/' element={<Signin />} />
+				<Route path='/signup' element={<Signup />} />
+				<Route path='/landing-page' element={<LandingPage />} />
+				<Route path='/student/signup' element={<StudentRegister />} />
 
-        <Route path="/student/submission" element={<PrivateWrapper />}>
-          <Route path="/student/submission" element={<StudentSubmission />} />
-        </Route>
-        <Route path="/r2" element={<StudentFeedbackAccept />} />
-        <Route path="/admin/members" element={<AdminHome />} />
-        <Route path="/student/templates" element={<StudentTemplateList />} />
-        <Route
-          path="/admin/submissions/create"
-          element={<CreateSubmission />}
-        />
-        <Route path="/admin/submissions/view" element={<ViewSubmission />} />
-        <Route path="/student/file-submission" element={<PrivateWrapper />}>
-          <Route
-            path="/student/file-submission"
-            element={<StudentFileSubmission />}
-          />
-        </Route>
-        <Route path="/admin/members/:memberId" element={<MemberDetails />} />
+				<Route path='/student/submission' element={<PrivateWrapper />}>
+					<Route path='/student/submission' element={<StudentSubmission />} />
+				</Route>
+				<Route path='/r2' element={<StudentFeedbackAccept />} />
+				<Route path='/admin/members' element={<AdminHome />} />
+				<Route path='/student/templates' element={<StudentTemplateList />} />
+				<Route
+					path='/admin/submissions/create'
+					element={<CreateSubmission />}
+				/>
+				<Route path='/admin/submissions/view' element={<ViewSubmission />} />
+				<Route path='/student/file-submission' element={<PrivateWrapper />}>
+					<Route
+						path='/student/file-submission'
+						element={<StudentFileSubmission />}
+					/>
+				</Route>
+				<Route path='/admin/members/:memberId' element={<MemberDetails />} />
 
-        <Route
-          path="/Members-Student/MemberStudentUpdate"
-          element={<MembersStudentUpdate />}
-        />
-        <Route
-          path="/Members-Student/MemberStudentCreate"
-          element={<MembersStudentCreate />}
-        />
-        <Route path="/student/topicRegistration" element={<PrivateWrapper />}>
-          <Route
-            path="/student/topicRegistration"
-            element={<TopicRegistration />}
-          />
-        </Route>
-        <Route
-          path="/Supervisor/Supervisor-Profile"
-          element={<SupervisorProfile />}
-        />
+				<Route
+					path='/Members-Student/MemberStudentUpdate'
+					element={<MembersStudentUpdate />}
+				/>
+				<Route
+					path='/Members-Student/MemberStudentCreate'
+					element={<MembersStudentCreate />}
+				/>
+				<Route path='/student/topicRegistration' element={<PrivateWrapper />}>
+					<Route
+						path='/student/topicRegistration'
+						element={<TopicRegistration />}
+					/>
+				</Route>
+				<Route
+					path='/Supervisor/Supervisor-Profile'
+					element={<SupervisorProfile />}
+				/>
 
-        <Route path="/admin/panels" element={<PrivateWrapper />}>
-          <Route path="/admin/panels" element={<Panels />} />
-        </Route>
-      </Routes>
-    </div>
-  );
+				<Route path='/admin/panels' element={<PrivateWrapper />}>
+					<Route path='/admin/panels' element={<Panels />} />
+				</Route>
+				<Route path='/r5' element={<Groups />} />
+			</Routes>
+		</div>
+	);
 }
 
 export default App;
