@@ -1,10 +1,8 @@
 import React from "react";
 import back from "../images/arrow-left.png";
 import { useNavigate } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
 
-function StudentContainer({ title, width }) {
-  //   const history = useHistory();
+function SupervisorContainer({ title, width }) {
   let navigate = useNavigate();
   return (
     <div className="bg-white drop-shadow-xl w-[74rem] h-[37rem] rounded-xl ">
@@ -23,4 +21,4 @@ function StudentContainer({ title, width }) {
   );
 }
 
-export default StudentContainer;
+export default SupervisorContainer;

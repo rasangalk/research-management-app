@@ -20,3 +20,22 @@ export const getGroupDetails = (id) => {
     }
   };
 };
+
+export const getAllGroupsDetails = () => {
+  return async (dispatch) => {
+    dispatch({ type: studentConstants.GET_ALL_GROUPS_DETAILS_REQUEST });
+    const res = await axios.get("/admin/group-details");
+
+    if (res.status === 200) {
+      dispatch({
+        type: studentConstants.GET_ALL_GROUPS_DETAILS_SUCCESS,
+        payload: res.data,
+      });
+    } else {
+      dispatch({
+        type: studentConstants.GET_ALL_GROUPS_DETAILS_FAILURE,
+        payload: { error: res.data.error },
+      });
+    }
+  };
+};

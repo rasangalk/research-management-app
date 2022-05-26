@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { getAllMemebrs } from "../../../actions/members.action";
+import { getAllPanelDetails } from "../../../actions/panel.action";
 import Menu from "../../../components/AdminMenu";
-import tt from "../../../images/upload.png";
 import { useNavigate } from "react-router-dom";
-function Members() {
+
+function Panels() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const members = useSelector((state) => state.members);
-  console.log(members);
+  const panels = useSelector((state) => state.panels);
+  //console.log("This is Panels:", panels.panels[0].panelMembers);
   useEffect(() => {
-    dispatch(getAllMemebrs());
+    dispatch(getAllPanelDetails());
   }, []);
   return (
     <div>
@@ -19,10 +18,10 @@ function Members() {
         <div className="">
           <Menu />
         </div>
-        <div className="col-span-11  ">
+        <div className="col-span-11">
           <div className="grid grid-rows-6 h-full w-full">
             <div className="flex items-center gap-8">
-              <div className="ml-[49rem]">
+              <div className="ml-[50rem]">
                 <input
                   type="search"
                   placeholder="Search"
@@ -30,46 +29,37 @@ function Members() {
                 />
               </div>
               <div className="flex flex-col">
-                <select className="h-[2.2rem] font-normal px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-[9.5rem] sm:w-144 rounded-md focus:ring-1">
-                  <option value="all">All</option>
-                  <option value="Student">Student</option>
-                  <option value="Supervisor">Supervisor</option>
-                  <option value="Co-Supervisor">Co-Supervisor</option>
-                  <option value="Staff">Staff</option>
-                </select>
+                <button
+                  className="capitalize text-lg font-bold px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm"
+                  onClick={() => navigate("/admin/create-panel")}
+                >
+                  create panel
+                </button>
               </div>
-              <button className=" text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm">
-                <Link to="/Members-Student/MemberStudentCreate">
-                  Add Member
-                </Link>
-              </button>
             </div>
             <div className="row-span-5 mx-auto bg-white w-[70.5rem] drop-shadow-xl rounded-xl mt-0 h-[33rem]">
-              <h2 className="text-xl font-bold ml-5 pt-2">Members</h2>
-              <div className="overflow-auto h-[25rem] mx-12 mt-5">
+              <h2 className="text-xl font-bold ml-5 pt-2 capitalize">panels</h2>
+              <div className="overflow-auto h-[25rem] mx-16 mt-5">
                 <table className="border-collapse w-full ">
                   <thead>
                     <tr>
                       <th className="py-2 px-2 uppercase bg-white text-left sticky top-0 z-1">
-                        name
-                      </th>
-                      <th className="py-2 px-2 uppercase bg-white text-left sticky top-0 z-1">
                         id
                       </th>
                       <th className="py-2 px-2 uppercase bg-white text-left sticky top-0 z-1">
-                        email
+                        member
                       </th>
                       <th className="py-2 px-2 uppercase bg-white text-left sticky top-0 z-1">
-                        phone
+                        member
                       </th>
                       <th className="py-2 px-2 uppercase bg-white text-left sticky top-0 z-1">
-                        role
+                        member
                       </th>
                     </tr>
                   </thead>
                   <tbody>
-                    {members.members.length > 0
-                      ? members.members.map((member) => (
+                    {panels.panels.length > 0
+                      ? panels.panels.map((member) => (
                           <tr
                             className="even:bg-white odd:bg-slate-100 cursor-pointer"
                             onClick={() => {
@@ -77,19 +67,16 @@ function Members() {
                             }}
                           >
                             <td className="capitalize py-2 px-2">
-                              {member.fullName}{" "}
-                            </td>
-                            <td className="uppercase py-2 px-2">
-                              {member.sliit_id}
+                              {member.panelId}
                             </td>
                             <td className="lowercase py-2 px-2">
-                              {member.email}
+                              {member.panelMembers.member1.username}
                             </td>
-                            <td className="capitalize py-2 px-2">
-                              {member.phone}
+                            <td className="lowercase py-2 px-2">
+                              {member.panelMembers.member2.username}
                             </td>
-                            <td className="capitalize py-2 px-2">
-                              {member.role}
+                            <td className="lowercase py-2 px-2">
+                              {member.panelMembers.member3.username}
                             </td>
                           </tr>
                         ))
@@ -105,4 +92,4 @@ function Members() {
   );
 }
 
-export default Members;
+export default Panels;
