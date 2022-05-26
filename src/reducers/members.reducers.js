@@ -2,6 +2,7 @@ import { memebersConstants, memberConstants } from "../actions/constants";
 
 const initState = {
   members: [],
+  staffMembers: [],
   member: {},
   pageRequest: false,
   error: null,
@@ -45,6 +46,27 @@ export default (state = initState, action) => {
       };
       break;
     case memberConstants.GET_MEMBER_FAILURE:
+      state = {
+        ...state,
+        error: action.payload.error,
+        pageRequest: false,
+      };
+      break;
+
+    case memebersConstants.GET_ALL_STAFF_MEMBERS_REQUEST:
+      state = {
+        ...state,
+        pageRequest: true,
+      };
+      break;
+    case memebersConstants.GET_ALL_STAFF_MEMBERS_SUCCESS:
+      state = {
+        ...state,
+        staffMembers: action.payload.staffMembers,
+        pageRequest: false,
+      };
+      break;
+    case memebersConstants.GET_ALL_STAFF_MEMBERS_FAILURE:
       state = {
         ...state,
         error: action.payload.error,

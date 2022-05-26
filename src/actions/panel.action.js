@@ -1,28 +1,27 @@
 import axios from "../helpers/axios";
 import { panelConstants } from "./constants";
 
-// export const CreateSubmissions = (submission) => {
-//   console.log(submission);
-//   return async (dispatch) => {
-//     dispatch({ type: submissionConstants.ADD_SUBMISSION_REQUEST });
-//     const res = await axios.post("/admin/submission/create", submission);
+export const CreatePanel = (panel) => {
+  return async (dispatch) => {
+    // dispatch({ type: submissionConstants.ADD_SUBMISSION_REQUEST });
+    const res = await axios.post("/admin/panel/add", panel);
 
-//     if (res.status === 201) {
-//       const { message } = res.data;
-//       dispatch({
-//         type: submissionConstants.ADD_SUBMISSION_SUCCESS,
-//         payload: {
-//           message,
-//         },
-//       });
-//     } else {
-//       dispatch({
-//         type: submissionConstants.ADD_SUBMISSION_FAILURE,
-//         payload: { error: res.data.error },
-//       });
-//     }
-//   };
-// };
+    if (res.status === 201) {
+      //   const { message } = res.data;
+      //   dispatch({
+      //     type: submissionConstants.ADD_SUBMISSION_SUCCESS,
+      //     payload: {
+      //       message,
+      //     },
+      //   });
+    } else {
+      //   dispatch({
+      //     type: submissionConstants.ADD_SUBMISSION_FAILURE,
+      //     payload: { error: res.data.error },
+      //   });
+    }
+  };
+};
 
 export const getAllPanelDetails = () => {
   return async (dispatch) => {

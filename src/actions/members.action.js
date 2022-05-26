@@ -56,3 +56,22 @@ export const deleteMember = (id) => {
     }
   };
 };
+
+export const getAllStaffMemebrs = () => {
+  return async (dispatch) => {
+    dispatch({ type: memebersConstants.GET_ALL_STAFF_MEMBERS_REQUEST });
+    const res = await axios.get("/admin/staff-members");
+
+    if (res.status === 200) {
+      dispatch({
+        type: memebersConstants.GET_ALL_STAFF_MEMBERS_SUCCESS,
+        payload: res.data,
+      });
+    } else {
+      dispatch({
+        type: memebersConstants.GET_ALL_STAFF_MEMBERS_FAILURE,
+        payload: { error: res.data.error },
+      });
+    }
+  };
+};
