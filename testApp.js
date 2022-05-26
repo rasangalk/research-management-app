@@ -20,6 +20,7 @@ import ViewSubmission from "./src/containers/Admin/ViewSubmission/ViewSubmission
 import MembersStudentUpdate from "./src/containers/Admin/Members-Student/MembersStudentUpdate";
 import MembersStudentCreate from "./src/containers/Admin/Members-Student/MembersStudentCreate";
 import TopicRegistration from "./src/containers/Student/StudentTopicRegister/TopicRegistration";
+import EditSubmission from "./src/containers/Admin/EditSubmission/EditSubmission";
 
 function App() {
   const dispatch = useDispatch();
@@ -53,6 +54,10 @@ function App() {
           element={<CreateSubmission />}
         />
         <Route path="/admin/submissions/view" element={<ViewSubmission />} />
+
+        <Route path="/admin/submissions/edi" element={<PrivateWrapper />}>
+          <Route path="/admin/submissions/edit" element={<EditSubmission />} />
+        </Route>
         <Route path="/student/file-submission" element={<PrivateWrapper />}>
           <Route
             path="/student/file-submission"
