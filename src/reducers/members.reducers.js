@@ -3,6 +3,7 @@ import { memebersConstants, memberConstants } from "../actions/constants";
 const initState = {
   members: [],
   staffMembers: [],
+  supservisors: [],
   member: {},
   pageRequest: false,
   error: null,
@@ -67,6 +68,27 @@ export default (state = initState, action) => {
       };
       break;
     case memebersConstants.GET_ALL_STAFF_MEMBERS_FAILURE:
+      state = {
+        ...state,
+        error: action.payload.error,
+        pageRequest: false,
+      };
+      break;
+
+    case memebersConstants.GET_ALL_SUPERVISORS_REQUEST:
+      state = {
+        ...state,
+        pageRequest: true,
+      };
+      break;
+    case memebersConstants.GET_ALL_SUPERVISORS_SUCCESS:
+      state = {
+        ...state,
+        supservisors: action.payload.supservisors,
+        pageRequest: false,
+      };
+      break;
+    case memebersConstants.GET_ALL_SUPERVISORS_FAILURE:
       state = {
         ...state,
         error: action.payload.error,

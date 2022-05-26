@@ -1,19 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { registerTopic } from "../../../actions/topicRegistration.action";
 import Menu from "../../../components/StudentMenu";
 import back from "../../../images/back-icon.png";
 import info from "../../../images/info-icon.png";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllSupervisors } from "../../../actions/members.action";
+import { getGroupDetails } from "../../../actions/student.action";
 
 function TopicRegistration() {
   const [researchInterest, setResearchInterest] = useState("");
   const [topic, setTopic] = useState("");
   const [supervisor, setSupervisor] = useState("");
   const dispatch = useDispatch();
+  const members = useSelector((state) => state.members);
+  const group = useSelector((state) => state.students);
+  const user = window.localStorage.getItem("user");
+  const userID = JSON.parse(user)._id;
+  console.log("This is Supervisors:", members.supservisors);
+  useEffect(() => {
+    dispatch(getAllSupervisors());
+    dispatch(getGroupDetails(userID));
+  }, []);
 
   const handleClose = (e) => {
     const register = {
+      groupId: group.username,
       topic,
       researchInterest,
       supervisor,
@@ -50,7 +62,7 @@ function TopicRegistration() {
             <option value="" disabled selected hidden>
               Select Your Research Interest
             </option>
-            <option value="bla">Distributed Systems</option>
+            <option value="bla">AI</option>
             <option value="blaa">blaa</option>
             <option value="blaaa">blaaa</option>
             <option value="blaaaa">blaaaa</option>
@@ -72,17 +84,21 @@ function TopicRegistration() {
             </span>
             <select
               name="Supervisor"
-              className="font-Nunito font-semibold hover:bg-gray-700 mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block lg:w-96 sm:w-144 rounded-md focus:ring-1 ml-6 mb-8 text-base"
+              className="font-Nunito font-semibold  mt-1 px-3 py-1 bg-white border border-slate-300 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block lg:w-96 sm:w-144 rounded-md focus:ring-1 ml-6 mb-8 text-base"
               onChange={(e) => setSupervisor(e.target.value)}
             >
               <option value="" disabled selected hidden>
                 Select Your Supervisor
               </option>
-              <option value="bla">Dr. Darshana Kasthurirathne</option>
-              <option value="blaa">blaa</option>
-              <option value="blaaa">blaaa</option>
-              <option value="blaaaa">blaaaa</option>
-              <option value="blaaaaa">blaaaaa</option>
+              {Object.keys(members.supservisors).map((element) => (
+                <option
+                  key={element}
+                  value={members.supservisors[element].sliit_id}
+                >
+                  {members.supservisors[element].fullName}
+                  {" - " + members.supservisors[element].research_interest}
+                </option>
+              ))}
             </select>
 
             <div className="ml-6 font-Nunito text-sm flex items-start mt-[3px] gap-1">

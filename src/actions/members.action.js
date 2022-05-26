@@ -75,3 +75,22 @@ export const getAllStaffMemebrs = () => {
     }
   };
 };
+
+export const getAllSupervisors = () => {
+  return async (dispatch) => {
+    dispatch({ type: memebersConstants.GET_ALL_SUPERVISORS_REQUEST });
+    const res = await axios.get("/admin/supervisors");
+
+    if (res.status === 200) {
+      dispatch({
+        type: memebersConstants.GET_ALL_SUPERVISORS_SUCCESS,
+        payload: res.data,
+      });
+    } else {
+      dispatch({
+        type: memebersConstants.GET_ALL_SUPERVISORS_FAILURE,
+        payload: { error: res.data.error },
+      });
+    }
+  };
+};
