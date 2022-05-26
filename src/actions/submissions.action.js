@@ -2,7 +2,6 @@ import axios from "../helpers/axios";
 import { submissionConstants } from "./constants";
 
 export const CreateSubmissions = (submission) => {
-  console.log(submission);
   return async (dispatch) => {
     dispatch({ type: submissionConstants.ADD_SUBMISSION_REQUEST });
     const res = await axios.post("/admin/submission/create", submission);
@@ -24,8 +23,29 @@ export const CreateSubmissions = (submission) => {
   };
 };
 
+export const DeleteSubmission = (submissionId) => {
+  return async (dispatch) => {
+    dispatch({ type: submissionConstants.DELETE_SUBMISSION_REQUEST });
+    const res = await axios.delete("/admin/submissions/delete/" + submissionId);
+    console.log(res);
+    if (res.status === 200) {
+      console.log("DONE");
+      dispatch({
+        type: submissionConstants.DELETE_SUBMISSION_SUCCESS,
+        payload: {
+          submissionId,
+        },
+      });
+    } else {
+      dispatch({
+        type: submissionConstants.DELETE_SUBMISSION_FAILURE,
+        payload: { error: res.data.error },
+      });
+    }
+  };
+};
+
 export const UpdateSubmissions = (submission) => {
-  console.log(submission);
   return async (dispatch) => {
     dispatch({ type: submissionConstants.EDIT_SUBMISSION_DETAILS_REQUEST });
     const res = await axios.post("/admin/submission/update", submission);

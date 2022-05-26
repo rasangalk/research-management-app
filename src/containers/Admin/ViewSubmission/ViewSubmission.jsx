@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useParams, useNavigate } from "react-router-dom";
 import Menu from "../../../components/AdminMenu";
 import Container from "../../../components/AdminContainer";
 import { getSubmissionByID } from "../../../actions/submissions.action";
@@ -7,11 +8,12 @@ import { getSubmissionByID } from "../../../actions/submissions.action";
 function ViewSubmission() {
   const submission = useSelector((state) => state.submission);
   const dispatch = useDispatch();
+  const { submissionId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(getSubmissionByID("628e739239a828a246125944"));
+    dispatch(getSubmissionByID(submissionId));
   }, []);
-  console.log("SUB", submission);
 
   if (submission.submission) {
     return (
@@ -59,7 +61,14 @@ function ViewSubmission() {
                     />
                   </div>
                 </div>
-                <button className=" float-right capitalize bg-regal-blue hover:bg-regal-blue-active mx-auto px-6 py-2 text-sm rounded-md font-bold text-white mr-4 mt-8">
+                <button
+                  onClick={() =>
+                    navigate(
+                      "/admin/submissions/edit/" + submission.submission._id
+                    )
+                  }
+                  className=" float-right capitalize bg-regal-blue hover:bg-regal-blue-active mx-auto px-6 py-2 text-sm rounded-md font-bold text-white mr-4 mt-8"
+                >
                   Edit
                 </button>
               </div>

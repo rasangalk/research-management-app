@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import Menu from "../../../components/AdminMenu";
 import Container from "../../../components/AdminContainer";
 import { CreateSubmissions } from "../../../actions/submissions.action";
 
 function CreateSubmission() {
+  const navigate = useNavigate();
+
   const [caption, setCaption] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
@@ -21,6 +24,7 @@ function CreateSubmission() {
     };
 
     dispatch(CreateSubmissions(submissionData));
+    navigate("/admin/submissions");
   };
 
   return (
