@@ -24,6 +24,7 @@ function SupervisortopicsAcceptanceReject() {
                   <div>
                     <p className='capitalize text-slate-700 text-sm mb-1'>
                       Topic
+                    </p>
                     <p className='capitalize font-bold text-base mb-8'>
                       Blockchain based smart contracts and its applications
                     </p>
