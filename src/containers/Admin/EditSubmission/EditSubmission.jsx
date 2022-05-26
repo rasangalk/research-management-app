@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useParams, useNavigate } from "react-router-dom";
 import Menu from "../../../components/AdminMenu";
 import Container from "../../../components/AdminContainer";
 import {
@@ -10,6 +11,9 @@ import {
 function EditSubmission() {
   const submission = useSelector((state) => state.submission);
   const dispatch = useDispatch();
+  const { id } = useParams();
+  console.log(id);
+  const navigate = useNavigate();
 
   const [caption, setCaption] = useState();
   const [description, setDescription] = useState();
@@ -17,7 +21,7 @@ function EditSubmission() {
   const [time, setTime] = useState();
 
   useEffect(() => {
-    dispatch(getSubmissionByID("628e739239a828a246125944"));
+    dispatch(getSubmissionByID(id));
     setCaption(submission.submission.caption);
     setDescription(submission.submission.description);
     setDate(submission.submission.deadlineDate);
@@ -26,7 +30,7 @@ function EditSubmission() {
 
   const handleEditSubmission = () => {
     const updatedSubmission = {
-      submissionId: "628e739239a828a246125944",
+      submissionId: id,
       caption: caption,
       description: description,
       deadlineDate: date,
@@ -35,6 +39,7 @@ function EditSubmission() {
     console.log(updatedSubmission);
 
     dispatch(UpdateSubmissions(updatedSubmission));
+    navigate("/admin/submissions");
   };
 
   if (submission.submission) {
@@ -93,7 +98,7 @@ function EditSubmission() {
                   className=" float-right capitalize bg-regal-blue hover:bg-regal-blue-active mx-auto px-6 py-2 text-sm rounded-md font-bold text-white mr-4 mt-8"
                   onClick={handleEditSubmission}
                 >
-                  Edit
+                  Save
                 </button>
               </div>
             </div>

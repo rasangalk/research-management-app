@@ -26,9 +26,12 @@ import Groups from "./src/containers/Admin/Groups/Groups";
 import Templates from "./src/containers/Admin/Templates/Templates";
 import CreatePannel from "./src/containers/Admin/Panels/CreatePannel";
 import EditSubmission from "./src/containers/Admin/EditSubmission/EditSubmission";
+import ViewSubmissionList from "./src/containers/Admin/ViewSubmissionList/ViewSubmissionList";
 import GroupManipulations from "./src/containers/Admin/Groups/GroupManipulations";
 import PannelView from "./src/containers/Admin/Panels/PannelView";
 import SupervisortopicsAcceptanceReject from "./src/containers/Supervisor/Supervisor-Topics/SupervisortopicsAcceptanceReject";
+import AssignedTopicDetails from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopicDetails";
+import PanelUpdate from "./src/containers/Admin/Panels/PanelUpdate";
 
 function App() {
   const dispatch = useDispatch();
@@ -121,6 +124,12 @@ function App() {
         </Route>
         <Route path="/admin/panels/:panelId" element={<PrivateWrapper />}>
           <Route path="/admin/panels/:panelId" element={<PannelView />} />
+        </Route>
+        <Route path="/admin/panel/update/:panelId" element={<PrivateWrapper />}>
+          <Route
+            path="/admin/panel/update/:panelId"
+            element={<PanelUpdate />}
+          />
         </Route>
         //////////////////////////////Supervisor////////////////////////
         <Route
