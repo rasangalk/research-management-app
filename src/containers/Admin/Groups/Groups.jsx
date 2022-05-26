@@ -49,7 +49,7 @@ function Groups() {
                           <tr
                             className="even:bg-white odd:bg-slate-100 cursor-pointer"
                             onClick={() => {
-                              navigate("/admin/members/" + group._id);
+                              navigate("/admin/view-groups/" + group._id);
                             }}
                           >
                             <td className="capitalize py-2 px-2">

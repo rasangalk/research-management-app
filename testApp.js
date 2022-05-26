@@ -27,6 +27,10 @@ import Templates from "./src/containers/Admin/Templates/Templates";
 import CreatePannel from "./src/containers/Admin/Panels/CreatePannel";
 import EditSubmission from "./src/containers/Admin/EditSubmission/EditSubmission";
 import ViewSubmissionList from "./src/containers/Admin/ViewSubmissionList/ViewSubmissionList";
+import GroupManipulations from "./src/containers/Admin/Groups/GroupManipulations";
+import PannelView from "./src/containers/Admin/Panels/PannelView";
+import SupervisortopicsAcceptanceReject from "./src/containers/Supervisor/Supervisor-Topics/SupervisortopicsAcceptanceReject";
+import AssignedTopicDetails from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopicDetails";
 
 function App() {
   const dispatch = useDispatch();
@@ -123,6 +127,15 @@ function App() {
         <Route path="/admin/submissions" element={<PrivateWrapper />}>
           <Route path="/admin/submissions" element={<ViewSubmissionList />} />
         </Route>
+        <Route path="/admin/view-groups/:grpId" element={<PrivateWrapper />}>
+          <Route
+            path="/admin/view-groups/:grpId"
+            element={<GroupManipulations />}
+          />
+        </Route>
+        <Route path="/r9" element={<PrivateWrapper />}>
+          <Route path="/r9" element={<PannelView />} />
+        </Route>
         //////////////////////////////Supervisor////////////////////////
         <Route
           path="/Supervisor/Supervisor-Profile"
@@ -133,6 +146,14 @@ function App() {
             element={<SupervisorProfile />}
           />
         </Route>
+        <Route
+          path="/Supervisor/Supervisor-Topics-AcceptanceReject"
+          element={<SupervisortopicsAcceptanceReject />}
+        />
+        <Route
+          path="/supervisor/topics-AcceptanceReject"
+          element={<AssignedTopicDetails />}
+        />
       </Routes>
     </div>
   );
