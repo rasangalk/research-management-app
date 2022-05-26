@@ -25,7 +25,7 @@ function TopicRegistration() {
 
   const handleClose = (e) => {
     const register = {
-      groupId: group.username,
+      groupId: group.group.username,
       topic,
       researchInterest,
       supervisor,
