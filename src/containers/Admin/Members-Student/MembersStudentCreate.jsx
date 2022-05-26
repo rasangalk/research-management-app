@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { memberReg } from "../../../actions/user.actions";
 import { useNavigate } from "react-router-dom";
 
-function MembersStudentCreate() {
+function MembersCreate() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -148,4 +148,4 @@ function MembersStudentCreate() {
   );
 }
 
-export default MembersStudentCreate;
+export default MembersCreate;

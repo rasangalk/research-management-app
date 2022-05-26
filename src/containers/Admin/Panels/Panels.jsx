@@ -29,7 +29,10 @@ function Panels() {
                 />
               </div>
               <div className="flex flex-col">
-                <button className="capitalize text-lg font-bold px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm">
+                <button
+                  className="capitalize text-lg font-bold px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm"
+                  onClick={() => navigate("/admin/create-panel")}
+                >
                   create panel
                 </button>
               </div>

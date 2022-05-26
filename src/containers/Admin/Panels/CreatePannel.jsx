@@ -14,7 +14,7 @@ function CreatePannel() {
   const [mem3, setMember3] = useState("");
   const [panelId, setPanelId] = useState("");
   const members = useSelector((state) => state.members);
-  console.log("This is Staff Members:", members);
+  console.log("This is Staff Members:", members.staffMembers[0].sliit_id);
   useEffect(() => {
     dispatch(getAllStaffMemebrs());
   }, []);
@@ -26,12 +26,18 @@ function CreatePannel() {
       panelMembers: {
         member1: {
           username: mem1,
+          fullName: members.staffMembers[0].fullName,
+          memberId: members.staffMembers[0].sliit_id,
         },
         member2: {
           username: mem2,
+          fullName: members.staffMembers[1].fullName,
+          memberId: members.staffMembers[1].sliit_id,
         },
         member3: {
           username: mem3,
+          fullName: members.staffMembers[2].fullName,
+          memberId: members.staffMembers[2].sliit_id,
         },
       },
     };
