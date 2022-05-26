@@ -26,6 +26,7 @@ import Groups from "./src/containers/Admin/Groups/Groups";
 import Templates from "./src/containers/Admin/Templates/Templates";
 import CreatePannel from "./src/containers/Admin/Panels/CreatePannel";
 import EditSubmission from "./src/containers/Admin/EditSubmission/EditSubmission";
+import ViewSubmissionList from "./src/containers/Admin/ViewSubmissionList/ViewSubmissionList";
 
 function App() {
   const dispatch = useDispatch();
@@ -80,8 +81,14 @@ function App() {
             element={<CreateSubmission />}
           />
         </Route>
-        <Route path="/admin/submissions/view" element={<PrivateWrapper />}>
-          <Route path="/admin/submissions/view" element={<ViewSubmission />} />
+        <Route
+          path="/admin/submissions/view/:submissionId"
+          element={<PrivateWrapper />}
+        >
+          <Route
+            path="/admin/submissions/view/:submissionId"
+            element={<ViewSubmission />}
+          />
         </Route>
         <Route path="/admin/members/:memberId" element={<PrivateWrapper />}>
           <Route path="/admin/members/:memberId" element={<MemberDetails />} />
@@ -107,8 +114,14 @@ function App() {
         <Route path="/admin/panels" element={<PrivateWrapper />}>
           <Route path="/admin/panels" element={<Panels />} />
         </Route>
-        <Route path="/admin/submissions/edit" element={<PrivateWrapper />}>
-          <Route path="/admin/submissions/edit" element={<EditSubmission />} />
+        <Route path="/admin/submissions/edit/:id" element={<PrivateWrapper />}>
+          <Route
+            path="/admin/submissions/edit/:id"
+            element={<EditSubmission />}
+          />
+        </Route>
+        <Route path="/admin/submissions" element={<PrivateWrapper />}>
+          <Route path="/admin/submissions" element={<ViewSubmissionList />} />
         </Route>
         //////////////////////////////Supervisor////////////////////////
         <Route
