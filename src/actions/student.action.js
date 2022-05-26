@@ -2,7 +2,6 @@ import axios from "../helpers/axios";
 import { studentConstants } from "./constants";
 
 export const getGroupDetails = (id) => {
-  console.log("ID eka yako", id);
   return async (dispatch) => {
     dispatch({ type: studentConstants.GET_GROUP_DETAILS_REQUEST });
     const res = await axios.get("/student/group-details/" + id);

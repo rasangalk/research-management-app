@@ -42,25 +42,24 @@ export const getAllPanelDetails = () => {
   };
 };
 
-// export const getSubmissionByID = (id) => {
-//   return async (dispatch) => {
-//     dispatch({ type: submissionConstants.GET_ONE_SUBMISSION_DETAIL_REQUEST });
-
-//     const res = await axios.get("admin/submissions/" + id);
-
-//     if (res.status === 201) {
-//       dispatch({
-//         type: submissionConstants.GET_ONE_SUBMISSION_DETAIL_SUCCESS,
-//         payload: res.data,
-//       });
-//     } else {
-//       dispatch({
-//         type: submissionConstants.GET_ONE_SUBMISSION_DETAIL_FAILURE,
-//         payload: { error: res.data.error },
-//       });
-//     }
-//   };
-// };
+export const UpdateStudentGrpPanel = (form) => {
+  return async (dispatch) => {
+    console.log("FORM", form);
+    const res = await axios.patch(
+      `/admin/groupDetails/update/628f42d7f81f32a8f53c08f6`,
+      form
+    );
+    console.log(res);
+    if (res.status === 202) {
+      dispatch({
+        // type: movieConstants.ADD_NEW_MOVIE_SUCCESS,
+        // payload: { categ: res.data.product },
+      });
+    } else {
+      dispatch({});
+    }
+  };
+};
 
 // export const AddFileSubmission = (submission) => {
 //   for (var value of submission.values()) {
