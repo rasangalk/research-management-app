@@ -31,6 +31,10 @@ module.exports = {
 				"bk-white": "#F9F9F9",
 
 				"white-blue": "#EDF2F7",
+
+				"main-orange": "#F65354",
+
+				"main-orange-active": "#E42627",
 			},
 		},
 	},
