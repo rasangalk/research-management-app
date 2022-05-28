@@ -31,6 +31,7 @@ import GroupManipulations from "./src/containers/Admin/Groups/GroupManipulations
 import PannelView from "./src/containers/Admin/Panels/PannelView";
 import SupervisortopicsAcceptanceReject from "./src/containers/Supervisor/Supervisor-Topics/SupervisortopicsAcceptanceReject";
 import AssignedTopicDetails from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopicDetails";
+import CreateMarkingScheme from "./src/containers/Admin/CreateMarkingScheme/CreateMarkingScheme";
 
 function App() {
   const dispatch = useDispatch();
@@ -135,6 +136,12 @@ function App() {
         </Route>
         <Route path="/r9" element={<PrivateWrapper />}>
           <Route path="/r9" element={<PannelView />} />
+        </Route>
+        <Route path="/admin/marking-scheme/create" element={<PrivateWrapper />}>
+          <Route
+            path="/admin/marking-scheme/create"
+            element={<CreateMarkingScheme />}
+          />
         </Route>
         //////////////////////////////Supervisor////////////////////////
         <Route
