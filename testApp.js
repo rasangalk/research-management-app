@@ -31,6 +31,9 @@ import GroupManipulations from "./src/containers/Admin/Groups/GroupManipulations
 import PannelView from "./src/containers/Admin/Panels/PannelView";
 import SupervisortopicsAcceptanceReject from "./src/containers/Supervisor/Supervisor-Topics/SupervisortopicsAcceptanceReject";
 import AssignedTopicDetails from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopicDetails";
+import PanelUpdate from "./src/containers/Admin/Panels/PanelUpdate";
+import Topics from "./src/containers/Supervisor/Supervisor-Topics/Topics";
+import AssignedTopics from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopics";
 import CreateMarkingScheme from "./src/containers/Admin/CreateMarkingScheme/CreateMarkingScheme";
 
 function App() {
@@ -137,6 +140,9 @@ function App() {
         <Route path="/r9" element={<PrivateWrapper />}>
           <Route path="/r9" element={<PannelView />} />
         </Route>
+        <Route path="/r10" element={<PrivateWrapper />}>
+          <Route path="/r10" element={<PanelUpdate />} />
+        </Route>
         <Route path="/admin/marking-scheme/create" element={<PrivateWrapper />}>
           <Route
             path="/admin/marking-scheme/create"
@@ -160,6 +166,11 @@ function App() {
         <Route
           path="/supervisor/topics-AcceptanceReject"
           element={<AssignedTopicDetails />}
+        />
+        <Route path="/supervisor/topics" element={<Topics />} />
+        <Route
+          path="/supervisor/assigned-topics"
+          element={<AssignedTopics />}
         />
       </Routes>
     </div>
