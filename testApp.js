@@ -35,6 +35,8 @@ import PanelUpdate from "./src/containers/Admin/Panels/PanelUpdate";
 import Topics from "./src/containers/Supervisor/Supervisor-Topics/Topics";
 import AssignedTopics from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopics";
 import CreateMarkingScheme from "./src/containers/Admin/MarkingScheme/CreateMarkingScheme";
+import ViewMarkingSchemaList from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaList";
+import ViewMarkingSchemaByID from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaByID";
 
 function App() {
   const dispatch = useDispatch();
@@ -157,6 +159,21 @@ function App() {
           <Route
             path="/admin/marking-scheme/create"
             element={<CreateMarkingScheme />}
+          />
+        </Route>
+        <Route path="/admin/marking-scheme" element={<PrivateWrapper />}>
+          <Route
+            path="/admin/marking-scheme"
+            element={<ViewMarkingSchemaList />}
+          />
+        </Route>
+        <Route
+          path="/admin/marking-scheme/view/:schemaId"
+          element={<PrivateWrapper />}
+        >
+          <Route
+            path="/admin/marking-scheme/view/:schemaId"
+            element={<ViewMarkingSchemaByID />}
           />
         </Route>
         //////////////////////////////Supervisor////////////////////////
