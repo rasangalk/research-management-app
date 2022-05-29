@@ -38,143 +38,145 @@ import CreateMarkingScheme from "./src/containers/Admin/MarkingScheme/CreateMark
 import ViewMarkingSchemaList from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaList";
 import TopicSubmission from "./src/containers/Supervisor/StudentSubmissions/TopicSubmission";
 import EditMarkingScheme from "./src/containers/Admin/MarkingScheme/EditMarkingScheme";
-// import ViewMarkingSchemaByID from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaByID";
+import ViewMarkingSchemaByID from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaByID";
 import TopicSubmission from "./src/containers/Supervisor/StudentSubmissions/TopicSubmission";
 import StudentSubmission from "./src/containers/Supervisor/StudentSubmissions/Submissions";
 import Markings from "./src/containers/Supervisor/MarkingSchemes-Submissions";
 
 function App() {
-	const dispatch = useDispatch();
-	const auth = useSelector(state => state.auth);
+  const dispatch = useDispatch();
+  const auth = useSelector((state) => state.auth);
 
-	useEffect(() => {
-		if (!auth.authenticate) {
-			dispatch(isUserLoggedIn());
-		}
-	}, [auth.authenticate]);
-	//window.location.hash = "ascscaaaaaaaaaacascascqwqwfq";
-	return (
-		<div className='App'>
-			<Routes>
-				////////////////////Common/////////////////////////////
-				<Route path='/' element={<Signin />} />
-				<Route path='/signup' element={<Signup />} />
-				<Route path='/landing-page' element={<LandingPage />} />
-				/////////////////////Student//////////////////////////
-				<Route path='/student/signup' element={<StudentRegister />} />
-				<Route path='/student/submission' element={<PrivateWrapper />}>
-					<Route path='/student/submission' element={<StudentSubmission />} />
-				</Route>
-				<Route path='/student-home' element={<PrivateWrapper />}>
-					<Route path='/student-home' element={<StudentHome />} />
-				</Route>
-				<Route path='/r2' element={<PrivateWrapper />}>
-					<Route path='/r2' element={<StudentFeedbackAccept />} />
-				</Route>
-				<Route path='/student/templates' element={<PrivateWrapper />}>
-					<Route path='/student/templates' element={<StudentTemplateList />} />
-				</Route>
-				<Route path='/student/file-submission' element={<PrivateWrapper />}>
-					<Route
-						path='/student/file-submission'
-						element={<StudentFileSubmission />}
-					/>
-				</Route>
-				<Route path='/student/topicRegistration' element={<PrivateWrapper />}>
-					<Route
-						path='/student/topicRegistration'
-						element={<TopicRegistration />}
-					/>
-				</Route>
-				///////////////////////Admin///////////////////////////////
-				<Route path='/admin/members' element={<PrivateWrapper />}>
-					<Route path='/admin/members' element={<AdminHome />} />
-				</Route>
-				<Route path='/admin/submissions/create' element={<PrivateWrapper />}>
-					<Route
-						path='/admin/submissions/create'
-						element={<CreateSubmission />}
-					/>
-				</Route>
-				<Route path='/admin/submissions/view' element={<PrivateWrapper />}>
-					<Route path='/admin/submissions/view' element={<ViewSubmission />} />
-				</Route>
-				<Route path='/admin/members/:memberId' element={<PrivateWrapper />}>
-					<Route path='/admin/members/:memberId' element={<MemberDetails />} />
-				</Route>
-				<Route
-					path='/admin/submissions/view/:submissionId'
-					element={<PrivateWrapper />}>
-					<Route
-						path='/admin/submissions/view/:submissionId'
-						element={<ViewSubmission />}
-					/>
-				</Route>
-				<Route path='/admin/members/:memberId' element={<PrivateWrapper />}>
-					<Route path='/admin/members/:memberId' element={<MemberDetails />} />
-				</Route>
-				<Route
-					path='/Members-Student/MemberStudentUpdate'
-					element={<PrivateWrapper />}>
-					<Route
-						path='/Members-Student/MemberStudentUpdate'
-						element={<MembersStudentUpdate />}
-					/>
-				</Route>
-				<Route path='/admin/member/create' element={<PrivateWrapper />}>
-					<Route path='/admin/member/create' element={<MembersCreate />} />
-				</Route>
-				<Route path='/admin/view-groups' element={<PrivateWrapper />}>
-					<Route path='/admin/view-groups' element={<Groups />} />
-				</Route>
-				<Route path='/admin/create-panel' element={<PrivateWrapper />}>
-					<Route path='/admin/create-panel' element={<CreatePannel />} />
-				</Route>
-				<Route path='/admin/panels' element={<PrivateWrapper />}>
-					<Route path='/admin/panels' element={<Panels />} />
-				</Route>
-				<Route path='/admin/submissions/edit' element={<PrivateWrapper />}>
-					<Route path='/admin/submissions/edit' element={<EditSubmission />} />
-				</Route>
-				<Route path='/admin/view-groups/:grpId' element={<PrivateWrapper />}>
-					<Route
-						path='/admin/view-groups/:grpId'
-						element={<GroupManipulations />}
-					/>
-				</Route>
-				<Route path='/admin/panels/:panelId' element={<PrivateWrapper />}>
-					<Route path='/admin/panels/:panelId' element={<PannelView />} />
-				</Route>
-				<Route path='/admin/panel/update/:panelId' element={<PrivateWrapper />}>
-					<Route
-						path='/admin/panel/update/:panelId'
-						element={<PanelUpdate />}
-					/>
-				</Route>
-				<Route path='/admin/submissions' element={<PrivateWrapper />}>
-					<Route path='/admin/submissions' element={<ViewSubmissionList />} />
-				</Route>
-				<Route
-					path='/supervisor/topics-AcceptanceReject'
-					element={<AssignedTopicDetails />}
-				/>
-				<Route path='/admin/marking-scheme/create' element={<PrivateWrapper />}>
-					<Route
-						path='/admin/marking-scheme/create'
-						element={<CreateMarkingScheme />}
-					/>
-				</Route>
-				<Route
-					path='/admin/marking-scheme/Edit'
-					element={<EditMarkingScheme />}
-				/>
-				<Route path='/admin/marking-scheme' element={<PrivateWrapper />}>
-					<Route
-						path='/admin/marking-scheme'
-						element={<ViewMarkingSchemaList />}
-					/>
-				</Route>
-				{/* <Route
+  useEffect(() => {
+    if (!auth.authenticate) {
+      dispatch(isUserLoggedIn());
+    }
+  }, [auth.authenticate]);
+  //window.location.hash = "ascscaaaaaaaaaacascascqwqwfq";
+  return (
+    <div className="App">
+      <Routes>
+        ////////////////////Common/////////////////////////////
+        <Route path="/" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/landing-page" element={<LandingPage />} />
+        /////////////////////Student//////////////////////////
+        <Route path="/student/signup" element={<StudentRegister />} />
+        <Route path="/student/submission" element={<PrivateWrapper />}>
+          <Route path="/student/submission" element={<StudentSubmission />} />
+        </Route>
+        <Route path="/student-home" element={<PrivateWrapper />}>
+          <Route path="/student-home" element={<StudentHome />} />
+        </Route>
+        <Route path="/r2" element={<PrivateWrapper />}>
+          <Route path="/r2" element={<StudentFeedbackAccept />} />
+        </Route>
+        <Route path="/student/templates" element={<PrivateWrapper />}>
+          <Route path="/student/templates" element={<StudentTemplateList />} />
+        </Route>
+        <Route path="/student/file-submission" element={<PrivateWrapper />}>
+          <Route
+            path="/student/file-submission"
+            element={<StudentFileSubmission />}
+          />
+        </Route>
+        <Route path="/student/topicRegistration" element={<PrivateWrapper />}>
+          <Route
+            path="/student/topicRegistration"
+            element={<TopicRegistration />}
+          />
+        </Route>
+        ///////////////////////Admin///////////////////////////////
+        <Route path="/admin/members" element={<PrivateWrapper />}>
+          <Route path="/admin/members" element={<AdminHome />} />
+        </Route>
+        <Route path="/admin/submissions/create" element={<PrivateWrapper />}>
+          <Route
+            path="/admin/submissions/create"
+            element={<CreateSubmission />}
+          />
+        </Route>
+        <Route path="/admin/submissions/view" element={<PrivateWrapper />}>
+          <Route path="/admin/submissions/view" element={<ViewSubmission />} />
+        </Route>
+        <Route path="/admin/members/:memberId" element={<PrivateWrapper />}>
+          <Route path="/admin/members/:memberId" element={<MemberDetails />} />
+        </Route>
+        <Route
+          path="/admin/submissions/view/:submissionId"
+          element={<PrivateWrapper />}
+        >
+          <Route
+            path="/admin/submissions/view/:submissionId"
+            element={<ViewSubmission />}
+          />
+        </Route>
+        <Route path="/admin/members/:memberId" element={<PrivateWrapper />}>
+          <Route path="/admin/members/:memberId" element={<MemberDetails />} />
+        </Route>
+        <Route
+          path="/Members-Student/MemberStudentUpdate"
+          element={<PrivateWrapper />}
+        >
+          <Route
+            path="/Members-Student/MemberStudentUpdate"
+            element={<MembersStudentUpdate />}
+          />
+        </Route>
+        <Route path="/admin/member/create" element={<PrivateWrapper />}>
+          <Route path="/admin/member/create" element={<MembersCreate />} />
+        </Route>
+        <Route path="/admin/view-groups" element={<PrivateWrapper />}>
+          <Route path="/admin/view-groups" element={<Groups />} />
+        </Route>
+        <Route path="/admin/create-panel" element={<PrivateWrapper />}>
+          <Route path="/admin/create-panel" element={<CreatePannel />} />
+        </Route>
+        <Route path="/admin/panels" element={<PrivateWrapper />}>
+          <Route path="/admin/panels" element={<Panels />} />
+        </Route>
+        <Route path="/admin/submissions/edit" element={<PrivateWrapper />}>
+          <Route path="/admin/submissions/edit" element={<EditSubmission />} />
+        </Route>
+        <Route path="/admin/view-groups/:grpId" element={<PrivateWrapper />}>
+          <Route
+            path="/admin/view-groups/:grpId"
+            element={<GroupManipulations />}
+          />
+        </Route>
+        <Route path="/admin/panels/:panelId" element={<PrivateWrapper />}>
+          <Route path="/admin/panels/:panelId" element={<PannelView />} />
+        </Route>
+        <Route path="/admin/panel/update/:panelId" element={<PrivateWrapper />}>
+          <Route
+            path="/admin/panel/update/:panelId"
+            element={<PanelUpdate />}
+          />
+        </Route>
+        <Route path="/admin/submissions" element={<PrivateWrapper />}>
+          <Route path="/admin/submissions" element={<ViewSubmissionList />} />
+        </Route>
+        <Route
+          path="/supervisor/topics-AcceptanceReject"
+          element={<AssignedTopicDetails />}
+        />
+        <Route path="/admin/marking-scheme/create" element={<PrivateWrapper />}>
+          <Route
+            path="/admin/marking-scheme/create"
+            element={<CreateMarkingScheme />}
+          />
+        </Route>
+        <Route
+          path="/admin/marking-scheme/Edit"
+          element={<EditMarkingScheme />}
+        />
+        <Route path="/admin/marking-scheme" element={<PrivateWrapper />}>
+          <Route
+            path="/admin/marking-scheme"
+            element={<ViewMarkingSchemaList />}
+          />
+        </Route>
+        <Route
           path="/admin/marking-scheme/view/:schemaId"
           element={<PrivateWrapper />}
         >
@@ -182,31 +184,32 @@ function App() {
             path="/admin/marking-scheme/view/:schemaId"
             element={<ViewMarkingSchemaByID />}
           />
-        </Route> */}
-				//////////////////////////////Supervisor////////////////////////
-				<Route
-					path='/Supervisor/Supervisor-Profile'
-					element={<PrivateWrapper />}>
-					<Route
-						path='/Supervisor/Supervisor-Profile'
-						element={<SupervisorProfile />}
-					/>
-				</Route>
-				<Route
-					path='/Supervisor/Supervisor-Topics-AcceptanceReject/:id'
-					element={<SupervisortopicsAcceptanceReject />}
-				/>
-				<Route
-					path='/supervisor/assigned-topics'
-					element={<AssignedTopics />}
-				/>
-				<Route path='/supervisor/topics' element={<Topics />} />
-				<Route path='/r11' element={<TopicSubmission />} />
-				<Route path='/r12' element={<Markings />} />
-				<Route path='/r13' element={<StudentSubmission />} />
-			</Routes>
-		</div>
-	);
+        </Route>
+        //////////////////////////////Supervisor////////////////////////
+        <Route
+          path="/Supervisor/Supervisor-Profile"
+          element={<PrivateWrapper />}
+        >
+          <Route
+            path="/Supervisor/Supervisor-Profile"
+            element={<SupervisorProfile />}
+          />
+        </Route>
+        <Route
+          path="/Supervisor/Supervisor-Topics-AcceptanceReject/:id"
+          element={<SupervisortopicsAcceptanceReject />}
+        />
+        <Route
+          path="/supervisor/assigned-topics"
+          element={<AssignedTopics />}
+        />
+        <Route path="/supervisor/topics" element={<Topics />} />
+        <Route path="/r11" element={<TopicSubmission />} />
+        <Route path="/r12" element={<Markings />} />
+        <Route path="/r13" element={<StudentSubmission />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
