@@ -1,5 +1,5 @@
 import React from "react";
-import Menu from "../../../components/AdminMenu";
+import Menu from "../../../components/SupervisorMenu";
 import back from "../../../images/back-icon.png";
 import RedDot from "../../../images/red-dot.png";
 import GreenDot from "../../../images/green-dot.png";
@@ -7,7 +7,6 @@ import GreenDot from "../../../images/green-dot.png";
 function TopicSubmission() {
 	return (
 		<div>
-			{" "}
 			<div className='w-screen h-screen grid grid-cols-12 bg-bk-white'>
 				<div className=''>
 					<Menu />
