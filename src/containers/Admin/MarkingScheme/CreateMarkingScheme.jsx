@@ -43,6 +43,7 @@ function CreateMarkingScheme() {
     };
 
     dispatch(CreateMarkingSchemes(markingSchema));
+    navigate("/admin/marking-scheme");
   };
 
   return (

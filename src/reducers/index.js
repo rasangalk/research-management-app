@@ -10,6 +10,7 @@ import panelReducer from "./panels.reducers";
 import markingSchemasReducer from "./markingSchemas.reducers";
 import supervisorReducer from "./supervisor.reducer";
 import topicReducer from "./topic.reducer";
+import markingSchemaByIDReducer from "./markingSchemaByID.reducers";
 
 const rootReducer = combineReducers({
   user: userReducer,
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   markingSchemas: markingSchemasReducer,
   supervisor: supervisorReducer,
   topics: topicReducer,
+  markingSchema: markingSchemaByIDReducer,
 });
 
 export default rootReducer;

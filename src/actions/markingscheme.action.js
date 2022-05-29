@@ -48,18 +48,18 @@ export const getMarkingSchemas = () => {
 export const getMarkingSchemaByID = (schemaID) => {
   return async (dispatch) => {
     dispatch({
-      type: markingSchemaConstants.GET_ALL_MARKING_SCHEME_REQUEST,
+      type: markingSchemaConstants.GET_MARKING_SCHEME_REQUEST,
     });
     const res = await axios.get("/admin/markingSchemas/" + schemaID);
 
     if (res.status === 201) {
       dispatch({
-        type: markingSchemaConstants.GET_ALL_MARKING_SCHEME_SUCCESS,
+        type: markingSchemaConstants.GET_MARKING_SCHEME_SUCCESS,
         payload: res.data,
       });
     } else {
       dispatch({
-        type: markingSchemaConstants.GET_ALL_MARKING_SCHEME_FAILURE,
+        type: markingSchemaConstants.GET_MARKING_SCHEME_FAILURE,
         payload: { error: res.data.error },
       });
     }
