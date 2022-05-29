@@ -34,7 +34,7 @@ import AssignedTopicDetails from "./src/containers/Supervisor/Supervisor-Topics/
 import PanelUpdate from "./src/containers/Admin/Panels/PanelUpdate";
 import Topics from "./src/containers/Supervisor/Supervisor-Topics/Topics";
 import AssignedTopics from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopics";
-import CreateMarkingScheme from "./src/containers/Admin/CreateMarkingScheme/CreateMarkingScheme";
+import CreateMarkingScheme from "./src/containers/Admin/MarkingScheme/CreateMarkingScheme";
 
 function App() {
   const dispatch = useDispatch();
