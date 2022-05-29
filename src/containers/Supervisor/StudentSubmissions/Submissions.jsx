@@ -12,7 +12,10 @@ function Submissions() {
 				</div>
 				<div className='col-span-11 mx-auto my-auto '>
 					<div className='relative'>
-						<Container title='Topics' width='w-[68rem] h-[24.9rem]' />
+						<Container
+							title='student submissions'
+							width='w-[68rem] h-[24.9rem]'
+						/>
 						<div className='absolute top-[10rem] left-[7rem]'>
 							<div className=' grid grid-cols-3 w-[60rem]'>
 								<div className='col-span-2'>
