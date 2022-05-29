@@ -36,6 +36,7 @@ import Topics from "./src/containers/Supervisor/Supervisor-Topics/Topics";
 import AssignedTopics from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopics";
 import CreateMarkingScheme from "./src/containers/Admin/MarkingScheme/CreateMarkingScheme";
 import TopicSubmission from "./src/containers/Supervisor/StudentSubmissions/TopicSubmission";
+import SupervisorMain from "./src/containers/Supervisor/MarkingSchemes-Submissions/index";
 
 function App() {
 	const dispatch = useDispatch();
@@ -177,6 +178,7 @@ function App() {
 				/>
 				<Route path='/supervisor/topics' element={<Topics />} />
 				<Route path='/r11' element={<TopicSubmission />} />
+				<Route path='/r12' element={<SupervisorMain />} />
 			</Routes>
 		</div>
 	);
