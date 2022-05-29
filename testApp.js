@@ -32,6 +32,7 @@ import PannelView from "./src/containers/Admin/Panels/PannelView";
 import SupervisortopicsAcceptanceReject from "./src/containers/Supervisor/Supervisor-Topics/SupervisortopicsAcceptanceReject";
 import AssignedTopicDetails from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopicDetails";
 import PanelUpdate from "./src/containers/Admin/Panels/PanelUpdate";
+import AssignedTopics from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopics";
 
 function App() {
   const dispatch = useDispatch();
@@ -143,6 +144,9 @@ function App() {
             element={<PanelUpdate />}
           />
         </Route>
+        <Route path="/admin/submissions" element={<PrivateWrapper />}>
+          <Route path="/admin/submissions" element={<ViewSubmissionList />} />
+        </Route>
         //////////////////////////////Supervisor////////////////////////
         <Route
           path="/Supervisor/Supervisor-Profile"
@@ -156,6 +160,14 @@ function App() {
         <Route
           path="/Supervisor/Supervisor-Topics-AcceptanceReject"
           element={<SupervisortopicsAcceptanceReject />}
+        />
+        <Route
+          path="/supervisor/assigned-topics"
+          element={<AssignedTopics />}
+        />
+        <Route
+          path="/supervisor/topics-AcceptanceReject"
+          element={<AssignedTopicDetails />}
         />
       </Routes>
     </div>
