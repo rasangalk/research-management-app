@@ -37,9 +37,11 @@ import AssignedTopics from "./src/containers/Supervisor/Supervisor-Topics/Assign
 import CreateMarkingScheme from "./src/containers/Admin/MarkingScheme/CreateMarkingScheme";
 import ViewMarkingSchemaList from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaList";
 import TopicSubmission from "./src/containers/Supervisor/StudentSubmissions/TopicSubmission";
-// import EditMarkingScheme from "./src/containers/Admin/ViewMarkingSchemaByID/EditMarkingScheme";
+import EditMarkingScheme from "./src/containers/Admin/MarkingScheme/EditMarkingScheme";
 import ViewMarkingSchemaByID from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaByID";
 import TopicSubmission from "./src/containers/Supervisor/StudentSubmissions/TopicSubmission";
+import StudentSubmission from "./src/containers/Supervisor/StudentSubmissions/Submissions";
+import Markings from "./src/containers/Supervisor/MarkingSchemes-Submissions";
 
 function App() {
   const dispatch = useDispatch();
@@ -164,10 +166,10 @@ function App() {
             element={<CreateMarkingScheme />}
           />
         </Route>
-        {/* <Route
+        <Route
           path="/admin/marking-scheme/Edit"
           element={<EditMarkingScheme />}
-        /> */}
+        />
         <Route path="/admin/marking-scheme" element={<PrivateWrapper />}>
           <Route
             path="/admin/marking-scheme"
@@ -203,6 +205,8 @@ function App() {
         />
         <Route path="/supervisor/topics" element={<Topics />} />
         <Route path="/r11" element={<TopicSubmission />} />
+        <Route path="/r12" element={<Markings />} />
+        <Route path="/r13" element={<StudentSubmission />} />
       </Routes>
     </div>
   );
