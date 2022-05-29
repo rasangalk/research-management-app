@@ -35,8 +35,11 @@ import PanelUpdate from './src/containers/Admin/Panels/PanelUpdate'
 import Topics from './src/containers/Supervisor/Supervisor-Topics/Topics'
 import AssignedTopics from './src/containers/Supervisor/Supervisor-Topics/AssignedTopics'
 import CreateMarkingScheme from './src/containers/Admin/MarkingScheme/CreateMarkingScheme'
-import TopicSubmission from './src/containers/Supervisor/StudentSubmissions/TopicSubmission'
-import EditMarkingScheme from './src/containers/Admin/MarkingScheme/EditMarkingScheme'
+import ViewMarkingSchemaList from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaList";
+import TopicSubmission from './src/containers/Supervisor/StudentSubmissions/TopicSubmission';
+import EditMarkingScheme from './src/containers/Admin/MarkingScheme/EditMarkingScheme';
+// import ViewMarkingSchemaByID from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaByID";
+import TopicSubmission from "./src/containers/Supervisor/StudentSubmissions/TopicSubmission";
 
 function App() {
   const dispatch = useDispatch()
@@ -165,6 +168,22 @@ function App() {
           path='/admin/marking-scheme/Edit'
           element={<EditMarkingScheme />}
         />
+
+        <Route path="/admin/marking-scheme" element={<PrivateWrapper />}>
+          <Route
+            path="/admin/marking-scheme"
+            element={<ViewMarkingSchemaList />}
+          />
+        </Route>
+        {/* <Route
+          path="/admin/marking-scheme/view/:schemaId"
+          element={<PrivateWrapper />}
+        >
+          <Route
+            path="/admin/marking-scheme/view/:schemaId"
+            element={<ViewMarkingSchemaByID />}
+          />
+        </Route> */}
         //////////////////////////////Supervisor////////////////////////
         <Route
           path='/Supervisor/Supervisor-Profile'
