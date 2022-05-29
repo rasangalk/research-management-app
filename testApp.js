@@ -37,6 +37,7 @@ import AssignedTopics from "./src/containers/Supervisor/Supervisor-Topics/Assign
 import CreateMarkingScheme from "./src/containers/Admin/MarkingScheme/CreateMarkingScheme";
 import ViewMarkingSchemaList from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaList";
 import ViewMarkingSchemaByID from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaByID";
+import TopicSubmission from "./src/containers/Supervisor/StudentSubmissions/TopicSubmission";
 
 function App() {
   const dispatch = useDispatch();
@@ -47,7 +48,7 @@ function App() {
       dispatch(isUserLoggedIn());
     }
   }, [auth.authenticate]);
-
+  //window.location.hash = "ascscaaaaaaaaaacascascqwqwfq";
   return (
     <div className="App">
       <Routes>
@@ -187,7 +188,7 @@ function App() {
           />
         </Route>
         <Route
-          path="/Supervisor/Supervisor-Topics-AcceptanceReject"
+          path="/Supervisor/Supervisor-Topics-AcceptanceReject/:id"
           element={<SupervisortopicsAcceptanceReject />}
         />
         <Route
@@ -195,6 +196,7 @@ function App() {
           element={<AssignedTopics />}
         />
         <Route path="/supervisor/topics" element={<Topics />} />
+        <Route path="/r11" element={<TopicSubmission />} />
       </Routes>
     </div>
   );
