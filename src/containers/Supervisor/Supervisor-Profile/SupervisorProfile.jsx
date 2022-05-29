@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Menu from "../../../components/SupervisorMenu";
 import Container from "../../../components/SupervisorContainer";
+import { getSupervisorDetails } from "../../../actions/supervisor.action";
 
 function SupervisorProfile() {
+  const dispatch = useDispatch();
+  // const auth = useSelector((state) => state.auth);
+  const supervisor = useSelector((state) => state.supervisor);
+
+  const user = window.localStorage.getItem("user");
+  const userID = JSON.parse(user)._id;
+  useEffect(() => {
+    dispatch(getSupervisorDetails(userID));
+  }, []);
+  console.log(supervisor);
   return (
     <div>
       <div className="w-screen h-screen grid grid-cols-12 bg-bk-white">
@@ -19,25 +31,33 @@ function SupervisorProfile() {
                     <p className="capitalize text-slate-700 text-sm mb-1">
                       Username:
                     </p>
-                    <p className=" font-bold text-base">kasthuri.r</p>
+                    <p className=" font-bold text-base">
+                      {supervisor.supervisor.username}
+                    </p>
                   </div>
                   <div>
                     <p className="capitalize text-slate-700 text-sm mb-1">
                       ID:
                     </p>
-                    <p className="capitalize font-bold text-base">EMP21786</p>
+                    <p className="capitalize font-bold text-base">
+                      {supervisor.supervisor.sliit_id}
+                    </p>
                   </div>
                   <div>
                     <p className="capitalize text-slate-700 text-sm mb-1">
                       Phone:
                     </p>
-                    <p className="capitalize font-bold text-base">0771245789</p>
+                    <p className="capitalize font-bold text-base">
+                      {supervisor.supervisor.phone}
+                    </p>
                   </div>
                   <div>
                     <p className="capitalize text-slate-700 text-sm mb-1">
                       Email:
                     </p>
-                    <p className=" font-bold text-base">emp21786@my.sliit.lk</p>
+                    <p className=" font-bold text-base">
+                      {supervisor.supervisor.email}
+                    </p>
                   </div>
                 </div>
                 <div className="flex flex-col gap-8">
@@ -46,26 +66,28 @@ function SupervisorProfile() {
                       Name:
                     </p>
                     <p className="capitalize font-bold text-base">
-                      Silva A. B. T
+                      {supervisor.supervisor.fullName}
                     </p>
                   </div>
                   <div>
                     <p className="capitalize text-slate-700 text-sm mb-1">
                       Role:
                     </p>
-                    <p className="capitalize font-bold text-base">Supervisor</p>
+                    <p className="capitalize font-bold text-base">
+                      {supervisor.supervisor.role}
+                    </p>
                   </div>
                   <div>
                     <p className="capitalize text-slate-700 text-sm mb-1">
                       Research Interests:
                     </p>
                     <p className="capitalize font-bold text-base">
-                      Artfial Interlligence Machine Learning IoT
+                      {supervisor.supervisor.research_interest}
                     </p>
-                    <p className="capitalize font-bold text-base">
+                    {/* <p className="capitalize font-bold text-base">
                       Machine Learning
                     </p>
-                    <p className="capitalize font-bold text-base">IoT</p>
+                    <p className="capitalize font-bold text-base">IoT</p> */}
                   </div>
                 </div>
               </div>

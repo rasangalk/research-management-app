@@ -91,10 +91,7 @@ function TopicRegistration() {
                 Select Your Supervisor
               </option>
               {Object.keys(members.supservisors).map((element) => (
-                <option
-                  key={element}
-                  value={members.supservisors[element].sliit_id}
-                >
+                <option key={element} value={members.supservisors[element]._id}>
                   {members.supservisors[element].fullName}
                   {" - " + members.supservisors[element].research_interest}
                 </option>

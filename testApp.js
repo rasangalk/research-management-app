@@ -35,6 +35,7 @@ import PanelUpdate from "./src/containers/Admin/Panels/PanelUpdate";
 import Topics from "./src/containers/Supervisor/Supervisor-Topics/Topics";
 import AssignedTopics from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopics";
 import CreateMarkingScheme from "./src/containers/Admin/MarkingScheme/CreateMarkingScheme";
+import TopicSubmission from "./src/containers/Supervisor/StudentSubmissions/TopicSubmission";
 
 function App() {
   const dispatch = useDispatch();
@@ -45,7 +46,7 @@ function App() {
       dispatch(isUserLoggedIn());
     }
   }, [auth.authenticate]);
-
+  //window.location.hash = "ascscaaaaaaaaaacascascqwqwfq";
   return (
     <div className="App">
       <Routes>
@@ -170,7 +171,7 @@ function App() {
           />
         </Route>
         <Route
-          path="/Supervisor/Supervisor-Topics-AcceptanceReject"
+          path="/Supervisor/Supervisor-Topics-AcceptanceReject/:id"
           element={<SupervisortopicsAcceptanceReject />}
         />
         <Route
@@ -178,6 +179,7 @@ function App() {
           element={<AssignedTopics />}
         />
         <Route path="/supervisor/topics" element={<Topics />} />
+        <Route path="/r11" element={<TopicSubmission />} />
       </Routes>
     </div>
   );
