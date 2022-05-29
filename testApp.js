@@ -32,7 +32,9 @@ import PannelView from "./src/containers/Admin/Panels/PannelView";
 import SupervisortopicsAcceptanceReject from "./src/containers/Supervisor/Supervisor-Topics/SupervisortopicsAcceptanceReject";
 import AssignedTopicDetails from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopicDetails";
 import PanelUpdate from "./src/containers/Admin/Panels/PanelUpdate";
+import Topics from "./src/containers/Supervisor/Supervisor-Topics/Topics";
 import AssignedTopics from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopics";
+import CreateMarkingScheme from "./src/containers/Admin/MarkingScheme/CreateMarkingScheme";
 
 function App() {
   const dispatch = useDispatch();
@@ -147,6 +149,16 @@ function App() {
         <Route path="/admin/submissions" element={<PrivateWrapper />}>
           <Route path="/admin/submissions" element={<ViewSubmissionList />} />
         </Route>
+        <Route
+          path="/supervisor/topics-AcceptanceReject"
+          element={<AssignedTopicDetails />}
+        />
+        <Route path="/admin/marking-scheme/create" element={<PrivateWrapper />}>
+          <Route
+            path="/admin/marking-scheme/create"
+            element={<CreateMarkingScheme />}
+          />
+        </Route>
         //////////////////////////////Supervisor////////////////////////
         <Route
           path="/Supervisor/Supervisor-Profile"
@@ -165,10 +177,7 @@ function App() {
           path="/supervisor/assigned-topics"
           element={<AssignedTopics />}
         />
-        <Route
-          path="/supervisor/topics-AcceptanceReject"
-          element={<AssignedTopicDetails />}
-        />
+        <Route path="/supervisor/topics" element={<Topics />} />
       </Routes>
     </div>
   );
