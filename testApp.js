@@ -93,6 +93,18 @@ function App() {
           <Route path="/admin/members/:memberId" element={<MemberDetails />} />
         </Route>
         <Route
+          path="/admin/submissions/view/:submissionId"
+          element={<PrivateWrapper />}
+        >
+          <Route
+            path="/admin/submissions/view/:submissionId"
+            element={<ViewSubmission />}
+          />
+        </Route>
+        <Route path="/admin/members/:memberId" element={<PrivateWrapper />}>
+          <Route path="/admin/members/:memberId" element={<MemberDetails />} />
+        </Route>
+        <Route
           path="/Members-Student/MemberStudentUpdate"
           element={<PrivateWrapper />}
         >
