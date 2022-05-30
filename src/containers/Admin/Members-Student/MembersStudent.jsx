@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Menu from "../../../components/StudentMenu";
 import Container from "../../../components/StudentContainer";
 import { deleteMember, getMember } from "../../../actions/members.action";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useNavigate } from "react-router-dom";
 
 function MemberDetails() {
   const dispatch = useDispatch();
@@ -81,20 +81,27 @@ function MemberDetails() {
                   </div>
                 </div>
               </div>
-              <div className="flex mt-[4rem] gap-3 ml-[53rem] ">
-                <button
-                  className="  text-lg  px-6 py-1 bg-[#F65354] text-white border border-slate-300 focus:outline-none focus:border-[#f76d6d]-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-[#c73e3e]-active float-right  text-sm"
-                  onClick={() => {
-                    dispatch(deleteMember(member.member._id));
-                    navigate(-1);
-                  }}
-                >
-                  Delete
-                </button>
-                <button className=" text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm">
-                  Edit
-                </button>
-              </div>
+              {member.member.role != "supervisor" ? (
+                <div className="flex mt-[4rem] gap-3 ml-[53rem] ">
+                  <button
+                    className="  text-lg  px-6 py-1 bg-[#F65354] text-white border border-slate-300 focus:outline-none focus:border-[#f76d6d]-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-[#c73e3e]-active float-right  text-sm"
+                    onClick={() => {
+                      dispatch(deleteMember(member.member._id));
+                      navigate(-1);
+                    }}
+                  >
+                    Delete
+                  </button>
+                  <button
+                    className=" text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm"
+                    onClick={() => {
+                      navigate("/admin/member/update/" + member.member._id);
+                    }}
+                  >
+                    Edit
+                  </button>
+                </div>
+              ) : null}
             </div>
           </div>
         </div>

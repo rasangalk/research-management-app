@@ -94,3 +94,25 @@ export const getAllSupervisors = () => {
     }
   };
 };
+
+export const UpdateMemberDetails = (member) => {
+  return async (dispatch) => {
+    // dispatch({ type: submissionConstants.ADD_SUBMISSION_REQUEST });
+    const res = await axios.patch("/admin/member/update", member);
+
+    if (res.status === 201) {
+      //   const { message } = res.data;
+      //   dispatch({
+      //     type: submissionConstants.ADD_SUBMISSION_SUCCESS,
+      //     payload: {
+      //       message,
+      //     },
+      //   });
+    } else {
+      //   dispatch({
+      //     type: submissionConstants.ADD_SUBMISSION_FAILURE,
+      //     payload: { error: res.data.error },
+      //   });
+    }
+  };
+};

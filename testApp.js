@@ -36,7 +36,11 @@ import Topics from "./src/containers/Supervisor/Supervisor-Topics/Topics";
 import AssignedTopics from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopics";
 import CreateMarkingScheme from "./src/containers/Admin/MarkingScheme/CreateMarkingScheme";
 import TopicSubmission from "./src/containers/Supervisor/StudentSubmissions/TopicSubmission";
-
+import Markings from "./src/containers/Supervisor/MarkingSchemes-Submissions";
+import StudentSubmission from "./src/containers/Supervisor/StudentSubmissions/Submissions";
+import ViewMarkingSchemaList from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaList";
+import EditMarkingScheme from "./src/containers/Admin/MarkingScheme/EditMarkingScheme";
+import ViewMarkingSchemaByID from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaByID";
 function App() {
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
@@ -108,12 +112,9 @@ function App() {
         <Route path="/admin/members/:memberId" element={<PrivateWrapper />}>
           <Route path="/admin/members/:memberId" element={<MemberDetails />} />
         </Route>
-        <Route
-          path="/Members-Student/MemberStudentUpdate"
-          element={<PrivateWrapper />}
-        >
+        <Route path="/admin/member/update/:id" element={<PrivateWrapper />}>
           <Route
-            path="/Members-Student/MemberStudentUpdate"
+            path="/admin/member/update/:id"
             element={<MembersStudentUpdate />}
           />
         </Route>
@@ -160,6 +161,28 @@ function App() {
             element={<CreateMarkingScheme />}
           />
         </Route>
+        <Route path="/admin/view-templates" element={<PrivateWrapper />}>
+          <Route path="/admin/view-templates" element={<Templates />} />
+        </Route>
+        <Route path="/admin/marking-scheme" element={<PrivateWrapper />}>
+          <Route
+            path="/admin/marking-scheme"
+            element={<ViewMarkingSchemaList />}
+          />
+        </Route>
+        <Route
+          path="/admin/marking-scheme/Edit"
+          element={<EditMarkingScheme />}
+        />
+        <Route
+          path="/admin/marking-scheme/view/:schemaId"
+          element={<PrivateWrapper />}
+        >
+          <Route
+            path="/admin/marking-scheme/view/:schemaId"
+            element={<ViewMarkingSchemaByID />}
+          />
+        </Route>
         //////////////////////////////Supervisor////////////////////////
         <Route
           path="/Supervisor/Supervisor-Profile"
@@ -179,7 +202,13 @@ function App() {
           element={<AssignedTopics />}
         />
         <Route path="/supervisor/topics" element={<Topics />} />
+        <Route
+          path="/supervisor/assigned-topic/:id"
+          element={<AssignedTopicDetails />}
+        />
         <Route path="/r11" element={<TopicSubmission />} />
+        <Route path="/r12" element={<Markings />} />
+        <Route path="/r13" element={<StudentSubmission />} />
       </Routes>
     </div>
   );

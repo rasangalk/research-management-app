@@ -39,9 +39,7 @@ function Members() {
                 </select>
               </div>
               <button className=" text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm">
-                <Link to="/Members-Student/MemberStudentCreate">
-                  Add Member
-                </Link>
+                <Link to="/admin/member/create">Add Member</Link>
               </button>
             </div>
             <div className="row-span-5 mx-auto bg-white w-[70.5rem] drop-shadow-xl rounded-xl mt-0 h-[33rem]">
