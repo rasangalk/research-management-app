@@ -46,6 +46,7 @@ import StaffPannel from "./src/containers/Staff/StaffPannel";
 import StudentSubmissions from "./src/containers/Staff/StudentSubmissions";
 import StudentTopicSubmission from "./src/containers/Staff/StudentTopicSubmission";
 import StaffProfile from "./src/containers/Staff/StaffProfile";
+import StaffEditProfile from "./src/containers/Staff/StaffEditProfile";
 
 function App() {
 	const dispatch = useDispatch();
@@ -223,6 +224,7 @@ function App() {
 					element={<StudentTopicSubmission />}
 				/>
 				<Route path='/r24' element={<StaffProfile />} />
+				<Route path='/r25' element={<StaffEditProfile />} />
 			</Routes>
 		</div>
 	);
