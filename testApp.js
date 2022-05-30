@@ -204,7 +204,7 @@ function App() {
           element={<AssignedTopics />}
         />
         <Route path="/supervisor/topics" element={<Topics />} />
-        <Route path="/r11" element={<TopicSubmission />} />
+        <Route path="/r11/:assignmentName" element={<TopicSubmission />} />
         <Route path="/r12" element={<Markings />} />
         <Route path="/r13" element={<StudentSubmission />} />
       </Routes>

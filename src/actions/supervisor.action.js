@@ -19,3 +19,23 @@ export const getSupervisorDetails = (id) => {
     }
   };
 };
+
+export const getStudentSubmissionsByName = (name) => {
+  return async (dispatch) => {
+    dispatch({
+      type: supervisorConstants.GET_STUDENT_ASSIGNMENT_BY_NAME_REQUEST,
+    });
+    const res = await axios.get("/supervisor/student-submission/" + name);
+    if (res.status === 201) {
+      dispatch({
+        type: supervisorConstants.GET_STUDENT_ASSIGNMENT_BY_NAME_SUCCESS,
+        payload: { submission: res.data.submission },
+      });
+    } else {
+      dispatch({
+        type: supervisorConstants.GET_STUDENT_ASSIGNMENT_BY_NAME_FAILURE,
+        payload: { error: res.data.error },
+      });
+    }
+  };
+};
