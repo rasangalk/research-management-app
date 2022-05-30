@@ -19,3 +19,22 @@ export const getTemplates = () => {
     }
   };
 };
+
+export const deleteTemplates = (id) => {
+  return async (dispatch) => {
+    dispatch({ type: templateConstants.GET_ALL_TEMPLATES_REQUEST });
+    const res = await axios.delete("/admin/template/delete/" + id);
+
+    // if (res.status === 200) {
+    //   dispatch({
+    //     type: templateConstants.GET_ALL_TEMPLATES_SUCCESS,
+    //     payload: { templates: res.data.templates },
+    //   });
+    // } else {
+    //   dispatch({
+    //     type: templateConstants.GET_ALL_TEMPLATES_FAILURE,
+    //     payload: { error: res.data.error },
+    //   });
+    // }
+  };
+};

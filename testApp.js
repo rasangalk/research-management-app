@@ -9,7 +9,7 @@ import Signup from "./src/containers/Register";
 import LandingPage from "./src/containers/LandingPage";
 import StudentRegister from "./src/containers/Student/StudentRegister";
 import StudentHome from "./src/containers/Student/StudentHome/Home";
-import StudentSubmission from "./src/containers/Student/StudentSubmission/StudentSubmission";
+import StudentNewSubmission from "./src/containers/Student/StudentSubmission/StudentSubmission";
 import StudentFeedbackAccept from "./src/containers/Student/FeedbackAccepted/FeedbackAccepted";
 import StudentTemplateList from "./src/containers/Student/StudentTemplateList";
 import StudentFileSubmission from "./src/containers/Student/StudentFileSubmission/StudentFileSubmission";
@@ -37,12 +37,16 @@ import AssignedTopics from "./src/containers/Supervisor/Supervisor-Topics/Assign
 import CreateMarkingScheme from "./src/containers/Admin/MarkingScheme/CreateMarkingScheme";
 import ViewMarkingSchemaList from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaList";
 import TopicSubmission from "./src/containers/Supervisor/StudentSubmissions/TopicSubmission";
+import Markings from "./src/containers/Supervisor/MarkingSchemes-Submissions";
+import StudentSubmission from "./src/containers/Supervisor/StudentSubmissions/Submissions";
+import ViewMarkingSchemaList from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaList";
 import EditMarkingScheme from "./src/containers/Admin/MarkingScheme/EditMarkingScheme";
 import ViewMarkingSchemaByID from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaByID";
-import TopicSubmission from "./src/containers/Supervisor/StudentSubmissions/TopicSubmission";
-import StudentSubmission from "./src/containers/Supervisor/StudentSubmissions/Submissions";
-import Markings from "./src/containers/Supervisor/MarkingSchemes-Submissions";
-
+import StaffPannel from "./src/containers/Staff/StaffPannel";
+import StudentSubmissions from "./src/containers/Staff/StudentSubmissions";
+import StudentTopicSubmission from "./src/containers/Staff/StudentTopicSubmission";
+import StaffProfile from "./src/containers/Staff/StaffProfile";
+import StaffEditProfile from "./src/containers/Staff/StaffEditProfile";
 function App() {
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
@@ -63,13 +67,19 @@ function App() {
         /////////////////////Student//////////////////////////
         <Route path="/student/signup" element={<StudentRegister />} />
         <Route path="/student/submission" element={<PrivateWrapper />}>
-          <Route path="/student/submission" element={<StudentSubmission />} />
+          <Route
+            path="/student/submission"
+            element={<StudentNewSubmission />}
+          />
         </Route>
         <Route path="/student-home" element={<PrivateWrapper />}>
           <Route path="/student-home" element={<StudentHome />} />
         </Route>
-        <Route path="/r2" element={<PrivateWrapper />}>
-          <Route path="/r2" element={<StudentFeedbackAccept />} />
+        <Route path="/student/topic/accepted" element={<PrivateWrapper />}>
+          <Route
+            path="/student/topic/accepted/:id"
+            element={<StudentFeedbackAccept />}
+          />
         </Route>
         <Route path="/student/templates" element={<PrivateWrapper />}>
           <Route path="/student/templates" element={<StudentTemplateList />} />
@@ -114,12 +124,9 @@ function App() {
         <Route path="/admin/members/:memberId" element={<PrivateWrapper />}>
           <Route path="/admin/members/:memberId" element={<MemberDetails />} />
         </Route>
-        <Route
-          path="/Members-Student/MemberStudentUpdate"
-          element={<PrivateWrapper />}
-        >
+        <Route path="/admin/member/update/:id" element={<PrivateWrapper />}>
           <Route
-            path="/Members-Student/MemberStudentUpdate"
+            path="/admin/member/update/:id"
             element={<MembersStudentUpdate />}
           />
         </Route>
@@ -166,16 +173,19 @@ function App() {
             element={<CreateMarkingScheme />}
           />
         </Route>
-        <Route
-          path="/admin/marking-scheme/Edit"
-          element={<EditMarkingScheme />}
-        />
+        <Route path="/admin/view-templates" element={<PrivateWrapper />}>
+          <Route path="/admin/view-templates" element={<Templates />} />
+        </Route>
         <Route path="/admin/marking-scheme" element={<PrivateWrapper />}>
           <Route
             path="/admin/marking-scheme"
             element={<ViewMarkingSchemaList />}
           />
         </Route>
+        <Route
+          path="/admin/marking-scheme/Edit"
+          element={<EditMarkingScheme />}
+        />
         <Route
           path="/admin/marking-scheme/view/:schemaId"
           element={<PrivateWrapper />}
@@ -205,8 +215,24 @@ function App() {
         />
         <Route path="/supervisor/topics" element={<Topics />} />
         <Route path="/r11/:assignmentName" element={<TopicSubmission />} />
+        <Route
+          path="/supervisor/assigned-topic/:id"
+          element={<AssignedTopicDetails />}
+        />
         <Route path="/r12" element={<Markings />} />
         <Route path="/r13" element={<StudentSubmission />} />
+        //////////////////////////////Staff////////////////////////
+        <Route path="/staff/staff-pannel" element={<StaffPannel />} />
+        <Route
+          path="/staff/student-submissions"
+          element={<StudentSubmissions />}
+        />
+        <Route
+          path="/staff/student-topic-submission"
+          element={<StudentTopicSubmission />}
+        />
+        <Route path="/r24" element={<StaffProfile />} />
+        <Route path="/r25" element={<StaffEditProfile />} />
       </Routes>
     </div>
   );

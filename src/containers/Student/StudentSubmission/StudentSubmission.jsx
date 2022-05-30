@@ -5,15 +5,19 @@ import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getSubmissions } from "../../../actions/submissions.action";
 import { Link } from "react-router-dom";
+import { getTopicByUserId } from "../../../actions/topics.action";
 
 function StudentSubmission() {
   const dispatch = useDispatch();
   const submissions = useSelector((state) => state.submissions);
-
+  const topic = useSelector((state) => state.topics);
+  const user = window.localStorage.getItem("user");
+  const userID = JSON.parse(user)._id;
   useEffect(() => {
     dispatch(getSubmissions());
+    dispatch(getTopicByUserId(userID));
   }, []);
-  console.log(submissions);
+  console.log(topic.topicById);
   return (
     <div className="h-screen w-screen">
       <div className="grid grid-cols-12 grid-rows-2 w-full h-full bg-bk-white gap-2">
@@ -30,9 +34,15 @@ function StudentSubmission() {
               Button will be enable if the submited topic is rejected by the
               supervisor or the panel.
             </p>
-            <button className="capitalize bg-regal-blue hover:bg-regal-blue-active ml-5 mt-12 px-5 py-2 text-sm rounded-md font-bold text-white">
-              <Link to="/student/topicRegistration">register button</Link>
-            </button>
+            {topic.topic.supervisorStatus == "Rejected" ? (
+              <button className="capitalize bg-regal-blue hover:bg-regal-blue-active ml-5 mt-12 px-5 py-2 text-sm rounded-md font-bold text-white">
+                <Link to="/student/topicRegistration">register button</Link>
+              </button>
+            ) : (
+              <button className="capitalize bg-regal-blue-disabled hover:bg-regal-blue-disabled ml-5 mt-12 px-5 py-2 text-sm rounded-md font-bold text-white">
+                pending
+              </button>
+            )}
           </div>
         </div>
         <div className="col-span-8">
@@ -44,9 +54,17 @@ function StudentSubmission() {
             </div>
             <div className="grid grid-cols-5 mx-6 mt-1 overflow-y-auto h-[9rem]">
               <div className="col-span-4 capitalize mt-1 underline underline-offset-3">
-                topic registration-supervisor
+                <Link to={"/student/topic/accepted/" + userID}>
+                  topic registration-supervisor
+                </Link>
               </div>
-              <div className="capitalize mt-1 mx-auto">accepted</div>
+              <div className="capitalize mt-1 mx-auto">
+                {topic.topicById.supervisorStatus == "unavailable" ? (
+                  <p>pending</p>
+                ) : (
+                  topic.topicById.supervisorStatus
+                )}
+              </div>
               <div className="col-span-4 capitalize mt-1 underline underline-offset-3">
                 topic registration-co-supervisor
               </div>
@@ -80,7 +98,7 @@ function StudentSubmission() {
             <div className="grid grid-rows-10 mx-6 overflow-y-auto h-[6rem] ">
               {submissions.submissions.length > 0
                 ? submissions.submissions.map((submission) => (
-                    <div className="grid grid-cols-4">
+                    <div className="grid grid-cols-4" key={submission._id}>
                       <div className="flex col-span-2 gap-2 items-center ">
                         <img src={submit} alt="submit" className="h-3   " />
                         <p className="capitalize mt-2">{submission.caption}</p>
