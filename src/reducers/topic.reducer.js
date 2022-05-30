@@ -3,6 +3,7 @@ import { topicConstants } from "../actions/constants";
 const initState = {
   topics: [],
   topic: {},
+  topicById: {},
   pageRequest: false,
   error: null,
   loading: false,
@@ -45,6 +46,27 @@ export default (state = initState, action) => {
       };
       break;
     case topicConstants.GET_TOPIC_FAILURE:
+      state = {
+        ...state,
+        error: action.payload.error,
+        pageRequest: false,
+      };
+      break;
+
+    case topicConstants.GET_TOPIC_BY_USERID_REQUEST:
+      state = {
+        ...state,
+        pageRequest: true,
+      };
+      break;
+    case topicConstants.GET_TOPIC_BY_USERID_SUCCESS:
+      state = {
+        ...state,
+        topicById: action.payload.topic,
+        pageRequest: false,
+      };
+      break;
+    case topicConstants.GET_TOPIC_BY_USERID_FAILURE:
       state = {
         ...state,
         error: action.payload.error,

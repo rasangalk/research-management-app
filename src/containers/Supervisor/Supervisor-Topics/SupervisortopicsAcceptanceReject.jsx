@@ -8,9 +8,14 @@ import {
   SupervisorUpdateTopicTick,
 } from "../../../actions/topics.action";
 import { useNavigate, useParams } from "react-router-dom";
+import { getSupervisorDetails } from "../../../actions/supervisor.action";
 
 function SupervisortopicsAcceptanceReject() {
   const [comment, setComment] = useState();
+  const supervisor = useSelector((state) => state.supervisor);
+
+  const user = window.localStorage.getItem("user");
+  const userID = JSON.parse(user)._id;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -19,16 +24,20 @@ function SupervisortopicsAcceptanceReject() {
   console.log("This is Topic Details:", topic);
   useEffect(() => {
     dispatch(getTopicById(id));
+    dispatch(getSupervisorDetails(userID));
   }, []);
 
+  console.log("supervisor.supervisor.fullName", supervisor.supervisor.fullName);
   const acceptTopic = () => {
     const data = {
+      supervisorName: supervisor.supervisor.fullName,
       topicId: id,
       status1: "Accepted",
       supComment: comment,
     };
 
     const tickData = {
+      supervisorName: supervisor.supervisor.fullName,
       groupId: topic.topic.groupId,
       status: "true",
     };

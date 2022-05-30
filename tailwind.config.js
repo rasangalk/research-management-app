@@ -26,6 +26,8 @@ module.exports = {
       colors: {
         "regal-blue": "#003CFF",
 
+        "regal-blue-disabled": "#769af5",
+
         "regal-blue-active": "#0235DB",
 
         "bk-white": "#F9F9F9",

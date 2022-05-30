@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { registerTopic } from "../../../actions/topicRegistration.action";
 import Menu from "../../../components/StudentMenu";
 import back from "../../../images/back-icon.png";
@@ -17,6 +17,7 @@ function TopicRegistration() {
   const group = useSelector((state) => state.students);
   const user = window.localStorage.getItem("user");
   const userID = JSON.parse(user)._id;
+  const navigate = useNavigate();
   console.log("This is Supervisors:", members.supservisors);
   useEffect(() => {
     dispatch(getAllSupervisors());
@@ -32,10 +33,7 @@ function TopicRegistration() {
     };
 
     dispatch(registerTopic(register));
-    window.location.reload(false);
-    setResearchInterest("");
-    setSupervisor("");
-    setTopic("");
+    navigate("/student/submission");
   };
   return (
     <div className="bg-bk-white h-screen w-screen">

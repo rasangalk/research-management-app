@@ -9,7 +9,7 @@ import Signup from "./src/containers/Register";
 import LandingPage from "./src/containers/LandingPage";
 import StudentRegister from "./src/containers/Student/StudentRegister";
 import StudentHome from "./src/containers/Student/StudentHome/Home";
-import StudentSubmission from "./src/containers/Student/StudentSubmission/StudentSubmission";
+import StudentNewSubmission from "./src/containers/Student/StudentSubmission/StudentSubmission";
 import StudentFeedbackAccept from "./src/containers/Student/FeedbackAccepted/FeedbackAccepted";
 import StudentTemplateList from "./src/containers/Student/StudentTemplateList";
 import StudentFileSubmission from "./src/containers/Student/StudentFileSubmission/StudentFileSubmission";
@@ -62,13 +62,19 @@ function App() {
         /////////////////////Student//////////////////////////
         <Route path="/student/signup" element={<StudentRegister />} />
         <Route path="/student/submission" element={<PrivateWrapper />}>
-          <Route path="/student/submission" element={<StudentSubmission />} />
+          <Route
+            path="/student/submission"
+            element={<StudentNewSubmission />}
+          />
         </Route>
         <Route path="/student-home" element={<PrivateWrapper />}>
           <Route path="/student-home" element={<StudentHome />} />
         </Route>
-        <Route path="/r2" element={<PrivateWrapper />}>
-          <Route path="/r2" element={<StudentFeedbackAccept />} />
+        <Route path="/student/topic/accepted" element={<PrivateWrapper />}>
+          <Route
+            path="/student/topic/accepted/:id"
+            element={<StudentFeedbackAccept />}
+          />
         </Route>
         <Route path="/student/templates" element={<PrivateWrapper />}>
           <Route path="/student/templates" element={<StudentTemplateList />} />
