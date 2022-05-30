@@ -42,6 +42,11 @@ import StudentSubmission from "./src/containers/Supervisor/StudentSubmissions/Su
 import ViewMarkingSchemaList from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaList";
 import EditMarkingScheme from "./src/containers/Admin/MarkingScheme/EditMarkingScheme";
 import ViewMarkingSchemaByID from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaByID";
+import StaffPannel from "./src/containers/Staff/StaffPannel";
+import StudentSubmissions from "./src/containers/Staff/StudentSubmissions";
+import StudentTopicSubmission from "./src/containers/Staff/StudentTopicSubmission";
+import StaffProfile from "./src/containers/Staff/StaffProfile";
+import StaffEditProfile from "./src/containers/Staff/StaffEditProfile";
 function App() {
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
@@ -216,6 +221,18 @@ function App() {
         <Route path="/r11" element={<TopicSubmission />} />
         <Route path="/r12" element={<Markings />} />
         <Route path="/r13" element={<StudentSubmission />} />
+        //////////////////////////////Staff////////////////////////
+        <Route path="/staff/staff-pannel" element={<StaffPannel />} />
+        <Route
+          path="/staff/student-submissions"
+          element={<StudentSubmissions />}
+        />
+        <Route
+          path="/staff/student-topic-submission"
+          element={<StudentTopicSubmission />}
+        />
+        <Route path="/r24" element={<StaffProfile />} />
+        <Route path="/r25" element={<StaffEditProfile />} />
       </Routes>
     </div>
   );
