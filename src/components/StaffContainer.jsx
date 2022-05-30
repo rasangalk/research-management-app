@@ -1,7 +1,9 @@
 import React from "react";
 import back from "../images/arrow-left.png";
+import { useNavigate } from "react-router-dom";
 
 function StaffContainer({ title, width }) {
+	let navigate = useNavigate();
 	return (
 		<div className='bg-white drop-shadow-xl w-[74rem] h-[37rem] rounded-xl '>
 			<div className='flex flex-row items-center pt-4 pl-10'>
