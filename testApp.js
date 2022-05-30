@@ -35,6 +35,7 @@ import PanelUpdate from "./src/containers/Admin/Panels/PanelUpdate";
 import Topics from "./src/containers/Supervisor/Supervisor-Topics/Topics";
 import AssignedTopics from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopics";
 import CreateMarkingScheme from "./src/containers/Admin/MarkingScheme/CreateMarkingScheme";
+import ViewMarkingSchemaList from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaList";
 import TopicSubmission from "./src/containers/Supervisor/StudentSubmissions/TopicSubmission";
 import Markings from "./src/containers/Supervisor/MarkingSchemes-Submissions";
 import StudentSubmission from "./src/containers/Supervisor/StudentSubmissions/Submissions";

@@ -43,6 +43,7 @@ function CreateMarkingScheme() {
     };
 
     dispatch(CreateMarkingSchemes(markingSchema));
+    navigate("/admin/marking-scheme");
   };
 
   return (
@@ -95,7 +96,7 @@ function CreateMarkingScheme() {
               <div
                 className={`border-2 border-[#E2E8F0] w-[68rem] h-[18rem] rounded-xl mt-6 mx-auto`}
               >
-                <div className="flex flex-col gap-2 my-4 overflow-y-scroll h-[16rem]">
+                <div className="flex flex-col gap-2 my-4 overflow-y-auto h-[16rem]">
                   {marksField.map((singleMarkField, index) => (
                     <div className="mx-auto" key={index}>
                       <input

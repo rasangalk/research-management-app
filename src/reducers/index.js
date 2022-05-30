@@ -7,8 +7,10 @@ import templateReducer from "./template.reducers";
 import submissionByIdReducer from "./submissionById.reducers";
 import membersReducer from "./members.reducers";
 import panelReducer from "./panels.reducers";
+import markingSchemasReducer from "./markingSchemas.reducers";
 import supervisorReducer from "./supervisor.reducer";
 import topicReducer from "./topic.reducer";
+import markingSchemaByIDReducer from "./markingSchemaByID.reducers";
 
 const rootReducer = combineReducers({
   user: userReducer,
@@ -19,8 +21,10 @@ const rootReducer = combineReducers({
   submission: submissionByIdReducer,
   members: membersReducer,
   panels: panelReducer,
+  markingSchemas: markingSchemasReducer,
   supervisor: supervisorReducer,
   topics: topicReducer,
+  markingSchema: markingSchemaByIDReducer,
 });
 
 export default rootReducer;
