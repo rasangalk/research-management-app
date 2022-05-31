@@ -42,6 +42,7 @@ export const getAllPanelDetails = () => {
 	};
 };
 
+<<<<<<< Updated upstream
 export const UpdateStudentGrpPanel = form => {
 	return async dispatch => {
 		console.log("FORM", form);
@@ -56,6 +57,22 @@ export const UpdateStudentGrpPanel = form => {
 			dispatch({});
 		}
 	};
+=======
+export const UpdateStudentGrpPanel = (form) => {
+  return async (dispatch) => {
+    console.log("FORM", form);
+    const res = await axios.patch(`/admin/groupDetails/update`, form);
+    console.log(res);
+    if (res.status === 202) {
+      dispatch({
+        // type: movieConstants.ADD_NEW_MOVIE_SUCCESS,
+        // payload: { categ: res.data.product },
+      });
+    } else {
+      dispatch({});
+    }
+  };
+>>>>>>> Stashed changes
 };
 
 export const getPanel = id => {
