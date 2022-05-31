@@ -1,82 +1,79 @@
 import axios from "../helpers/axios";
 import { panelConstants } from "./constants";
 
-export const CreatePanel = (panel) => {
-  return async (dispatch) => {
-    // dispatch({ type: submissionConstants.ADD_SUBMISSION_REQUEST });
-    const res = await axios.post("/admin/panel/add", panel);
+export const CreatePanel = panel => {
+	return async dispatch => {
+		// dispatch({ type: submissionConstants.ADD_SUBMISSION_REQUEST });
+		const res = await axios.post("/admin/panel/add", panel);
 
-    if (res.status === 201) {
-      //   const { message } = res.data;
-      //   dispatch({
-      //     type: submissionConstants.ADD_SUBMISSION_SUCCESS,
-      //     payload: {
-      //       message,
-      //     },
-      //   });
-    } else {
-      //   dispatch({
-      //     type: submissionConstants.ADD_SUBMISSION_FAILURE,
-      //     payload: { error: res.data.error },
-      //   });
-    }
-  };
+		if (res.status === 201) {
+			//   const { message } = res.data;
+			//   dispatch({
+			//     type: submissionConstants.ADD_SUBMISSION_SUCCESS,
+			//     payload: {
+			//       message,
+			//     },
+			//   });
+		} else {
+			//   dispatch({
+			//     type: submissionConstants.ADD_SUBMISSION_FAILURE,
+			//     payload: { error: res.data.error },
+			//   });
+		}
+	};
 };
 
 export const getAllPanelDetails = () => {
-  return async (dispatch) => {
-    dispatch({ type: panelConstants.GET_ALL_PANEL_REQUEST });
-    const res = await axios.get("/admin/panel-details");
+	return async dispatch => {
+		dispatch({ type: panelConstants.GET_ALL_PANEL_REQUEST });
+		const res = await axios.get("/admin/panel-details");
 
-    if (res.status === 200) {
-      dispatch({
-        type: panelConstants.GET_ALL_PANEL_SUCCESS,
-        payload: res.data,
-      });
-    } else {
-      dispatch({
-        type: panelConstants.GET_ALL_PANEL_FAILURE,
-        payload: { error: res.data.error },
-      });
-    }
-  };
+		if (res.status === 200) {
+			dispatch({
+				type: panelConstants.GET_ALL_PANEL_SUCCESS,
+				payload: res.data,
+			});
+		} else {
+			dispatch({
+				type: panelConstants.GET_ALL_PANEL_FAILURE,
+				payload: { error: res.data.error },
+			});
+		}
+	};
 };
 
-export const UpdateStudentGrpPanel = (form) => {
-  return async (dispatch) => {
-    console.log("FORM", form);
-    const res = await axios.patch(
-      `/admin/groupDetails/update/628f42d7f81f32a8f53c08f6`,
-      form
-    );
-    console.log(res);
-    if (res.status === 202) {
-      dispatch({
-        // type: movieConstants.ADD_NEW_MOVIE_SUCCESS,
-        // payload: { categ: res.data.product },
-      });
-    } else {
-      dispatch({});
-    }
-  };
+export const UpdateStudentGrpPanel = form => {
+	return async dispatch => {
+		console.log("FORM", form);
+		const res = await axios.patch(`/admin/groupDetails/update`, form);
+		console.log(res);
+		if (res.status === 202) {
+			dispatch({
+				// type: movieConstants.ADD_NEW_MOVIE_SUCCESS,
+				// payload: { categ: res.data.product },
+			});
+		} else {
+			dispatch({});
+		}
+	};
 };
 
-export const getPanel = (id) => {
-  return async (dispatch) => {
-    dispatch({ type: panelConstants.GET_PANEL_REQUEST });
-    const res = await axios.get("/admin/panel-details/" + id);
-    if (res.status === 201) {
-      dispatch({
-        type: panelConstants.GET_PANEL_SUCCESS,
-        payload: { panel: res.data.panel },
-      });
-    } else {
-      dispatch({
-        type: panelConstants.GET_PANEL_FAILURE,
-        payload: { error: res.data.error },
-      });
-    }
-  };
+export const getPanel = id => {
+	return async dispatch => {
+		dispatch({ type: panelConstants.GET_PANEL_REQUEST });
+		const res = await axios.get("/admin/panel-details/" + id);
+		if (res.status === 201) {
+			dispatch({
+				type: panelConstants.GET_PANEL_SUCCESS,
+				payload: { panel: res.data.panel },
+			});
+		} else {
+			dispatch({
+				type: panelConstants.GET_PANEL_FAILURE,
+				payload: { error: res.data.error },
+			});
+		}
+	};
 };
 
 // export const AddFileSubmission = (submission) => {
