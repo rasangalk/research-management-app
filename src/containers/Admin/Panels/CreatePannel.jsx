@@ -65,10 +65,6 @@ function CreatePannel() {
     dispatch(UpdateStudentGrpPanel(pnl1));
     dispatch(UpdateStudentGrpPanel(pnl2));
     dispatch(UpdateStudentGrpPanel(pnl3));
-    //navigate("/admin/panels");
-    // console.log(pnl1);
-    // console.log(pnl2);
-    // console.log(pnl3);
   };
 
   return (
