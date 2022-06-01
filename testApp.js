@@ -231,8 +231,8 @@ function App() {
           path="/staff/student-topic-submission"
           element={<StudentTopicSubmission />}
         />
-        <Route path="/r24" element={<StaffProfile />} />
-        <Route path="/r25" element={<StaffEditProfile />} />
+        <Route path="/staff/view-profile" element={<StaffProfile />} />
+        <Route path="/staff/edit-profile" element={<StaffEditProfile />} />
       </Routes>
     </div>
   );
