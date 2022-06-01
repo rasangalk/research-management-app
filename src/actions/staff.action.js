@@ -2,6 +2,7 @@ import axios from "../helpers/axios";
 import { staffConstants } from "./constants";
 
 export const getPanelByPanelId = (panelid) => {
+  console.log("Hello");
   return async (dispatch) => {
     dispatch({ type: staffConstants.GET_STAFF_PANEL_REQUEST });
     const res = await axios.get("/staff/getPanel/" + panelid);
