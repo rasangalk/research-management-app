@@ -5,8 +5,11 @@ import done from "../../../images/done-icon.png";
 import whiteDone from "../../../images/white-done.png";
 import { useDispatch, useSelector } from "react-redux";
 import { getGroupDetails } from "../../../actions/student.action";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 function Home() {
+  // var percentage = 30;
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
   const students = useSelector((state) => state.students);
@@ -32,6 +35,252 @@ function Home() {
     no9: "thesis evaluation",
     no10: "complete",
   });
+
+  const progressCheck = () => {
+    var percentage;
+    if (
+      students.group.status.no1 == "true" &&
+      students.group.status.no2 == "true" &&
+      students.group.status.no3 == "true" &&
+      students.group.status.no4 == "true" &&
+      students.group.status.no5 == "true" &&
+      students.group.status.no6 == "true" &&
+      students.group.status.no7 == "true" &&
+      students.group.status.no8 == "true" &&
+      students.group.status.no9 == "true" &&
+      students.group.status.no10 == "true"
+    ) {
+      percentage = 100;
+      return (
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          styles={buildStyles({
+            // Colors
+            pathColor: `rgba(30, 233, 182)`,
+            textColor: "#2D3748",
+            trailColor: "#EDF2F7",
+          })}
+        />
+      );
+    } else if (
+      students.group.status.no1 == "true" &&
+      students.group.status.no2 == "true" &&
+      students.group.status.no3 == "true" &&
+      students.group.status.no4 == "true" &&
+      students.group.status.no5 == "true" &&
+      students.group.status.no6 == "true" &&
+      students.group.status.no7 == "true" &&
+      students.group.status.no8 == "true" &&
+      students.group.status.no9 == "true"
+    ) {
+      percentage = 90;
+      return (
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          styles={buildStyles({
+            // Colors
+            pathColor: `rgba(30, 233, 182)`,
+            textColor: "#2D3748",
+            trailColor: "#EDF2F7",
+          })}
+        />
+      );
+    } else if (
+      students.group.status.no1 == "true" &&
+      students.group.status.no2 == "true" &&
+      students.group.status.no3 == "true" &&
+      students.group.status.no4 == "true" &&
+      students.group.status.no5 == "true" &&
+      students.group.status.no6 == "true" &&
+      students.group.status.no7 == "true" &&
+      students.group.status.no8 == "true"
+    ) {
+      percentage = 80;
+      return (
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          styles={buildStyles({
+            // Colors
+            pathColor: `rgba(30, 233, 182)`,
+            textColor: "#2D3748",
+            trailColor: "#EDF2F7",
+          })}
+        />
+      );
+    } else if (
+      students.group.status.no1 == "true" &&
+      students.group.status.no2 == "true" &&
+      students.group.status.no3 == "true" &&
+      students.group.status.no4 == "true" &&
+      students.group.status.no5 == "true" &&
+      students.group.status.no6 == "true" &&
+      students.group.status.no7 == "true" &&
+      students.group.status.no8 == "true"
+    ) {
+      percentage = 80;
+      return (
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          styles={buildStyles({
+            // Colors
+            pathColor: `rgba(30, 233, 182)`,
+            textColor: "#2D3748",
+            trailColor: "#EDF2F7",
+          })}
+        />
+      );
+    } else if (
+      students.group.status.no1 == "true" &&
+      students.group.status.no2 == "true" &&
+      students.group.status.no3 == "true" &&
+      students.group.status.no4 == "true" &&
+      students.group.status.no5 == "true" &&
+      students.group.status.no6 == "true" &&
+      students.group.status.no7 == "true"
+    ) {
+      percentage = 70;
+      return (
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          styles={buildStyles({
+            // Colors
+            pathColor: `rgba(30, 233, 182)`,
+            textColor: "#2D3748",
+            trailColor: "#EDF2F7",
+          })}
+        />
+      );
+    } else if (
+      students.group.status.no1 == "true" &&
+      students.group.status.no2 == "true" &&
+      students.group.status.no3 == "true" &&
+      students.group.status.no4 == "true" &&
+      students.group.status.no5 == "true" &&
+      students.group.status.no6 == "true"
+    ) {
+      percentage = 60;
+      return (
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          styles={buildStyles({
+            // Colors
+            pathColor: `rgba(30, 233, 182)`,
+            textColor: "#2D3748",
+            trailColor: "#EDF2F7",
+          })}
+        />
+      );
+    } else if (
+      students.group.status.no1 == "true" &&
+      students.group.status.no2 == "true" &&
+      students.group.status.no3 == "true" &&
+      students.group.status.no4 == "true" &&
+      students.group.status.no5 == "true"
+    ) {
+      percentage = 50;
+      return (
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          styles={buildStyles({
+            // Colors
+            pathColor: `rgba(30, 233, 182)`,
+            textColor: "#2D3748",
+            trailColor: "#EDF2F7",
+          })}
+        />
+      );
+    } else if (
+      students.group.status.no1 == "true" &&
+      students.group.status.no2 == "true" &&
+      students.group.status.no3 == "true" &&
+      students.group.status.no4 == "true"
+    ) {
+      percentage = 40;
+      return (
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          styles={buildStyles({
+            // Colors
+            pathColor: `rgba(30, 233, 182)`,
+            textColor: "#2D3748",
+            trailColor: "#EDF2F7",
+          })}
+        />
+      );
+    } else if (
+      students.group.status.no1 == "true" &&
+      students.group.status.no2 == "true" &&
+      students.group.status.no3 == "true"
+    ) {
+      percentage = 30;
+      return (
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          styles={buildStyles({
+            // Colors
+            pathColor: `rgba(30, 233, 182)`,
+            textColor: "#2D3748",
+            trailColor: "#EDF2F7",
+          })}
+        />
+      );
+    } else if (
+      students.group.status.no1 == "true" &&
+      students.group.status.no2 == "true"
+    ) {
+      percentage = 20;
+      return (
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          styles={buildStyles({
+            // Colors
+            pathColor: `rgba(30, 233, 182)`,
+            textColor: "#2D3748",
+            trailColor: "#EDF2F7",
+          })}
+        />
+      );
+    } else if (students.group.status.no1 == "true") {
+      percentage = 10;
+      return (
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          styles={buildStyles({
+            // Colors
+            pathColor: `rgba(30, 233, 182)`,
+            textColor: "#2D3748",
+            trailColor: "#EDF2F7",
+          })}
+        />
+      );
+    } else {
+      percentage = 0;
+      return (
+        <CircularProgressbar
+          value={percentage}
+          text={`${percentage}%`}
+          styles={buildStyles({
+            // Colors
+            pathColor: `rgba(30, 233, 182)`,
+            textColor: "#2D3748",
+            trailColor: "#EDF2F7",
+          })}
+        />
+      );
+    }
+  };
+
   const checkno1 = () => {
     if (students.group.status.no1 == "true") {
       return (
@@ -214,20 +463,22 @@ function Home() {
 
   if (students.group.students) {
     return (
-      <div className="bg-bk-white h-screen w-screen">
+      <div className="bg-bk-white h-screen w-screen drop-shadow-xl">
         <div className="grid grid-cols-12 h-full w-full grid-rows-2">
           <div className="h-full w-[10px]">
             <Menu />
           </div>
           <div className="col-span-3 mx-auto mt-12">
-            <img
-              src={chart}
-              alt=""
-              className="w-[14em] ml-[8rem] 2xl:ml-[8rem] xl:ml-[8rem]"
-            />
+            {/* <img
+							src={chart}
+							alt=''
+							className='w-[14em] ml-[8rem] 2xl:ml-[8rem] xl:ml-[8rem]'
+						/> */}
+
+            <div className="w-[15rem] ml-[7rem]">{progressCheck()}</div>
           </div>
           <div className="col-span-8 mx-auto  my-auto 2xl:mt-12">
-            <div className="w-[45rem] h-[17rem] bg-white rounded-xl">
+            <div className="w-[45rem] h-[17rem] bg-white rounded-xl drop-shadow-xl">
               <h2 className="text-xl font-bold ml-5 pt-2">Progress</h2>
               <div className="grid grid-cols-2">
                 <div className="flex flex-col">
@@ -247,80 +498,78 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="col-span-11 h-[18rem] 2xl:w-[69rem] w-[67rem] mx-auto bg-white col-start-2 rounded-xl">
+          <div className="col-span-11 h-[18rem] 2xl:w-[69rem] w-[67rem] mx-auto bg-white col-start-2 rounded-xl drop-shadow-xl">
             <h2 className="capitalize text-xl font-bold ml-5 pt-2">group</h2>
             <div className="grid grid-cols-7 mx-8 mt-4">
-              <div className="uppercase col-span-2 font-bold mb-2">name</div>
+              <div className="uppercase col-span-2 font-bold mb-2 px-4">
+                name
+              </div>
               <div className="uppercase font-bold">id</div>
               <div className="uppercase col-span-2 font-bold">email</div>
               <div className="uppercase font-bold">phone</div>
               <div className="uppercase font-bold">specialization</div>
 
-              <div className="capitalize col-span-2 ">
+              <div className="capitalize col-span-2 py-2 bg-white-blue px-4">
                 {students.group.students.leader.fullName}
               </div>
-              <div className="uppercase ">
+              <div className="uppercase py-2 bg-white-blue">
                 {students.group.students.leader.sliit_id}
               </div>
-              <div className="capiatalize col-span-2 ">
+              <div className="capiatalize col-span-2 py-2 bg-white-blue">
                 {students.group.students.leader.email}
               </div>
-              <div className="uppercase ">
+              <div className="uppercase py-2 bg-white-blue">
                 {students.group.students.leader.phone}
               </div>
-              <div className="uppercase ">
+              <div className="uppercase py-2 bg-white-blue">
                 {students.group.students.leader.specialization}
               </div>
 
-              <div className="capitalize col-span-2 ">
+              <div className="capitalize col-span-2 py-2 px-4">
                 {students.group.students.member1.fullName}
               </div>
-              <div className="uppercase ">
+              <div className="uppercase py-2">
                 {students.group.students.member1.sliit_id}
               </div>
-              <div className="capiatalize col-span-2 ">
+              <div className="capiatalize col-span-2 py-2">
                 {students.group.students.member1.email}
               </div>
-              <div className="uppercase ">
+              <div className="uppercase py-2">
                 {students.group.students.member1.phone}
               </div>
-              <div className="uppercase ">
+              <div className="uppercase py-2">
                 {students.group.students.member1.specialization}
               </div>
 
-              <div className="capitalize col-span-2 ">
+              <div className="capitalize col-span-2 py-2 bg-white-blue px-4">
                 {students.group.students.member2.fullName}
               </div>
-              <div className="uppercase ">
-                {" "}
+              <div className="uppercase py-2 bg-white-blue">
                 {students.group.students.member2.sliit_id}
               </div>
-              <div className="capiatalize col-span-2 ">
+              <div className="capiatalize col-span-2 py-2 bg-white-blue">
                 {students.group.students.member2.email}
               </div>
-              <div className="uppercase ">
-                {" "}
+              <div className="uppercase py-2 bg-white-blue">
                 {students.group.students.member2.phone}
               </div>
-              <div className="uppercase ">
-                {" "}
+              <div className="uppercase py-2 bg-white-blue">
                 {students.group.students.member2.specialization}
               </div>
 
-              <div className="capitalize col-span-2 ">
-                {" "}
+              <div className="capitalize col-span-2 py-2 px-4">
                 {students.group.students.member3.fullName}
               </div>
-              <div className="uppercase ">
+              <div className="uppercase py-2">
                 {students.group.students.member3.sliit_id}
               </div>
-              <div className="capiatalize col-span-2 ">
+              <div className="capiatalize col-span-2 py-2">
                 {students.group.students.member3.email}
               </div>
-              <div className="uppercase ">
+              <div className="uppercase py-2">
                 {students.group.students.member3.phone}
               </div>
-              <div className="uppercase ">
+              <div className="uppercase py-2">
                 {students.group.students.member3.specialization}
               </div>
             </div>
