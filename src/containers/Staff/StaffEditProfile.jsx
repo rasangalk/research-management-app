@@ -114,7 +114,12 @@ function StaffEditProfile() {
               </div>
               <div className=" mt-[4rem]  ml-[51rem] ">
                 <div className="flex flex-row gap-4">
-                  <button className="capitalize text-lg  px-6 py-1 bg-main-orange text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-main-orange-active float-right  text-sm">
+                  <button
+                    className="capitalize text-lg  px-6 py-1 bg-main-orange text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-main-orange-active float-right  text-sm"
+                    onClick={() => {
+                      navigate("/staff/view-profile");
+                    }}
+                  >
                     cancel
                   </button>
                   <button
