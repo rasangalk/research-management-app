@@ -59,7 +59,6 @@ function App() {
 	const dispatch = useDispatch();
 	const auth = useSelector(state => state.auth);
 
-
 	useEffect(() => {
 		if (!auth.authenticate) {
 			dispatch(isUserLoggedIn());
@@ -93,9 +92,9 @@ function App() {
 				<Route path='/student/templates' element={<PrivateWrapper />}>
 					<Route path='/student/templates' element={<StudentTemplateList />} />
 				</Route>
-				<Route path='/student/file-submission' element={<PrivateWrapper />}>
+				<Route path='/student/file-submission/:id' element={<PrivateWrapper />}>
 					<Route
-						path='/student/file-submission'
+						path='/student/file-submission/:id'
 						element={<StudentFileSubmission />}
 					/>
 				</Route>
@@ -251,7 +250,6 @@ function App() {
 			</Routes>
 		</div>
 	);
-
 }
 
 export default App;

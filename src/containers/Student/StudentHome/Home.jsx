@@ -9,7 +9,7 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 function Home() {
-	// var percentage = 30;
+	const [page, setPage] = useState("home");
 	const dispatch = useDispatch();
 	const auth = useSelector(state => state.auth);
 	const students = useSelector(state => state.students);
@@ -466,7 +466,7 @@ function Home() {
 			<div className='bg-bk-white h-screen w-screen drop-shadow-xl'>
 				<div className='grid grid-cols-12 h-full w-full grid-rows-2'>
 					<div className='h-full w-[10px]'>
-						<Menu />
+						<Menu status={page} />
 					</div>
 					<div className='col-span-3 mx-auto mt-12'>
 						{/* <img
