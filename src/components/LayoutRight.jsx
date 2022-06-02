@@ -4,10 +4,10 @@ import SigninCover from "../images/student.jpg";
 function LayoutRight() {
 	return (
 		<div className='bg-slate-300 h-full relative'>
-			<h1 className='absolute w-100 text-center bottom-48 font-bold text-xl py-10 text-left font-Nunito text-white'>
+			<h1 className='absolute w-100 text-center ml-[9rem] bottom-48 font-bold text-xl py-10  font-Nunito text-white'>
 				Research Portal
 			</h1>
-			<p className='absolute font-medium text-center text-white px-10 bottom-28 text-left font-Nunito'>
+			<p className='absolute font-medium text-center text-white px-10 bottom-28  font-Nunito'>
 				As a leading tertiary educational Institute in Sri Lanka, research is an
 				integral part of SLIIT.We strive for a vibrant research culture and
 				numerous initiatives are in place for programming research among the

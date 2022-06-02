@@ -15,20 +15,20 @@ import studentSubmissionByNameReducer from "./studentSubmissionByName.reducers";
 import staffReducer from "./staff.reducers";
 
 const rootReducer = combineReducers({
-  user: userReducer,
-  auth: authReducer,
-  students: studentReducer,
-  templates: templateReducer,
-  submissions: submissionReducer,
-  submission: submissionByIdReducer,
-  members: membersReducer,
-  panels: panelReducer,
-  markingSchemas: markingSchemasReducer,
-  supervisor: supervisorReducer,
-  topics: topicReducer,
-  markingSchema: markingSchemaByIDReducer,
-  submission: studentSubmissionByNameReducer,
-  staff: staffReducer,
+	user: userReducer,
+	auth: authReducer,
+	students: studentReducer,
+	templates: templateReducer,
+	submissions: submissionReducer,
+	submissionByID: submissionByIdReducer,
+	members: membersReducer,
+	panels: panelReducer,
+	markingSchemas: markingSchemasReducer,
+	supervisor: supervisorReducer,
+	topics: topicReducer,
+	markingSchema: markingSchemaByIDReducer,
+	submission: studentSubmissionByNameReducer,
+	staff: staffReducer,
 });
 
 export default rootReducer;
