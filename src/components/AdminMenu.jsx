@@ -9,13 +9,92 @@ import upload from "../images/upload.png";
 import logout from "../images/logout.png";
 import logo from "../images/logo.png";
 
-function AdminMenu() {
+function AdminMenu({ status }) {
+	const activeTab = () => {
+		if (status == "members") {
+			return (
+				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
+					<img
+						src={Groups}
+						alt='home'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+					/>
+					<img
+						src={AddMember}
+						alt='book'
+						className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl active:bg-white-blue'
+					/>
+
+					<img
+						src={Members}
+						alt='document'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue bg-white-blue'
+					/>
+
+					<img
+						src={Doc}
+						alt='users'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+					/>
+					<img
+						src={report}
+						alt='chat'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+					/>
+					<img
+						src={upload}
+						alt='chat'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+					/>
+				</div>
+			);
+		} else {
+			return (
+				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
+					<img
+						src={Groups}
+						alt='home'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+					/>
+					<img
+						src={AddMember}
+						alt='book'
+						className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl active:bg-white-blue'
+					/>
+
+					<img
+						src={Members}
+						alt='document'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+					/>
+
+					<img
+						src={Doc}
+						alt='users'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+					/>
+					<img
+						src={report}
+						alt='chat'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+					/>
+					<img
+						src={upload}
+						alt='chat'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+					/>
+				</div>
+			);
+		}
+	};
+
 	return (
 		<div className='flex flex-col items-center w-[114px] bg-white h-screen rounded-tr-xl rounded-br-xl '>
 			<div className='my-8 '>
 				<img src={logo} alt='logo' />
 			</div>
-			<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
+			{activeTab(status)}
+			{/* <div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
 				<img
 					src={Groups}
 					alt='home'
@@ -48,7 +127,7 @@ function AdminMenu() {
 					alt='chat'
 					className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
 				/>
-			</div>
+			</div> */}
 			<div className='cursor-pointer mt-36'>
 				<img src={logout} alt='logout' />
 			</div>

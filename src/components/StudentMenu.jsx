@@ -9,8 +9,6 @@ import chat from "../images/chat-typing.png";
 import logout from "../images/logout.png";
 
 function StudentMenu({ status }) {
-	console.log("lkasa", status);
-
 	const activePage = s => {
 		if (s == "home") {
 			return (
