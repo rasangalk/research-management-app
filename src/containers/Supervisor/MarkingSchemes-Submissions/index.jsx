@@ -45,7 +45,9 @@ function Markings() {
 												<td
 													className='px-5 py-2 w-[80rem]'
 													onClick={() =>
-														navigate("/admin/marking-scheme/view/" + schema._id)
+														navigate(
+															"/supervisor/marking-scheme/view/" + schema._id,
+														)
 													}>
 													{schema.assignmentName}
 												</td>

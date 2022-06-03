@@ -46,7 +46,7 @@ function ViewMarkingSchemaList() {
 										<tbody className='leading-8'>
 											{markingSchemas.markingSchemas.map((schema, index) => (
 												<tr
-													className='even:bg-white odd:bg-slate-100 cursor-default'
+													className='even:bg-white odd:bg-slate-100 cursor-pointer'
 													key={index}>
 													<td
 														className='px-5 py-1 w-[80rem]'

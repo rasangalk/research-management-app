@@ -30,6 +30,8 @@ function RegisterPageOne() {
 			return <Navigate to={"/admin/members"} />;
 		} else if (userRole == "staff") {
 			return <Navigate to={"/staff/staff-pannel"} />;
+		} else if (userRole == "coSupervisor") {
+			return <Navigate to={"/coSupervisor/topics"} />;
 		}
 	}
 

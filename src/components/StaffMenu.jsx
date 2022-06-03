@@ -29,11 +29,13 @@ function StaffMenu({ status }) {
 						/>
 					</Link>
 
-					<img
-						src={unorderlist}
-						alt='list'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl  hover:bg-white-blue active:bg-white-blue'
-					/>
+					<Link to='/staff/student-submissions'>
+						<img
+							src={unorderlist}
+							alt='list'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl  hover:bg-white-blue active:bg-white-blue'
+						/>
+					</Link>
 
 					<img
 						src={chat}
@@ -60,11 +62,46 @@ function StaffMenu({ status }) {
 							className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl bg-white-blue'
 						/>
 					</Link>
+					<Link to='/staff/student-submissions'>
+						<img
+							src={unorderlist}
+							alt='list'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl  hover:bg-white-blue active:bg-white-blue'
+						/>
+					</Link>
+
 					<img
-						src={unorderlist}
-						alt='list'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl  hover:bg-white-blue active:bg-white-blue'
+						src={chat}
+						alt='chat'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
 					/>
+				</div>
+			);
+		} else if (s == "list") {
+			return (
+				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
+					<Link to='/staff/staff-profile'>
+						<img
+							src={user}
+							alt='profile'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+						/>
+					</Link>
+
+					<Link to='/staff/staff-pannel'>
+						<img
+							src={tikFile}
+							alt='file'
+							className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl active:bg-white-blue'
+						/>
+					</Link>
+					<Link to='/staff/student-submissions'>
+						<img
+							src={unorderlist}
+							alt='list'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl  hover:bg-white-blue bg-white-blue'
+						/>
+					</Link>
 
 					<img
 						src={chat}
@@ -91,11 +128,13 @@ function StaffMenu({ status }) {
 							className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl active:bg-white-blue'
 						/>
 					</Link>
-					<img
-						src={unorderlist}
-						alt='list'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl  hover:bg-white-blue active:bg-white-blue'
-					/>
+					<Link to='/staff/student-submissions'>
+						<img
+							src={unorderlist}
+							alt='list'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl  hover:bg-white-blue active:bg-white-blue'
+						/>
+					</Link>
 
 					<img
 						src={chat}
