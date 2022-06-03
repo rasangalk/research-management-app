@@ -1,5 +1,5 @@
 import axios from "../helpers/axios";
-import { supervisorConstants } from "./constants";
+import { submissionConstants } from "./constants";
 
 export const getSupervisorDetails = (id) => {
   return async (dispatch) => {
@@ -43,17 +43,17 @@ export const getStudentSubmissionsByName = (name) => {
 export const getStudentSubmission = (id) => {
   return async (dispatch) => {
     dispatch({
-      type: supervisorConstants.GET_STUDENT_ASSIGNMENT_REQUEST,
+      type: submissionConstants.GET_ONE_SUBMISSION_DETAIL_REQUEST,
     });
     const res = await axios.get("/supervisor/student-submission/view/" + id);
     if (res.status === 201) {
       dispatch({
-        type: supervisorConstants.GET_STUDENT_ASSIGNMENT_SUCCESS,
-        payload: { assignment: res.data },
+        type: submissionConstants.GET_ONE_SUBMISSION_DETAIL_SUCCESS,
+        payload: { assignment: res.data.assignment },
       });
     } else {
       dispatch({
-        type: supervisorConstants.GET_STUDENT_ASSIGNMENT_FAILURE,
+        type: submissionConstants.GET_ONE_SUBMISSION_DETAIL_FAILURE,
         payload: { error: res.data.error },
       });
     }

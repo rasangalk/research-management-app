@@ -33,10 +33,10 @@ function Submissions() {
         data
       )
     );
-    navigate("/r12");
+    navigate("/supervisor/markings-submissions");
   };
-  console.log(marks, comment);
-  if (studentSubmission.assignment.assignment) {
+
+  if (studentSubmission.assignment[0]) {
     return (
       <div>
         <div className="w-screen h-screen grid grid-cols-12 bg-bk-white">
@@ -56,7 +56,7 @@ function Submissions() {
                       Group ID:
                     </p>
                     <p className=" font-bold text-base mb-2">
-                      {studentSubmission.assignment.assignment[0].groupID}
+                      {studentSubmission.assignment[0].groupID}
                     </p>
                   </div>
                   <div className="">
@@ -64,10 +64,7 @@ function Submissions() {
                       Interest:
                     </p>
                     <p className="capitalize font-bold text-base">
-                      {
-                        studentSubmission.assignment.assignment[0]
-                          .researchInterest
-                      }
+                      {studentSubmission.assignment[0].researchInterest}
                     </p>
                   </div>
                   <div className="col-span-2 mt-8">
@@ -75,7 +72,7 @@ function Submissions() {
                       Topic:
                     </p>
                     <p className="capitalize font-bold text-base mb-8">
-                      {studentSubmission.assignment.assignment[0].topic}
+                      {studentSubmission.assignment[0].topic}
                     </p>
                   </div>
                   <div className="mt-8">
@@ -90,8 +87,8 @@ function Submissions() {
                         (handleClick = () =>
                           window.open(
                             "http://localhost:2022/templates/" +
-                              studentSubmission.assignment.assignment[0]
-                                .submissionArray[0].submission
+                              studentSubmission.assignment[0].submissionArray[0]
+                                .submission
                           ))
                       }
                     />
