@@ -9,10 +9,10 @@ import {
 } from "../../../actions/submissions.action";
 
 function EditSubmission() {
-  const submission = useSelector((state) => state.submission);
+  const submission = useSelector((state) => state.assignment);
   const dispatch = useDispatch();
   const { id } = useParams();
-  console.log(id);
+  console.log(submission);
   const navigate = useNavigate();
 
   const [caption, setCaption] = useState();
@@ -22,10 +22,10 @@ function EditSubmission() {
 
   useEffect(() => {
     dispatch(getSubmissionByID(id));
-    setCaption(submission.submission.caption);
-    setDescription(submission.submission.description);
-    setDate(submission.submission.deadlineDate);
-    setTime(submission.submission.deadlineTime);
+    setCaption(submission.assignment.assignment.caption);
+    setDescription(submission.assignment.assignment.description);
+    setDate(submission.assignment.assignment.deadlineDate);
+    setTime(submission.assignment.assignment.deadlineTime);
   }, []);
 
   const handleEditSubmission = () => {
@@ -42,7 +42,7 @@ function EditSubmission() {
     navigate("/admin/submissions");
   };
 
-  if (submission.submission) {
+  if (submission.assignment.assignment) {
     return (
       <div>
         <div className="w-screen h-screen grid grid-cols-12 bg-bk-white">
@@ -58,7 +58,7 @@ function EditSubmission() {
                     <p>Caption:</p>
                     <input
                       type="text"
-                      defaultValue={submission.submission.caption}
+                      defaultValue={submission.assignment.assignment.caption}
                       // value={caption}
                       onChange={(e) => setCaption(e.target.value)}
                       className=" border-2 w-[60rem] break-all whitespace-normal rounded-md py-1 px-2 mt-1 outline-0  focus:border-slate-300"
@@ -67,7 +67,9 @@ function EditSubmission() {
                   <div>
                     <p>Description:</p>
                     <textarea
-                      defaultValue={submission.submission.description}
+                      defaultValue={
+                        submission.assignment.assignment.description
+                      }
                       // value={description}
                       onChange={(e) => setDescription(e.target.value)}
                       className="border-2 w-[60rem] rounded-md h-20 py-1 px-2 resize-none mt-1 outline-0 focus:border-slate-300"
@@ -77,7 +79,9 @@ function EditSubmission() {
                     <p>Due Date:</p>
                     <input
                       type="date"
-                      defaultValue={submission.submission.deadlineDate}
+                      defaultValue={
+                        submission.assignment.assignment.deadlineDate
+                      }
                       // value={date}
                       onChange={(e) => setDate(e.target.value)}
                       className="border-2 w-[14rem] rounded-md px-4 py-1 mt-1 outline-0  focus:border-slate-300"
@@ -87,7 +91,9 @@ function EditSubmission() {
                     <p>Due Time</p>
                     <input
                       type="time"
-                      defaultValue={submission.submission.deadlineTime}
+                      defaultValue={
+                        submission.assignment.assignment.deadlineTime
+                      }
                       // value={time}
                       onChange={(e) => setTime(e.target.value)}
                       className="border-2 w-[14rem] rounded-md px-4 py-1 mt-1 outline-0  focus:border-slate-300"
