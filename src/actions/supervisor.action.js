@@ -1,5 +1,5 @@
 import axios from "../helpers/axios";
-import { submissionConstants } from "./constants";
+import { supervisorConstants, submissionConstants } from "./constants";
 
 export const getSupervisorDetails = (id) => {
   return async (dispatch) => {
