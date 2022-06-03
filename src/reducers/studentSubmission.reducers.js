@@ -2,7 +2,7 @@ import { submissionConstants } from "../actions/constants";
 import supervisorReducer from "./supervisor.reducer";
 
 const initState = {
-  assignment: {},
+  assignment: [],
   pageRequest: false,
   error: null,
   loading: false,
@@ -19,7 +19,7 @@ export default (state = initState, action) => {
     case submissionConstants.GET_ONE_SUBMISSION_DETAIL_SUCCESS:
       state = {
         ...state,
-        assignment: action.payload,
+        assignment: action.payload.assignment,
         pageRequest: false,
       };
       break;
