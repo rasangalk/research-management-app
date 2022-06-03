@@ -21,7 +21,7 @@ function Panels() {
 				<div className='col-span-11'>
 					<div className='grid grid-rows-6 h-full w-full'>
 						<div className='flex items-center gap-8'>
-							<div className='ml-[50rem]'>
+							<div className='2xl:ml-[57rem] ml-[51rem]'>
 								<input
 									type='search'
 									placeholder='Search'
