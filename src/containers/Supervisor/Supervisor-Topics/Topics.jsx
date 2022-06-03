@@ -5,16 +5,6 @@ import { getAllTopics } from "../../../actions/topics.action";
 import Menu from "../../../components/SupervisorMenu";
 
 function Topics() {
-<<<<<<< Updated upstream
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const topics = useSelector((state) => state.topics);
-  const user = window.localStorage.getItem("user");
-  const userID = JSON.parse(user)._id;
-  useEffect(() => {
-    dispatch(getAllTopics(userID));
-  }, []);
-=======
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const topics = useSelector(state => state.topics);
@@ -23,7 +13,6 @@ function Topics() {
 	useEffect(() => {
 		dispatch(getAllTopics(userID));
 	}, []);
->>>>>>> Stashed changes
 
 	return (
 		<div className='w-screen h-screen grid grid-cols-12 bg-bk-white'>
