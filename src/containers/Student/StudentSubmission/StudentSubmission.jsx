@@ -19,7 +19,41 @@ function StudentSubmission() {
 		dispatch(getSubmissions());
 		dispatch(getTopicByUserId(userID));
 	}, []);
-	console.log(topic.topicById);
+
+	const supervisorStatusBtn = () => {
+		if (topic.topicById.supervisorStatus == "Rejected") {
+			return (
+				<button className='capitalize bg-regal-blue hover:bg-regal-blue-active ml-5 mt-12 px-5 py-2 text-sm rounded-md font-bold text-white'>
+					<Link to='/student/topicRegistration'>register topic</Link>
+				</button>
+			);
+		} else if (topic.topicById.supervisorStatus == null) {
+			return (
+				<button className='capitalize bg-regal-blue hover:bg-regal-blue-active ml-5 mt-12 px-5 py-2 text-sm rounded-md font-bold text-white'>
+					<Link to='/student/topicRegistration'>register topic</Link>
+				</button>
+			);
+		} else if (topic.topicById.supervisorStatus == "unavailable") {
+			return (
+				<button className='capitalize bg-regal-blue-disabled hover:bg-regal-blue-disabled ml-5 mt-12 px-5 py-2 text-sm rounded-md font-bold text-white'>
+					register topic
+				</button>
+			);
+		} else if (topic.topicById.supervisorStatus == "Accepted") {
+			return (
+				<button className='capitalize bg-regal-blue-disabled hover:bg-regal-blue-disabled ml-5 mt-12 px-5 py-2 text-sm rounded-md font-bold text-white'>
+					register topic
+				</button>
+			);
+		} else {
+			return (
+				<button className='capitalize bg-regal-blue-disabled hover:bg-regal-blue-disabled ml-5 mt-12 px-5 py-2 text-sm rounded-md font-bold text-white'>
+					register topic
+				</button>
+			);
+		}
+	};
+
 	return (
 		<div className='h-screen w-screen'>
 			<div className='grid grid-cols-12 grid-rows-2 w-full h-full bg-bk-white gap-2'>
@@ -36,15 +70,7 @@ function StudentSubmission() {
 							Button will be enable if the submited topic is rejected by the
 							supervisor or the panel.
 						</p>
-						{topic.topic.supervisorStatus == "unavailable" ? (
-							<button className='capitalize bg-regal-blue hover:bg-regal-blue-active ml-5 mt-12 px-5 py-2 text-sm rounded-md font-bold text-white'>
-								<Link to='/student/topicRegistration'>register button</Link>
-							</button>
-						) : (
-							<button className='capitalize bg-regal-blue-disabled hover:bg-regal-blue-disabled ml-5 mt-12 px-5 py-2 text-sm rounded-md font-bold text-white'>
-								pending
-							</button>
-						)}
+						{supervisorStatusBtn()}
 					</div>
 				</div>
 				<div className='col-span-8'>
