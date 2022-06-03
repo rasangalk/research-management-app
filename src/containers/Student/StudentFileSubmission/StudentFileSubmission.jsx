@@ -4,6 +4,7 @@ import Menu from "../../../components/StudentMenu";
 import {
   AddFileSubmission,
   getSubmissionByID,
+  getSubmissions,
 } from "../../../actions/submissions.action";
 import Container from "../../../components/StudentContainer";
 import { getTopicByUserId } from "../../../actions/topics.action";
@@ -11,13 +12,14 @@ import { getTopicByUserId } from "../../../actions/topics.action";
 function StudentFileSubmission() {
   const dispatch = useDispatch();
   const [file, setFile] = useState([]);
+  const { id } = useParams();
   const [submissionArray, setSubmissionArray] = useState([]);
   const user = window.localStorage.getItem("user");
   const userID = JSON.parse(user)._id;
   const panelID = JSON.parse(user).panel;
 
   useEffect(() => {
-    dispatch(getSubmissionByID("628e739239a828a246125944"));
+    dispatch(getSubmissionByID(id));
     dispatch(getTopicByUserId(userID));
   }, []);
 

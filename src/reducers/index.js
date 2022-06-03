@@ -14,6 +14,7 @@ import markingSchemaByIDReducer from "./markingSchemaByID.reducers";
 import studentSubmissionByNameReducer from "./studentSubmissionByName.reducers";
 import studentSubmissionReducer from "./studentSubmission.reducers";
 import studentSubmissionsReducer from "./studentSubmissions.reducers";
+import staffReducer from "./staff.reducers";
 
 const rootReducer = combineReducers({
   user: userReducer,
@@ -31,6 +32,7 @@ const rootReducer = combineReducers({
   submission: studentSubmissionByNameReducer,
   assignment: studentSubmissionReducer,
   allSubmissions: studentSubmissionsReducer,
+  staff: staffReducer,
 });
 
 export default rootReducer;

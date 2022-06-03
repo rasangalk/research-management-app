@@ -12,6 +12,7 @@
     "axios": "^0.27.2",
     "dateformat": "^5.0.3",
     "react": "^18.1.0",
+    "react-circular-progressbar": "^2.0.4",
     "react-dom": "^18.1.0",
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
@@ -22,9 +23,15 @@
   },
   "devDependencies": {
     "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
     "parcel": "^2.5.0",
+    "path-browserify": "^1.0.1",
     "postcss": "^8.4.14",
     "process": "^0.11.10",
-    "tailwindcss": "^3.0.24"
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "tailwindcss": "^3.0.24",
+    "util": "^0.12.4"
   }
 }
