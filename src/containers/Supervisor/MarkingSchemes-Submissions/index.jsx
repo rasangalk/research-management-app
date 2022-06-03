@@ -73,21 +73,24 @@ function Markings() {
                     </tr>
                   </thead>
                   <tbody>
-                    {markingSchemas.markingSchemas.map((schema, index) => (
-                      <tr
-                        className="even:bg-white odd:bg-slate-100 cursor-default hover:bg-slate-200"
-                        key={index}
+                    <tr>
+                      <td
+                        className="px-5 py-2 w-[80rem] cursor-pointer bg-slate-100"
+                        onClick={() =>
+                          navigate("/r11/Topic Details Submission")
+                        }
                       >
-                        <td
-                          className="px-5 py-2 w-[80rem]"
-                          onClick={() =>
-                            navigate("/r11/" + schema.assignmentName)
-                          }
-                        >
-                          {schema.assignmentName}
-                        </td>
-                      </tr>
-                    ))}
+                        Topic Details Submission
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        className="px-5 py-2 w-[80rem] cursor-pointer"
+                        onClick={() => navigate("/r11/Final Thesis Submission")}
+                      >
+                        Final Thesis Submission
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>

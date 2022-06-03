@@ -6,21 +6,33 @@ import {
   getSubmissionByID,
 } from "../../../actions/submissions.action";
 import Container from "../../../components/StudentContainer";
+import { getTopicByUserId } from "../../../actions/topics.action";
 
 function StudentFileSubmission() {
   const dispatch = useDispatch();
   const [file, setFile] = useState([]);
   const [submissionArray, setSubmissionArray] = useState([]);
+  const user = window.localStorage.getItem("user");
+  const userID = JSON.parse(user)._id;
+  const panelID = JSON.parse(user).panel;
 
   useEffect(() => {
-    dispatch(getSubmissions("628a8981e44e803003a29fd5"));
+    dispatch(getSubmissionByID("628e739239a828a246125944"));
+    dispatch(getTopicByUserId(userID));
   }, []);
 
-  const submission = useSelector((state) => state.submission);
+  const topic = useSelector((state) => state.topics);
+
+  const submission = useSelector((state) => state.submissionByID);
 
   const addSubmission = () => {
     let form = new FormData();
     form.append("status", submission.submission.caption);
+    form.append("topic", topic.topicById.topic);
+    form.append("researchInterest", topic.topicById.researchInterest);
+    form.append("groupID", topic.topicById.groupId);
+    form.append("supervisorID", topic.topicById.supervisor);
+    form.append("panelID", panelID);
 
     for (let file of submissionArray) {
       form.append("studentSubmission", file);

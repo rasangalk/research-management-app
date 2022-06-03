@@ -218,9 +218,9 @@ function App() {
           path="/supervisor/assigned-topic/:id"
           element={<AssignedTopicDetails />}
         />
-        <Route path="/r11" element={<TopicSubmission />} />
+        <Route path="/r11/:assignmentName" element={<TopicSubmission />} />
         <Route path="/r12" element={<Markings />} />
-        <Route path="/r13" element={<StudentSubmission />} />
+        <Route path="/r13/:submission" element={<StudentSubmission />} />
         //////////////////////////////Staff////////////////////////
         <Route path="/staff/staff-pannel" element={<StaffPannel />} />
         <Route
@@ -228,7 +228,7 @@ function App() {
           element={<StudentSubmissions />}
         />
         <Route
-          path="/staff/student-topic-submission"
+          path="/staff/student-topic-submission/:submission"
           element={<StudentTopicSubmission />}
         />
         <Route path="/r24" element={<StaffProfile />} />

@@ -12,6 +12,8 @@ import supervisorReducer from "./supervisor.reducer";
 import topicReducer from "./topic.reducer";
 import markingSchemaByIDReducer from "./markingSchemaByID.reducers";
 import studentSubmissionByNameReducer from "./studentSubmissionByName.reducers";
+import studentSubmissionReducer from "./studentSubmission.reducers";
+import studentSubmissionsReducer from "./studentSubmissions.reducers";
 
 const rootReducer = combineReducers({
   user: userReducer,
@@ -19,7 +21,7 @@ const rootReducer = combineReducers({
   students: studentReducer,
   templates: templateReducer,
   submissions: submissionReducer,
-  submission: submissionByIdReducer,
+  submissionByID: submissionByIdReducer,
   members: membersReducer,
   panels: panelReducer,
   markingSchemas: markingSchemasReducer,
@@ -27,6 +29,8 @@ const rootReducer = combineReducers({
   topics: topicReducer,
   markingSchema: markingSchemaByIDReducer,
   submission: studentSubmissionByNameReducer,
+  assignment: studentSubmissionReducer,
+  allSubmissions: studentSubmissionsReducer,
 });
 
 export default rootReducer;
