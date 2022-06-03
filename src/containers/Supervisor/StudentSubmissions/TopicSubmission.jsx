@@ -12,12 +12,12 @@ function TopicSubmission() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { assignmentName } = useParams();
-
+  const user = window.localStorage.getItem("user");
+  console.log("USER", user);
   useEffect(() => {
     dispatch(getStudentSubmissionsByName(assignmentName));
   }, []);
 
-  console.log(submission);
   if (submission.submission) {
     return (
       <div>
@@ -38,7 +38,12 @@ function TopicSubmission() {
               </div>
               <div className="row-span-5 mx-auto bg-white w-[70.5rem] drop-shadow-xl rounded-xl mt-0 h-[33rem]">
                 <div className="flex flex-row items-center ml-4 gap-4 mt-4">
-                  <img src={back} alt="back" className="h-12" />
+                  <img
+                    src={back}
+                    alt="back"
+                    className="h-12 cursor-pointer "
+                    onClick={() => navigate(-1)}
+                  />
                   <h2 className="text-xl font-bold pt-2 capitalize">
                     student submissions
                   </h2>
@@ -51,27 +56,41 @@ function TopicSubmission() {
                           group id
                         </th>
                         <th className="py-2 px-2 uppercase bg-white text-left sticky top-0 z-1">
+                          topic
+                        </th>
+                        <th className="py-2 px-2 uppercase bg-white text-left sticky top-0 z-1">
                           date & time
                         </th>
                       </tr>
                     </thead>
                     <tbody>
-                      {submission.submission.map((submission) => (
-                        <tr className="even:bg-white odd:bg-slate-100 cursor-pointer">
-                          <td className="uppercase py-2 px-2">
-                            {submission.user}
-                          </td>
-                          <td className="lowercase py-2 px-2">
-                            <div className="flex flex-row gap-2 items-center">
-                              <p>{submission.createdAt.substring(0, 10)}</p><p>{submission.createdAt.match(/\d\d:\d\d/)}</p>
-                              <img
-                                src={GreenDot}
-                                className="h-3 drop-shadow-sm"
-                              />
-                            </div>
-                          </td>
-                        </tr>
-                      ))}
+                      {submission.submission
+                        .filter((submission) => submission.isViewed === "0")
+                        .map((submission) => (
+                          <tr
+                            className="even:bg-white odd:bg-slate-100 cursor-pointer"
+                            onClick={() => {
+                              navigate("/r13/" + submission._id);
+                            }}
+                          >
+                            <td className="uppercase py-2 px-2">
+                              {submission.groupID}
+                            </td>
+                            <td className="uppercase py-2 px-2">
+                              {submission.topic}
+                            </td>
+                            <td className="lowercase py-2 px-2">
+                              <div className="flex flex-row gap-2 items-center">
+                                <p>{submission.createdAt.substring(0, 10)}</p>
+                                <p>{submission.createdAt.match(/\d\d:\d\d/)}</p>
+                                <img
+                                  src={GreenDot}
+                                  className="h-3 drop-shadow-sm"
+                                />
+                              </div>
+                            </td>
+                          </tr>
+                        ))}
                     </tbody>
                   </table>
                 </div>

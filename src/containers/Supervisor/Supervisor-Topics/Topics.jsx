@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { getStudentSubmissionsByName } from "../../../actions/supervisor.action";
 import { getAllTopics } from "../../../actions/topics.action";
 import Menu from "../../../components/SupervisorMenu";
 
 function Topics() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const topics = useSelector((state) => state.topics);
-  const user = window.localStorage.getItem("user");
-  const userID = JSON.parse(user)._id;
+  const { assignmentName } = useParams();
+  const submission = useSelector((state) => state.submission);
   useEffect(() => {
-    dispatch(getAllTopics(userID));
+    dispatch(getStudentSubmissionsByName(assignmentName));
   }, []);
 
   return (

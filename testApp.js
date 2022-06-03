@@ -245,14 +245,14 @@ function App() {
 						element={<AssignedTopicDetails />}
 					/>
 				</Route>
-				<Route path='/r11' element={<PrivateWrapper />}>
-					<Route path='/r11' element={<TopicSubmission />} />
+				<Route path='/r11/:assignmentName' element={<PrivateWrapper />}>
+					<Route path='/r11/:assignmentName' element={<TopicSubmission />} />
 				</Route>
 				<Route path='/r12' element={<PrivateWrapper />}>
 					<Route path='/r12' element={<Markings />} />
 				</Route>
-				<Route path='/r13' element={<PrivateWrapper />}>
-					<Route path='/r13' element={<StudentSubmission />} />
+				<Route path='/r13/:submission' element={<PrivateWrapper />}>
+					<Route path='/r13/:submission' element={<StudentSubmission />} />
 				</Route>
 				//////////////////////////////Co-Supervisor////////////////////////
 				<Route
@@ -314,7 +314,7 @@ function App() {
 					path='/staff/student-topic-submission'
 					element={<PrivateWrapper />}>
 					<Route
-						path='/staff/student-topic-submission'
+						path='/staff/student-topic-submission/:submission'
 						element={<StudentTopicSubmission />}
 					/>
 				</Route>
