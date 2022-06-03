@@ -22,7 +22,7 @@ function Members() {
 				<div className='col-span-11  '>
 					<div className='grid grid-rows-6 h-full w-full'>
 						<div className='flex items-center gap-8'>
-							<div className='ml-[66rem]'>
+							<div className='2xl:ml-[71rem] ml-[66rem]'>
 								<button className='font-bold text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm'>
 									<Link to='/admin/member/create'>Add Member</Link>
 								</button>
