@@ -1,8 +1,8 @@
-import { supervisorConstants } from "../actions/constants";
+import { submissionConstants } from "../actions/constants";
 import supervisorReducer from "./supervisor.reducer";
 
 const initState = {
-  assignment: [],
+  assignment: {},
   pageRequest: false,
   error: null,
   loading: false,
@@ -10,20 +10,20 @@ const initState = {
 
 export default (state = initState, action) => {
   switch (action.type) {
-    case supervisorConstants.GET_STUDENT_ASSIGNMENT_REQUEST:
+    case submissionConstants.GET_ONE_SUBMISSION_DETAIL_REQUEST:
       state = {
         ...state,
         pageRequest: true,
       };
       break;
-    case supervisorConstants.GET_STUDENT_ASSIGNMENT_SUCCESS:
+    case submissionConstants.GET_ONE_SUBMISSION_DETAIL_SUCCESS:
       state = {
         ...state,
-        assignment: action.payload.assignment,
+        assignment: action.payload,
         pageRequest: false,
       };
       break;
-    case supervisorConstants.GET_STUDENT_ASSIGNMENT_FAILURE:
+    case submissionConstants.GET_ONE_SUBMISSION_DETAIL_FAILURE:
       state = {
         ...state,
         error: action.payload.error,
