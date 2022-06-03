@@ -3,9 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import Menu from "../../../components/SupervisorMenu";
 import Container from "../../../components/SupervisorContainer";
 import { getSupervisorDetails } from "../../../actions/supervisor.action";
+import { useNavigate } from "react-router-dom";
 
 function SupervisorProfile() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   // const auth = useSelector((state) => state.auth);
   const supervisor = useSelector((state) => state.supervisor);
 
@@ -92,7 +94,12 @@ function SupervisorProfile() {
                 </div>
               </div>
               <div className=" mt-[4.5rem]  ml-[59.5rem] ">
-                <button className=" text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm">
+                <button
+                  className=" text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm"
+                  onClick={() => {
+                    navigate("/supervisor/profile/edit");
+                  }}
+                >
                   Edit
                 </button>
               </div>

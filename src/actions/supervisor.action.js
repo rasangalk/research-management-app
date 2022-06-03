@@ -20,6 +20,25 @@ export const getSupervisorDetails = (id) => {
   };
 };
 
+export const EditSupervisorDetails = (id, data) => {
+  return async (dispatch) => {
+    // dispatch({ type: supervisorConstants.GET_SUPERVISOR_DETAILS_REQUEST });
+    const res = await axios.patch("/supervisor/update/" + id, data);
+    console.log("Student Details", res);
+    if (res.status === 201) {
+      // dispatch({
+      //   type: supervisorConstants.GET_SUPERVISOR_DETAILS_SUCCESS,
+      //   payload: { group: res.data.group },
+      // });
+    } else {
+      // dispatch({
+      //   type: supervisorConstants.GET_SUPERVISOR_DETAILS_FAILURE,
+      //   payload: { error: res.data.error },
+      // });
+    }
+  };
+};
+
 export const getStudentSubmissionsByName = (name) => {
   return async (dispatch) => {
     dispatch({
