@@ -57,6 +57,7 @@ import CoSupervisortopicsAcceptanceReject from "./src/containers/Co-Supervisor/C
 import CoTopics from "./src/containers/Co-Supervisor/Co-Supervisor-Topics/Topics";
 import StudentGroup from "./src/containers/Student/StudentGroup/StudentGroup";
 import SupervisorProfileEdit from "./src/containers/Supervisor/Supervisor-Profile-Edit/SupervisorProfileEdit";
+import MarkingSchemaByID from "./src/containers/Supervisor/MarkingSchemes-Submissions/Marking";
 
 function App() {
 	const dispatch = useDispatch();
@@ -220,6 +221,14 @@ function App() {
 					<Route
 						path='/Supervisor/Supervisor-Profile'
 						element={<SupervisorProfile />}
+					/>
+				</Route>
+				<Route
+					path='/supervisor/marking-scheme/view/:schemaId'
+					element={<PrivateWrapper />}>
+					<Route
+						path='/supervisor/marking-scheme/view/:schemaId'
+						element={<MarkingSchemaByID />}
 					/>
 				</Route>
 				<Route
