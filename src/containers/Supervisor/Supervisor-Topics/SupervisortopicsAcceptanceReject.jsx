@@ -6,6 +6,7 @@ import {
 	getTopicById,
 	SupervisorUpdateTopicDeials,
 	SupervisorUpdateTopicTick,
+	SupervisorUserStudentUpdate,
 } from "../../../actions/topics.action";
 import { useNavigate, useParams } from "react-router-dom";
 import { getSupervisorDetails } from "../../../actions/supervisor.action";
@@ -41,8 +42,14 @@ function SupervisortopicsAcceptanceReject() {
 			groupId: topic.topic.groupId,
 			status: "true",
 		};
+
+		const supdata = {
+			supervisorName: supervisor.supervisor.fullName,
+		};
+
 		dispatch(SupervisorUpdateTopicDeials(data));
 		dispatch(SupervisorUpdateTopicTick(tickData));
+		dispatch(SupervisorUserStudentUpdate(topic.topic.user, supdata));
 		navigate("/supervisor/topics");
 	};
 

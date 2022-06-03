@@ -168,35 +168,7 @@ function StudentMenu({ status }) {
 			</div>
 
 			{activePage(status)}
-			{/* <div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
-				<img
-					src={home}
-					alt='home'
-					className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-				/>
-				<img
-					src={book}
-					alt='book'
-					className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl active:bg-white-blue'
-				/>
-				<Link to='/student/templates'>
-					<img
-						src={document}
-						alt='document'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl  hover:bg-white-blue active:bg-white-blue'
-					/>
-				</Link>
-				<img
-					src={users}
-					alt='users'
-					className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-				/>
-				<img
-					src={chat}
-					alt='chat'
-					className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-				/>
-			</div> */}
+
 			<div className='cursor-pointer mt-36'>
 				<img
 					src={logout}

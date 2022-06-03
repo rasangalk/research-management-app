@@ -55,7 +55,7 @@ function CoAssignedTopics() {
 														className='even:bg-white odd:bg-slate-100 cursor-pointer'
 														onClick={() => {
 															navigate(
-																"/supervisor/assigned-topic/" + topic._id,
+																"/coSupervisor/assigned-topic/" + topic._id,
 															);
 														}}>
 														<td className='uppercase py-2 px-2'>

@@ -50,12 +50,14 @@ function CoTopics() {
 								<tbody>
 									{topics.topics.length > 0
 										? topics.topics.map(topic =>
-												topic.supervisorStatus == "unavailable" ? (
+												topic.supervisorStatus == "Accepted" ||
+												(topic.supervisorStatus == "unavailable" &&
+													topic.coSupervisorStatus == "unavailable") ? (
 													<tr
 														className='even:bg-white odd:bg-slate-100 cursor-pointer'
 														onClick={() => {
 															navigate(
-																"/Supervisor/Supervisor-Topics-AcceptanceReject/" +
+																"/coSupervisor/coSupervisor-Topics-AcceptanceReject/" +
 																	topic._id,
 															);
 														}}>
