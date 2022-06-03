@@ -6,12 +6,11 @@ import { Navigate } from "react-router";
 function RegisterPageOne() {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
-	//   const auth = useSelector((state) => state.auth);
+
 	const auth = useSelector(state => state.auth);
 	const dispatch = useDispatch();
 
 	const userLogin = e => {
-		// e.preventDefault();
 		const user = {
 			username,
 			password,
@@ -29,6 +28,8 @@ function RegisterPageOne() {
 			return <Navigate to={"/student-home"} />;
 		} else if (userRole == "admin") {
 			return <Navigate to={"/admin/members"} />;
+		} else if (userRole == "staff") {
+			return <Navigate to={"/staff/staff-pannel"} />;
 		}
 	}
 

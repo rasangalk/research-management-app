@@ -38,11 +38,11 @@ function MembersCreate() {
 				</div>
 				<div className='col-span-11 mx-auto my-auto '>
 					<div className='relative'>
-						<Container title='members' width='w-[68rem] h-[10rem]' />
+						<Container title='members' width='w-[68rem] h-[24.5rem]' />
 						<div className='absolute top-[10rem] left-[7rem]'>
-							<div className=' grid grid-cols-2  w-[60rem] '>
-								<div className='flex flex-col gap-12'>
-									<div>
+							<div className='w-[63rem] h-[19rem] overflow-y-auto'>
+								<div className=' grid grid-cols-2  w-[60rem]'>
+									<div className=''>
 										<p className='capitalize text-base text-slate-700 text-sm mb-1'>
 											Name
 										</p>
@@ -51,22 +51,10 @@ function MembersCreate() {
 											name='Name'
 											value={fullName}
 											onChange={e => setFullName(e.target.value)}
-											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
+											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
 										/>
 									</div>
-									<div>
-										<p className='capitalize text-base text-slate-700 text-sm mb-1'>
-											Email
-										</p>
-										<input
-											type='text'
-											name='Email'
-											value={email}
-											onChange={e => setEmail(e.target.value)}
-											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
-										/>
-									</div>
-									<div>
+									<div className=''>
 										<p className='capitalize text-base text-slate-700 text-sm mb-1'>
 											Username
 										</p>
@@ -75,24 +63,22 @@ function MembersCreate() {
 											name='Username'
 											value={username}
 											onChange={e => setUsername(e.target.value)}
-											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
+											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
 										/>
 									</div>
-									<div>
+									<div className='mt-8'>
 										<p className='capitalize text-base text-slate-700 text-sm mb-1'>
-											Re-Password
+											Email
 										</p>
 										<input
-											type='Password'
-											name='Re-Password'
-											value={re_hash_password}
-											onChange={e => setRePassword(e.target.value)}
-											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
+											type='text'
+											name='Email'
+											value={email}
+											onChange={e => setEmail(e.target.value)}
+											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
 										/>
 									</div>
-								</div>
-								<div className='flex flex-col gap-12'>
-									<div>
+									<div className='mt-8'>
 										<p className='capitalize text-base text-slate-700 text-sm mb-1'>
 											ID number
 										</p>
@@ -101,10 +87,10 @@ function MembersCreate() {
 											name='ID number'
 											value={sliit_id}
 											onChange={e => setSliitId(e.target.value)}
-											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
+											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
 										/>
 									</div>
-									<div>
+									<div className='mt-8'>
 										<p className='capitalize text-base text-slate-700 text-sm mb-1'>
 											Phone
 										</p>
@@ -113,10 +99,10 @@ function MembersCreate() {
 											name='Phone'
 											value={phone}
 											onChange={e => setPhone(e.target.value)}
-											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
+											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
 										/>
 									</div>
-									<div>
+									<div className='mt-8'>
 										<p className='capitalize text-base text-slate-700 text-sm mb-1'>
 											Password
 										</p>
@@ -125,12 +111,25 @@ function MembersCreate() {
 											name='Password'
 											value={password}
 											onChange={e => setPassword(e.target.value)}
-											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-gray-500 focus:ring-gray-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
+											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
+										/>
+									</div>
+									<div className='mt-8'>
+										<p className='capitalize text-base text-slate-700 text-sm mb-1'>
+											Re-Password
+										</p>
+										<input
+											type='Password'
+											name='Re-Password'
+											value={re_hash_password}
+											onChange={e => setRePassword(e.target.value)}
+											className='font-Nunito font-semibold  bg-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-[25rem] sm:w-[25rem] rounded-md text-base focus:ring-1 px-3 py-1'
 										/>
 									</div>
 								</div>
 							</div>
-							<div className='mt-[0.2rem]  ml-[58.3rem] '>
+
+							<div className='mt-[4rem]  ml-[58.3rem] '>
 								<button
 									className=' text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm'
 									onClick={() => {

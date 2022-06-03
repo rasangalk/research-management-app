@@ -4,8 +4,9 @@ import Menu from "../../../components/SupervisorMenu";
 import Container from "../../../components/SupervisorContainer";
 import {
 	getTopicById,
-	SupervisorUpdateTopicDeials,
-	SupervisorUpdateTopicTick,
+	coSupervisorUpdateTopicTick,
+	coSupervisorUpdateTopicDeials,
+	coSupervisorUserStudentUpdate,
 } from "../../../actions/topics.action";
 import { useNavigate, useParams } from "react-router-dom";
 import { getSupervisorDetails } from "../../../actions/supervisor.action";
@@ -30,10 +31,10 @@ function CoSupervisortopicsAcceptanceReject() {
 	console.log("supervisor.supervisor.fullName", supervisor.supervisor.fullName);
 	const acceptTopic = () => {
 		const data = {
-			supervisorName: supervisor.supervisor.fullName,
+			coSupervisorName: "Janaka Perera",
 			topicId: id,
-			status1: "Accepted",
-			supComment: comment,
+			status2: "Accepted",
+			coSupComment: comment,
 		};
 
 		const tickData = {
@@ -41,25 +42,32 @@ function CoSupervisortopicsAcceptanceReject() {
 			groupId: topic.topic.groupId,
 			status: "true",
 		};
-		dispatch(SupervisorUpdateTopicDeials(data));
-		dispatch(SupervisorUpdateTopicTick(tickData));
-		navigate("/supervisor/topics");
+
+		const supdata = {
+			coSupervisorName: "Janaka Perera",
+		};
+
+		dispatch(coSupervisorUpdateTopicDeials(data));
+		dispatch(coSupervisorUpdateTopicTick(tickData));
+		dispatch(coSupervisorUserStudentUpdate(topic.topic.user, supdata));
+		navigate("/coSupervisor/topics");
 	};
 
 	const rejectTopic = () => {
 		const data = {
+			coSupervisorName: supervisor.supervisor.fullName,
 			topicId: id,
-			status1: "Rejected",
-			supComment: comment,
+			status2: "Accepted",
+			coSupComment: comment,
 		};
 
 		const tickData = {
 			groupId: topic.topic.groupId,
 			status: "false",
 		};
-		dispatch(SupervisorUpdateTopicDeials(data));
+		dispatch(coSupervisorUpdateTopicDeials(data));
 		dispatch(SupervisorUpdateTopicTick(tickData));
-		navigate("/supervisor/topics");
+		navigate("/coSupervisor/topics");
 	};
 
 	return (

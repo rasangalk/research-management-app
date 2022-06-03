@@ -74,7 +74,7 @@ function CoSupervisorProfile() {
 											Role:
 										</p>
 										<p className='capitalize font-bold text-base'>
-											{supervisor.supervisor.role}
+											co supervisor
 										</p>
 									</div>
 									<div>
