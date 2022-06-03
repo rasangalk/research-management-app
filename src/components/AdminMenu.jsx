@@ -14,75 +14,357 @@ function AdminMenu({ status }) {
 		if (status == "members") {
 			return (
 				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
-					<img
-						src={Groups}
-						alt='home'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-					/>
-					<img
-						src={AddMember}
-						alt='book'
-						className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl active:bg-white-blue'
-					/>
+					<Link to='/admin/view-groups'>
+						<img
+							src={Groups}
+							alt='home'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+						/>
+					</Link>
 
-					<img
-						src={Members}
-						alt='document'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue bg-white-blue'
-					/>
+					<Link to='/admin/panels'>
+						<img
+							src={AddMember}
+							alt='book'
+							className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl active:bg-white-blue'
+						/>
+					</Link>
 
-					<img
-						src={Doc}
-						alt='users'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-					/>
-					<img
-						src={report}
-						alt='chat'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-					/>
-					<img
-						src={upload}
-						alt='chat'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-					/>
+					<Link to='/admin/members'>
+						<img
+							src={Members}
+							alt='document'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue bg-white-blue'
+						/>
+					</Link>
+					<Link to='/admin/view-templates'>
+						<img
+							src={Doc}
+							alt='users'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+						/>
+					</Link>
+					<Link to='/admin/marking-scheme'>
+						<img
+							src={report}
+							alt='chat'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+						/>
+					</Link>
+
+					<Link to='/admin/submissions'>
+						<img
+							src={upload}
+							alt='chat'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+						/>
+					</Link>
+				</div>
+			);
+		} else if (status == "groups") {
+			return (
+				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
+					<Link to='/admin/view-groups'>
+						<img
+							src={Groups}
+							alt='home'
+							className='bg-white-blue cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/panels'>
+						<img
+							src={AddMember}
+							alt='book'
+							className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl '
+						/>
+					</Link>
+
+					<Link to='/admin/members'>
+						<img
+							src={Members}
+							alt='document'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/view-templates'>
+						<img
+							src={Doc}
+							alt='users'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+					<Link to='/admin/marking-scheme'>
+						<img
+							src={report}
+							alt='chat'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/submissions'>
+						<img
+							src={upload}
+							alt='chat'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+				</div>
+			);
+		} else if (status == "panels") {
+			return (
+				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
+					<Link to='/admin/view-groups'>
+						<img
+							src={Groups}
+							alt='home'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/panels'>
+						<img
+							src={AddMember}
+							alt='book'
+							className='bg-white-blue cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl '
+						/>
+					</Link>
+
+					<Link to='/admin/members'>
+						<img
+							src={Members}
+							alt='document'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/view-templates'>
+						<img
+							src={Doc}
+							alt='users'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+					<Link to='/admin/marking-scheme'>
+						<img
+							src={report}
+							alt='chat'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/submissions'>
+						<img
+							src={upload}
+							alt='chat'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+				</div>
+			);
+		} else if (status == "templates") {
+			return (
+				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
+					<Link to='/admin/view-groups'>
+						<img
+							src={Groups}
+							alt='home'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/panels'>
+						<img
+							src={AddMember}
+							alt='book'
+							className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl '
+						/>
+					</Link>
+
+					<Link to='/admin/members'>
+						<img
+							src={Members}
+							alt='document'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/view-templates'>
+						<img
+							src={Doc}
+							alt='users'
+							className='bg-white-blue cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+					<Link to='/admin/marking-scheme'>
+						<img
+							src={report}
+							alt='chat'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/submissions'>
+						<img
+							src={upload}
+							alt='chat'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+				</div>
+			);
+		} else if (status == "markings") {
+			return (
+				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
+					<Link to='/admin/view-groups'>
+						<img
+							src={Groups}
+							alt='home'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/panels'>
+						<img
+							src={AddMember}
+							alt='book'
+							className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl '
+						/>
+					</Link>
+
+					<Link to='/admin/members'>
+						<img
+							src={Members}
+							alt='document'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/view-templates'>
+						<img
+							src={Doc}
+							alt='users'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+					<Link to='/admin/marking-scheme'>
+						<img
+							src={report}
+							alt='chat'
+							className='bg-white-blue cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/submissions'>
+						<img
+							src={upload}
+							alt='chat'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+				</div>
+			);
+		} else if (status == "submissions") {
+			return (
+				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
+					<Link to='/admin/view-groups'>
+						<img
+							src={Groups}
+							alt='home'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/panels'>
+						<img
+							src={AddMember}
+							alt='book'
+							className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl '
+						/>
+					</Link>
+
+					<Link to='/admin/members'>
+						<img
+							src={Members}
+							alt='document'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/view-templates'>
+						<img
+							src={Doc}
+							alt='users'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+					<Link to='/admin/marking-scheme'>
+						<img
+							src={report}
+							alt='chat'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/submissions'>
+						<img
+							src={upload}
+							alt='chat'
+							className='bg-white-blue cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
 				</div>
 			);
 		} else {
 			return (
 				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
-					<img
-						src={Groups}
-						alt='home'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-					/>
-					<img
-						src={AddMember}
-						alt='book'
-						className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl active:bg-white-blue'
-					/>
+					<Link to='/admin/view-groups'>
+						<img
+							src={Groups}
+							alt='home'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
 
-					<img
-						src={Members}
-						alt='document'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-					/>
+					<Link to='/admin/panels'>
+						<img
+							src={AddMember}
+							alt='book'
+							className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl '
+						/>
+					</Link>
 
-					<img
-						src={Doc}
-						alt='users'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-					/>
-					<img
-						src={report}
-						alt='chat'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-					/>
-					<img
-						src={upload}
-						alt='chat'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-					/>
+					<Link to='/admin/members'>
+						<img
+							src={Members}
+							alt='document'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/view-templates'>
+						<img
+							src={Doc}
+							alt='users'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+					<Link to='/admin/marking-scheme'>
+						<img
+							src={report}
+							alt='chat'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
+
+					<Link to='/admin/submissions'>
+						<img
+							src={upload}
+							alt='chat'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+						/>
+					</Link>
 				</div>
 			);
 		}
@@ -129,7 +411,15 @@ function AdminMenu({ status }) {
 				/>
 			</div> */}
 			<div className='cursor-pointer mt-36'>
-				<img src={logout} alt='logout' />
+				<img
+					src={logout}
+					alt='logout'
+					onClick={() => {
+						window.localStorage.clear();
+
+						window.location.reload(false);
+					}}
+				/>
 			</div>
 		</div>
 	);
