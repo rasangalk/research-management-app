@@ -8,6 +8,8 @@ import {
 	getStudentSubmission,
 	evaluateStudentSubmission,
 } from "../../../actions/supervisor.action";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 function Submissions() {
 	const [marks, setMarks] = useState("");
@@ -16,6 +18,8 @@ function Submissions() {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const studentSubmission = useSelector(state => state.assignment);
+	const user = window.localStorage.getItem("user");
+	const userRole = JSON.parse(user).role;
 
 	useEffect(() => {
 		dispatch(getStudentSubmission(submission));
@@ -30,7 +34,11 @@ function Submissions() {
 		dispatch(
 			evaluateStudentSubmission(studentSubmission.assignment[0]._id, data),
 		);
-		navigate("/supervisor/markings-submissions");
+		if (userRole == "supervisor") {
+			navigate(-1);
+		} else {
+			navigate("/staff/student-submissions");
+		}
 	};
 
 	if (studentSubmission.assignment[0]) {
@@ -111,7 +119,22 @@ function Submissions() {
 								</div>
 								<div className='flex mt-[4.8rem] gap-3 ml-[58rem] '>
 									<button
-										onClick={handleEdit}
+										onClick={() => {
+											confirmAlert({
+												message: "Are you sure to submit?",
+												buttons: [
+													{
+														label: "Yes",
+														onClick: () => {
+															handleEdit();
+														},
+													},
+													{
+														label: "No",
+													},
+												],
+											});
+										}}
 										className='capitalize font-bold text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active text-sm'>
 										submit
 									</button>

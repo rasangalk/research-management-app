@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Menu from "../../../components/SupervisorMenu";
+import Menu from "../../../components/coSupervisorMenu";
 import Container from "../../../components/SupervisorContainer";
 import { getSupervisorDetails } from "../../../actions/supervisor.action";
 
@@ -19,11 +19,11 @@ function CoSupervisorProfile() {
 		<div>
 			<div className='w-screen h-screen grid grid-cols-12 bg-bk-white'>
 				<div className=''>
-					<Menu />
+					<Menu status='coprofile' />
 				</div>
 				<div className='col-span-11 mx-auto my-auto '>
 					<div className='relative'>
-						<Container title='Profile' width='w-[68rem] h-[25rem]' />
+						<Container title='Profile' width='w-[68rem] h-[24rem]' />
 						<div className='absolute top-[10rem] left-[7rem]'>
 							<div className=' grid grid-cols-2 w-[60rem]'>
 								<div className='flex flex-col gap-8'>

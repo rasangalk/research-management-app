@@ -18,6 +18,9 @@ import { useDispatch } from "react-redux";
 
 import { signup } from "../../../actions/user.actions";
 
+import Login from "../../Signin/index";
+import { compose } from "redux";
+
 function StudentRegister() {
 	const [page, setPage] = useState(0);
 	const Forms = ["register", "leader", "member1", "member2", "member3"];
@@ -64,6 +67,8 @@ function StudentRegister() {
 		navigate(path);
 	};
 
+	console.log("rasa", page);
+
 	const PageDisplay = () => {
 		if (page === 0) {
 			return (
@@ -90,13 +95,15 @@ function StudentRegister() {
 					setSecondMemberFormData={setSecondMemberFormData}
 				/>
 			);
-		} else {
+		} else if (page === 4) {
 			return (
 				<RegisterThirdMember
 					thirdMemberFormData={thirdMemberFormData}
 					setThirdMemberFormData={setThirdMemberFormData}
 				/>
 			);
+		} else if (page === 5) {
+			navigate("/");
 		}
 	};
 
@@ -154,7 +161,7 @@ function StudentRegister() {
 					<button
 						className='mt-5 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active disabled:opacity-75 disabled:hover:bg-regal-blue disabled:hover:opacity-75'
 						onClick={() => {
-							if (page === Forms.length - 1) {
+							if (page === 5) {
 								studentSignup();
 							} else {
 								setPage(page + 1);

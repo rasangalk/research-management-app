@@ -10,6 +10,8 @@ import {
 } from "../../../actions/topics.action";
 import { useNavigate, useParams } from "react-router-dom";
 import { getSupervisorDetails } from "../../../actions/supervisor.action";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 function SupervisortopicsAcceptanceReject() {
 	const [comment, setComment] = useState();
@@ -125,14 +127,40 @@ function SupervisortopicsAcceptanceReject() {
 								<button
 									className='  text-lg  px-6 py-1 bg-[#F65354] text-white border border-slate-300 focus:outline-none focus:border-[#f76d6d]-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-[#c73e3e]-active text-sm'
 									onClick={() => {
-										rejectTopic();
+										confirmAlert({
+											message: "Are you sure to reject the topic?",
+											buttons: [
+												{
+													label: "Yes",
+													onClick: () => {
+														rejectTopic();
+													},
+												},
+												{
+													label: "No",
+												},
+											],
+										});
 									}}>
 									Reject
 								</button>
 								<button
 									className=' text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active text-sm'
 									onClick={() => {
-										acceptTopic();
+										confirmAlert({
+											message: "Are you sure to accept the topic?",
+											buttons: [
+												{
+													label: "Yes",
+													onClick: () => {
+														acceptTopic();
+													},
+												},
+												{
+													label: "No",
+												},
+											],
+										});
 									}}>
 									Accept
 								</button>
