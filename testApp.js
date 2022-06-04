@@ -167,8 +167,11 @@ function App() {
 				<Route path='/admin/panels' element={<PrivateWrapper />}>
 					<Route path='/admin/panels' element={<Panels />} />
 				</Route>
-				<Route path='/admin/submissions/edit' element={<PrivateWrapper />}>
-					<Route path='/admin/submissions/edit' element={<EditSubmission />} />
+				<Route path='/admin/submissions/edit/:id' element={<PrivateWrapper />}>
+					<Route
+						path='/admin/submissions/edit/:id'
+						element={<EditSubmission />}
+					/>
 				</Route>
 				<Route path='/admin/view-groups/:grpId' element={<PrivateWrapper />}>
 					<Route

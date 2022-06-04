@@ -4,115 +4,125 @@ import { useParams, useNavigate } from "react-router-dom";
 import Menu from "../../../components/AdminMenu";
 import Container from "../../../components/AdminContainer";
 import {
-  getSubmissionByID,
-  UpdateSubmissions,
+	getSubmissionByID,
+	UpdateSubmissions,
 } from "../../../actions/submissions.action";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 function EditSubmission() {
-  const submission = useSelector((state) => state.assignment);
-  const dispatch = useDispatch();
-  const { id } = useParams();
-  console.log(submission);
-  const navigate = useNavigate();
+	const submission = useSelector(state => state.assignment);
+	const dispatch = useDispatch();
+	const { id } = useParams();
+	console.log(submission);
+	const navigate = useNavigate();
 
-  const [caption, setCaption] = useState();
-  const [description, setDescription] = useState();
-  const [date, setDate] = useState();
-  const [time, setTime] = useState();
+	const [caption, setCaption] = useState();
+	const [description, setDescription] = useState();
+	const [date, setDate] = useState();
+	const [time, setTime] = useState();
 
-  useEffect(() => {
-    dispatch(getSubmissionByID(id));
-    setCaption(submission.assignment.assignment.caption);
-    setDescription(submission.assignment.assignment.description);
-    setDate(submission.assignment.assignment.deadlineDate);
-    setTime(submission.assignment.assignment.deadlineTime);
-  }, []);
+	useEffect(() => {
+		dispatch(getSubmissionByID(id));
+		setCaption(submission.assignment.caption);
+		setDescription(submission.assignment.description);
+		setDate(submission.assignment.deadlineDate);
+		setTime(submission.assignment.deadlineTime);
+	}, []);
 
-  const handleEditSubmission = () => {
-    const updatedSubmission = {
-      submissionId: id,
-      caption: caption,
-      description: description,
-      deadlineDate: date,
-      deadlineTime: time,
-    };
-    console.log(updatedSubmission);
+	const handleEditSubmission = () => {
+		const updatedSubmission = {
+			submissionId: id,
+			caption: caption,
+			description: description,
+			deadlineDate: date,
+			deadlineTime: time,
+		};
+		console.log(updatedSubmission);
 
-    dispatch(UpdateSubmissions(updatedSubmission));
-    navigate("/admin/submissions");
-  };
+		dispatch(UpdateSubmissions(updatedSubmission));
+		navigate("/admin/submissions");
+	};
 
-  if (submission.assignment.assignment) {
-    return (
-      <div>
-        <div className="w-screen h-screen grid grid-cols-12 bg-bk-white">
-          <div>
-            <Menu />
-          </div>
-          <div className="col-span-11 mx-auto my-auto">
-            <div class="relative">
-              <Container title="submission" width="w-[68rem]" />
-              <div class="absolute left-[6rem] top-[9rem] w-[66rem]">
-                <div className="flex flex-col gap-3 h-[22rem] w-[64rem] outline-0">
-                  <div>
-                    <p>Caption:</p>
-                    <input
-                      type="text"
-                      defaultValue={submission.assignment.assignment.caption}
-                      // value={caption}
-                      onChange={(e) => setCaption(e.target.value)}
-                      className=" border-2 w-[60rem] break-all whitespace-normal rounded-md py-1 px-2 mt-1 outline-0  focus:border-slate-300"
-                    />
-                  </div>
-                  <div>
-                    <p>Description:</p>
-                    <textarea
-                      defaultValue={
-                        submission.assignment.assignment.description
-                      }
-                      // value={description}
-                      onChange={(e) => setDescription(e.target.value)}
-                      className="border-2 w-[60rem] rounded-md h-20 py-1 px-2 resize-none mt-1 outline-0 focus:border-slate-300"
-                    />
-                  </div>
-                  <div>
-                    <p>Due Date:</p>
-                    <input
-                      type="date"
-                      defaultValue={
-                        submission.assignment.assignment.deadlineDate
-                      }
-                      // value={date}
-                      onChange={(e) => setDate(e.target.value)}
-                      className="border-2 w-[14rem] rounded-md px-4 py-1 mt-1 outline-0  focus:border-slate-300"
-                    />
-                  </div>
-                  <div>
-                    <p>Due Time</p>
-                    <input
-                      type="time"
-                      defaultValue={
-                        submission.assignment.assignment.deadlineTime
-                      }
-                      // value={time}
-                      onChange={(e) => setTime(e.target.value)}
-                      className="border-2 w-[14rem] rounded-md px-4 py-1 mt-1 outline-0  focus:border-slate-300"
-                    />
-                  </div>
-                </div>
-                <button
-                  className=" float-right capitalize bg-regal-blue hover:bg-regal-blue-active mx-auto px-6 py-2 text-sm rounded-md font-bold text-white mr-4 mt-8"
-                  onClick={handleEditSubmission}
-                >
-                  Save
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+	if (submission.assignment) {
+		return (
+			<div>
+				<div className='w-screen h-screen grid grid-cols-12 bg-bk-white'>
+					<div>
+						<Menu />
+					</div>
+					<div className='col-span-11 mx-auto my-auto'>
+						<div class='relative'>
+							<Container title='submission' width='w-[68rem]' />
+							<div class='absolute left-[6rem] top-[9rem] w-[66rem]'>
+								<div className='flex flex-col gap-3 h-[22rem] w-[64rem] outline-0'>
+									<div>
+										<p>Caption:</p>
+										<input
+											type='text'
+											defaultValue={submission.assignment.caption}
+											// value={caption}
+											onChange={e => setCaption(e.target.value)}
+											className=' border-2 w-[60rem] break-all whitespace-normal rounded-md py-1 px-2 mt-1 outline-0  focus:border-slate-300'
+										/>
+									</div>
+									<div>
+										<p>Description:</p>
+										<textarea
+											defaultValue={submission.assignment.description}
+											// value={description}
+											onChange={e => setDescription(e.target.value)}
+											className='border-2 w-[60rem] rounded-md h-20 py-1 px-2 resize-none mt-1 outline-0 focus:border-slate-300'
+										/>
+									</div>
+									<div>
+										<p>Due Date:</p>
+										<input
+											type='date'
+											defaultValue={submission.assignment.deadlineDate}
+											// value={date}
+											onChange={e => setDate(e.target.value)}
+											className='border-2 w-[14rem] rounded-md px-4 py-1 mt-1 outline-0  focus:border-slate-300'
+										/>
+									</div>
+									<div>
+										<p>Due Time</p>
+										<input
+											type='time'
+											defaultValue={submission.assignment.deadlineTime}
+											// value={time}
+											onChange={e => setTime(e.target.value)}
+											className='border-2 w-[14rem] rounded-md px-4 py-1 mt-1 outline-0  focus:border-slate-300'
+										/>
+									</div>
+								</div>
+								<button
+									className=' float-right capitalize bg-regal-blue hover:bg-regal-blue-active mx-auto px-6 py-2 text-sm rounded-md font-bold text-white mr-4 mt-8'
+									onClick={() => {
+										confirmAlert({
+											message: "Are you sure to update?",
+											buttons: [
+												{
+													label: "Yes",
+													onClick: () => {
+														handleEditSubmission();
+													},
+												},
+												{
+													label: "No",
+												},
+											],
+										});
+									}}>
+									Save
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	}
 }
 
 export default EditSubmission;
