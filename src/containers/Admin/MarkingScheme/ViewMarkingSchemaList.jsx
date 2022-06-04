@@ -8,6 +8,8 @@ import {
 	getMarkingSchemas,
 	DeleteMarkingSchema,
 } from "../../../actions/markingscheme.action";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 function ViewMarkingSchemaList() {
 	const dispatch = useDispatch();
@@ -63,8 +65,23 @@ function ViewMarkingSchemaList() {
 															className='h-4 cursor-pointer'
 															onClick={
 																(handleDelete = () => {
-																	dispatch(DeleteMarkingSchema(schema._id));
-																	window.location.reload();
+																	confirmAlert({
+																		message: "Are you sure to delete?",
+																		buttons: [
+																			{
+																				label: "Yes",
+																				onClick: () => {
+																					dispatch(
+																						DeleteMarkingSchema(schema._id),
+																					);
+																					window.location.reload();
+																				},
+																			},
+																			{
+																				label: "No",
+																			},
+																		],
+																	});
 																})
 															}
 														/>

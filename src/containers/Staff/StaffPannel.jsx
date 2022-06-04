@@ -46,12 +46,12 @@ function StaffPannel() {
 									<tbody>
 										{markingSchemas.markingSchemas.map((schema, index) => (
 											<tr
-												className='even:bg-white odd:bg-slate-100 cursor-default hover:bg-slate-200'
+												className='even:bg-white odd:bg-slate-100 cursor-pointer'
 												key={index}>
 												<td
 													className='px-5 py-2 w-[80rem]'
 													onClick={() =>
-														navigate("/admin/marking-scheme/view/" + schema._id)
+														navigate("/staff/staff-markings/" + schema._id)
 													}>
 													{schema.assignmentName}
 												</td>

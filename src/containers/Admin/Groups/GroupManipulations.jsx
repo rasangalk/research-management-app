@@ -4,6 +4,9 @@ import Menu from "../../../components/AdminMenu";
 import Container from "../../../components/AdminContainer";
 import { getGroupDetails } from "../../../actions/student.action";
 import { useParams, useNavigate } from "react-router-dom";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
+
 import {
 	getAllPanelDetails,
 	UpdateStudentGrpPanel,
@@ -52,18 +55,14 @@ function GroupManipulations() {
 										</p>
 									</div>
 									<div className=''>
-										<p className='capitalize'>
-											supervisor <span className='uppercase'>id:</span>
-										</p>
-										<p className='uppercase font-bold text-lg'>
+										<p className='capitalize'>supervisor:</p>
+										<p className='capitalize font-bold text-lg'>
 											{students.group.supervisor}{" "}
 										</p>
 									</div>
 									<div className='mt-12'>
-										<p className='capitalize'>
-											co-supervisor <span className='uppercase'>id:</span>
-										</p>
-										<p className='uppercase font-bold text-lg'>
+										<p className='capitalize'>co-supervisor:</p>
+										<p className='capitalize font-bold text-lg'>
 											{students.group.coSupervisor}
 										</p>
 									</div>
@@ -145,7 +144,20 @@ function GroupManipulations() {
 								<button
 									className='mt-16 capitalize text-lg font-bold px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right text-sm'
 									onClick={() => {
-										updatePanel();
+										confirmAlert({
+											message: "Are you sure to update the panel?.",
+											buttons: [
+												{
+													label: "Yes",
+													onClick: () => {
+														updatePanel();
+													},
+												},
+												{
+													label: "No",
+												},
+											],
+										});
 									}}>
 									update
 								</button>

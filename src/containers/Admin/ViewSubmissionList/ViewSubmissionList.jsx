@@ -9,6 +9,8 @@ import {
 } from "../../../actions/submissions.action";
 import deleteIcon from "../../../images/delete.png";
 import { DeleteSubmission } from "../../../actions/submissions.action";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 function ViewSubmissionList() {
 	const submissions = useSelector(state => state.submissions);
@@ -45,7 +47,7 @@ function ViewSubmissionList() {
 									<div className='h-[20rem] overflow-y-auto w-[62rem]'>
 										<tbody className='leading-8'>
 											{submissions.submissions.map(submission => (
-												<tr className='even:bg-white odd:bg-slate-100 cursor-default'>
+												<tr className='even:bg-white odd:bg-slate-100 cursor-pointer'>
 													<td
 														className='px-5 py-1 w-[80rem]'
 														onClick={() =>
@@ -61,8 +63,23 @@ function ViewSubmissionList() {
 															className='h-4 cursor-pointer'
 															onClick={
 																(handleDelete = () => {
-																	dispatch(DeleteSubmission(submission._id));
-																	window.location.reload();
+																	confirmAlert({
+																		message: "Are you sure to delete?",
+																		buttons: [
+																			{
+																				label: "Yes",
+																				onClick: () => {
+																					dispatch(
+																						DeleteSubmission(submission._id),
+																					);
+																					window.location.reload();
+																				},
+																			},
+																			{
+																				label: "No",
+																			},
+																		],
+																	});
 																})
 															}
 														/>
