@@ -37,6 +37,7 @@ import Topics from "./src/containers/Supervisor/Supervisor-Topics/Topics";
 import AssignedTopics from "./src/containers/Supervisor/Supervisor-Topics/AssignedTopics";
 import CreateMarkingScheme from "./src/containers/Admin/MarkingScheme/CreateMarkingScheme";
 import ViewMarkingSchemaList from "./src/containers/Admin/MarkingScheme/ViewMarkingSchemaList";
+import AddTemplate from "./src/containers/Admin/Templates/AddTemplate";
 import TopicSubmission from "./src/containers/Supervisor/StudentSubmissions/TopicSubmission";
 import Markings from "./src/containers/Supervisor/MarkingSchemes-Submissions";
 import StudentSubmission from "./src/containers/Supervisor/StudentSubmissions/Submissions";
@@ -227,6 +228,9 @@ function App() {
             path="/admin/marking-scheme/view/:schemaId"
             element={<ViewMarkingSchemaByID />}
           />
+        </Route>
+        <Route path="/admin/template/upload" element={<PrivateWrapper />}>
+          <Route path="/admin/template/upload" element={<AddTemplate />} />
         </Route>
         //////////////////////////////Supervisor////////////////////////
         <Route
