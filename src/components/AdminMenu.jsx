@@ -8,6 +8,8 @@ import report from "../images/clipboard-minus.png";
 import upload from "../images/upload.png";
 import logout from "../images/logout.png";
 import logo from "../images/logo.png";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 function AdminMenu({ status }) {
 	const activeTab = () => {
@@ -415,9 +417,21 @@ function AdminMenu({ status }) {
 					src={logout}
 					alt='logout'
 					onClick={() => {
-						window.localStorage.clear();
-
-						window.location.reload(false);
+						confirmAlert({
+							message: "Are you sure to logout?",
+							buttons: [
+								{
+									label: "Yes",
+									onClick: () => {
+										window.localStorage.clear();
+										window.location.reload(false);
+									},
+								},
+								{
+									label: "No",
+								},
+							],
+						});
 					}}
 				/>
 			</div>

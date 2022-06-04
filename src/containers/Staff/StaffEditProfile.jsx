@@ -4,6 +4,8 @@ import Menu from "../../components/StaffMenu";
 import Container from "../../components/StaffContainer";
 import { useNavigate } from "react-router-dom";
 import { getMember, UpdateMemberDetails } from "../../actions/members.action";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 function StaffEditProfile() {
 	const dispatch = useDispatch();
@@ -117,14 +119,28 @@ function StaffEditProfile() {
 									<button
 										className='capitalize text-lg  px-6 py-1 bg-main-orange text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-main-orange-active float-right  text-sm'
 										onClick={() => {
-											navigate("/staff/view-profile");
+											navigate("/staff/staff-profile");
 										}}>
 										cancel
 									</button>
 									<button
 										className='capitalize text-lg  px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right  text-sm'
 										onClick={() => {
-											updateMember();
+											confirmAlert({
+												title: "Yes to Cancel",
+												message: "Are you sure to update profile?.",
+												buttons: [
+													{
+														label: "Yes",
+														onClick: () => {
+															updateMember();
+														},
+													},
+													{
+														label: "No",
+													},
+												],
+											});
 										}}>
 										update
 									</button>

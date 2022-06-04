@@ -7,6 +7,8 @@ import clipboard from "../images/clipboard-minus.png";
 import chat from "../images/chat-typing.png";
 import logout from "../images/logout.png";
 import { Link } from "react-router-dom";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 function StaffMenu({ status }) {
 	const activeTab = s => {
@@ -157,9 +159,22 @@ function StaffMenu({ status }) {
 					src={logout}
 					alt='logout'
 					onClick={() => {
-						window.localStorage.clear();
-
-						window.location.reload(false);
+						confirmAlert({
+							title: "Yes to Cancel",
+							message: "Are you sure to logout?",
+							buttons: [
+								{
+									label: "Yes",
+									onClick: () => {
+										window.localStorage.clear();
+										window.location.reload(false);
+									},
+								},
+								{
+									label: "No",
+								},
+							],
+						});
 					}}
 				/>
 			</div>

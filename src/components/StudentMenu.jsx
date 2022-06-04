@@ -7,6 +7,8 @@ import document from "../images/documents.png";
 import users from "../images/users.png";
 import chat from "../images/chat-typing.png";
 import logout from "../images/logout.png";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 function StudentMenu({ status }) {
 	const activePage = s => {
@@ -223,9 +225,22 @@ function StudentMenu({ status }) {
 					src={logout}
 					alt='logout'
 					onClick={() => {
-						window.localStorage.clear();
-
-						window.location.reload(false);
+						confirmAlert({
+							title: "Yes to Cancel",
+							message: "Are you sure to logout?",
+							buttons: [
+								{
+									label: "Yes",
+									onClick: () => {
+										window.localStorage.clear();
+										window.location.reload(false);
+									},
+								},
+								{
+									label: "No",
+								},
+							],
+						});
 					}}
 				/>
 			</div>

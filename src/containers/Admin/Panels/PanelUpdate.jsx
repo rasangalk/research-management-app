@@ -5,6 +5,8 @@ import Container from "../../../components/AdminContainer";
 import { getPanel, UpdatePanelDetails } from "../../../actions/panel.action";
 import { useParams, useNavigate, Navigate } from "react-router-dom";
 import { getAllStaffMemebrs } from "../../../actions/members.action";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 function PanelUpdate() {
 	// const [del1, setDel1] = useState(false);
@@ -78,7 +80,9 @@ function PanelUpdate() {
 										<p className='capitalize'>
 											panel <span className='uppercase'>id:</span>
 										</p>
-										<p className='uppercase font-bold text-lg'>w14</p>
+										<p className='uppercase font-bold text-lg'>
+											{panels.panel.panelId}
+										</p>
 									</div>
 									<div className='col-span-5'>
 										<p className='capitalize'>username: </p>
@@ -135,11 +139,29 @@ function PanelUpdate() {
 								<button
 									className='mt-16 capitalize text-lg font-bold px-6 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-regal-blue-active float-right text-sm'
 									onClick={() => {
-										UpdatePnl();
+										confirmAlert({
+											message: "Are you sure to update the panel?",
+											buttons: [
+												{
+													label: "Yes",
+													onClick: () => {
+														UpdatePnl();
+														navigate("/admin/panels");
+													},
+												},
+												{
+													label: "No",
+												},
+											],
+										});
 									}}>
 									update
 								</button>
-								<button className='mr-4 mt-16 capitalize text-lg font-bold px-6 py-1 bg-main-orange text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-main-orange-active float-right text-sm'>
+								<button
+									className='mr-4 mt-16 capitalize text-lg font-bold px-6 py-1 bg-main-orange text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-50 sm:w-50 rounded-md hover:bg-main-orange-active float-right text-sm'
+									onClick={() => {
+										navigate("/admin/panels");
+									}}>
 									cancel
 								</button>
 							</div>
