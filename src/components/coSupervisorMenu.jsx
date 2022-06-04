@@ -12,49 +12,7 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 
 function coSupervisorMenu({ status }) {
 	const ActiveTab = s => {
-		if (s == "topics") {
-			return (
-				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
-					<Link to='/coSupervisor/coSupervisor-Profile'>
-						<img
-							src={profile}
-							alt='profile'
-							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
-						/>
-					</Link>
-
-					<Link to='/coSupervisor/topics'>
-						<img
-							src={file}
-							alt='file'
-							className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl bg-white-blue'
-						/>
-					</Link>
-
-					<Link to='/coSupervisor/assigned-topics'>
-						<img
-							src={list}
-							alt='list'
-							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl  hover:bg-white-blue '
-						/>
-					</Link>
-
-					<Link to='/coSupervisor/markings-submissions'>
-						<img
-							src={report}
-							alt='report'
-							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
-						/>
-					</Link>
-
-					<img
-						src={chat}
-						alt='chat'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue'
-					/>
-				</div>
-			);
-		} else if (s == "profile") {
+		if (status == "coprofile") {
 			return (
 				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
 					<Link to='/coSupervisor/coSupervisor-Profile'>
@@ -81,13 +39,11 @@ function coSupervisorMenu({ status }) {
 						/>
 					</Link>
 
-					<Link to='/coSupervisor/markings-submissions'>
-						<img
-							src={report}
-							alt='report'
-							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-						/>
-					</Link>
+					<img
+						src={report}
+						alt='report'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+					/>
 
 					<img
 						src={chat}
@@ -96,7 +52,47 @@ function coSupervisorMenu({ status }) {
 					/>
 				</div>
 			);
-		} else if (s == "assigned") {
+		} else if (status == "cotopics") {
+			return (
+				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
+					<Link to='/coSupervisor/coSupervisor-Profile'>
+						<img
+							src={profile}
+							alt='profile'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+						/>
+					</Link>
+
+					<Link to='/coSupervisor/topics'>
+						<img
+							src={file}
+							alt='file'
+							className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl bg-white-blue'
+						/>
+					</Link>
+
+					<Link to='/coSupervisor/assigned-topics'>
+						<img
+							src={list}
+							alt='list'
+							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl  hover:bg-white-blue active:bg-white-blue'
+						/>
+					</Link>
+
+					<img
+						src={report}
+						alt='report'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+					/>
+
+					<img
+						src={chat}
+						alt='chat'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+					/>
+				</div>
+			);
+		} else if (status == "assigned") {
 			return (
 				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
 					<Link to='/coSupervisor/coSupervisor-Profile'>
@@ -123,55 +119,11 @@ function coSupervisorMenu({ status }) {
 						/>
 					</Link>
 
-					<Link to='/coSupervisor/markings-submissions'>
-						<img
-							src={report}
-							alt='report'
-							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-						/>
-					</Link>
-
 					<img
-						src={chat}
-						alt='chat'
-						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
+						src={report}
+						alt='report'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
 					/>
-				</div>
-			);
-		} else if (s == "main") {
-			return (
-				<div className='w-full h-[244px] mt-16 flex flex-col items-center justify-center'>
-					<Link to='/coSupervisor/coSupervisor-Profile'>
-						<img
-							src={profile}
-							alt='profile'
-							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-						/>
-					</Link>
-
-					<Link to='/coSupervisor/topics'>
-						<img
-							src={file}
-							alt='file'
-							className='cursor-pointer py-2 hover:bg-white-blue px-[3rem]  mt-2 rounded-tr-xl rounded-br-xl active:bg-white-blue'
-						/>
-					</Link>
-
-					<Link to='/coSupervisor/assigned-topics'>
-						<img
-							src={list}
-							alt='list'
-							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl  hover:bg-white-blue active:bg-white-blue'
-						/>
-					</Link>
-
-					<Link to='/coSupervisor/markings-submissions'>
-						<img
-							src={report}
-							alt='report'
-							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue bg-white-blue'
-						/>
-					</Link>
 
 					<img
 						src={chat}
@@ -207,13 +159,11 @@ function coSupervisorMenu({ status }) {
 						/>
 					</Link>
 
-					<Link to='/coSupervisor/markings-submissions'>
-						<img
-							src={report}
-							alt='report'
-							className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue active:bg-white-blue'
-						/>
-					</Link>
+					<img
+						src={report}
+						alt='report'
+						className='cursor-pointer py-2 px-[3rem] mt-2 rounded-tr-xl rounded-br-xl hover:bg-white-blue '
+					/>
 
 					<img
 						src={chat}

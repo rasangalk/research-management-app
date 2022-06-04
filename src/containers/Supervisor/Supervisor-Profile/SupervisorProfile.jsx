@@ -9,14 +9,14 @@ function SupervisorProfile() {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	// const auth = useSelector((state) => state.auth);
-	const supervisor = useSelector(state => state.supervisor);
 
 	const user = window.localStorage.getItem("user");
 	const userID = JSON.parse(user)._id;
 	useEffect(() => {
 		dispatch(getSupervisorDetails(userID));
 	}, []);
-	console.log(supervisor);
+	const supervisor = useSelector(state => state.supervisor);
+
 	return (
 		<div>
 			<div className='w-screen h-screen grid grid-cols-12 bg-bk-white'>

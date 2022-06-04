@@ -88,7 +88,7 @@ function StaffPannel() {
 								<div className='lowercase col-span-2 py-2'>
 									{staff.panel.panelMembers.member2.username}
 								</div>
-								<div className='capiatalize py-2'>
+								<div className='uppercase py-2'>
 									{staff.panel.panelMembers.member2.memberId}
 								</div>
 
@@ -98,7 +98,7 @@ function StaffPannel() {
 								<div className='lowercase col-span-2 bg-white-blue py-2'>
 									{staff.panel.panelMembers.member3.username}
 								</div>
-								<div className='capiatalize bg-white-blue py-2'>
+								<div className='uppercase bg-white-blue py-2'>
 									{staff.panel.panelMembers.member3.memberId}
 								</div>
 							</div>
