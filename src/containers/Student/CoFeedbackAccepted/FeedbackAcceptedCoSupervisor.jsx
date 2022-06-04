@@ -9,7 +9,7 @@ import {
 } from "../../../actions/topics.action";
 import dateFormat from "dateformat";
 
-function coSupFeedbackAccepted() {
+function CoSupFeedbackAccepted() {
   const { id } = useParams();
   const navigate = useNavigate();
   console.log("ID", id);
@@ -81,4 +81,4 @@ function coSupFeedbackAccepted() {
   );
 }
 
-export default coSupFeedbackAccepted;
+export default CoSupFeedbackAccepted;

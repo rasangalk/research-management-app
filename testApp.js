@@ -11,7 +11,7 @@ import StudentRegister from "./src/containers/Student/StudentRegister";
 import StudentHome from "./src/containers/Student/StudentHome/Home";
 import StudentNewSubmission from "./src/containers/Student/StudentSubmission/StudentSubmission";
 import StudentFeedbackAccept from "./src/containers/Student/FeedbackAccepted/FeedbackAccepted";
-import coSupStudentFeedback from "./src/containers/Student/CoFeedbackAccepted/coFeedbackAccepted";
+import CoSupStudentFeedback from "./src/containers/Student/CoFeedbackAccepted/FeedbackAcceptedCoSupervisor";
 import StudentTemplateList from "./src/containers/Student/StudentTemplateList";
 import StudentFileSubmission from "./src/containers/Student/StudentFileSubmission/StudentFileSubmission";
 import AdminHome from "./src/containers/Admin/Members/Members";
@@ -59,6 +59,7 @@ import CoTopics from "./src/containers/Co-Supervisor/Co-Supervisor-Topics/Topics
 import StudentGroup from "./src/containers/Student/StudentGroup/StudentGroup";
 import SupervisorProfileEdit from "./src/containers/Supervisor/Supervisor-Profile-Edit/SupervisorProfileEdit";
 import MarkingSchemaByID from "./src/containers/Supervisor/MarkingSchemes-Submissions/Marking";
+import FeedbackAccepted from "./src/containers/Student/FeedbackAccepted/FeedbackAccepted";
 
 function App() {
   const dispatch = useDispatch();
@@ -100,7 +101,7 @@ function App() {
         >
           <Route
             path="/student/co/topic/accepted/:id"
-            element={<coSupStudentFeedback />}
+            element={<CoSupStudentFeedback />}
           />
         </Route>
         <Route path="/student/templates" element={<PrivateWrapper />}>
