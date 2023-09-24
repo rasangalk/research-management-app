@@ -26,7 +26,7 @@
   "devDependencies": {
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.0",
-    "parcel": "^2.5.0",
+    "parcel": "^2.9.3",
     "path-browserify": "^1.0.1",
     "postcss": "^8.4.14",
     "process": "^0.11.10",
