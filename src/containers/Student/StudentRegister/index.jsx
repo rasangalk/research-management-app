@@ -1,66 +1,66 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import RegisterPageOne from '../../../components/RegisterPageOne';
+import RegisterPageOne from "../../../components/RegisterPageOne";
 
-import LayoutRight from '../../../components/LayoutRight';
+import LayoutRight from "../../../components/LayoutRight";
 
-import RegisterPageLeader from '../../../components/RegisterPageLeader';
+import RegisterPageLeader from "../../../components/RegisterPageLeader";
 
-import RegisterFirstMember from '../../../components/RegisterFirstMember';
+import RegisterFirstMember from "../../../components/RegisterFirstMember";
 
-import RegisterSecondMember from '../../../components/RegisterSecondMember';
+import RegisterSecondMember from "../../../components/RegisterSecondMember";
 
-import RegisterThirdMember from '../../../components/RegisterThirdMember';
+import RegisterThirdMember from "../../../components/RegisterThirdMember";
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 
-import { signup } from '../../../actions/user.actions';
+import { signup } from "../../../actions/user.actions";
 
-import Login from '../../Signin/index';
-import { compose } from 'redux';
+import Login from "../../Signin/index";
+import { compose } from "redux";
 
 function StudentRegister() {
   const [page, setPage] = useState(0);
-  console.log('page:', page);
+  console.log("page:", page);
 
-  const Forms = ['register', 'leader', 'member1', 'member2', 'member3'];
+  const Forms = ["register", "leader", "member1", "member2", "member3"];
   const [loginInfo, setLoginInfo] = useState({
-    username: '',
-    password: '',
-    rePassword: '',
+    username: "",
+    password: "",
+    rePassword: "",
   });
   const [leaderFormData, setLeaderFormData] = useState({
-    nameWithInitials: '',
-    studentId: '',
-    phone: '',
-    email: '',
-    specialization: '',
+    nameWithInitials: "",
+    studentId: "",
+    phone: "",
+    email: "",
+    specialization: "",
   });
 
   const [firstMemberFormData, setFirstMemberFormData] = useState({
-    nameWithInitials: '',
-    studentId: '',
-    phone: '',
-    email: '',
-    specialization: '',
+    nameWithInitials: "",
+    studentId: "",
+    phone: "",
+    email: "",
+    specialization: "",
   });
 
   const [secondMemberFormData, setSecondMemberFormData] = useState({
-    nameWithInitials: '',
-    studentId: '',
-    phone: '',
-    email: '',
-    specialization: '',
+    nameWithInitials: "",
+    studentId: "",
+    phone: "",
+    email: "",
+    specialization: "",
   });
 
   const [thirdMemberFormData, setThirdMemberFormData] = useState({
-    nameWithInitials: '',
-    studentId: '',
-    phone: '',
-    email: '',
-    specialization: '',
+    nameWithInitials: "",
+    studentId: "",
+    phone: "",
+    email: "",
+    specialization: "",
   });
 
   let navigate = useNavigate();
@@ -103,19 +103,19 @@ function StudentRegister() {
         />
       );
     } else if (page === 5) {
-      navigate('/');
+      navigate("/");
     }
   };
 
   const dispatch = useDispatch();
 
   const studentSignup = () => {
-    console.log('inside');
+    console.log("inside");
     const user = {
       username: loginInfo.username,
       password: loginInfo.password,
       re_hash_password: loginInfo.rePassword,
-      role: 'student',
+      role: "student",
       students: {
         leader: {
           fullName: leaderFormData.nameWithInitials,
@@ -169,7 +169,7 @@ function StudentRegister() {
               }
             }}
           >
-            {page === Forms.length - 1 ? 'Submit' : 'Next'}
+            {page === Forms.length - 1 ? "Submit" : "Next"}
           </button>
           <button
             className='mt-2 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active disabled:opacity-75 disabled:hover:bg-regal-blue disabled:hover:opacity-75'
