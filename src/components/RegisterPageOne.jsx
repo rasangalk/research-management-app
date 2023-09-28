@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as Yup from "yup"; // Import Yup for validation
 
-function RegisterPageOne({ loginInfo, setLoginInfo }) {
+function RegisterPageOne({ loginInfo, setLoginInfo, setIsValid }) {
   // Define validation schema using Yup
   const validationSchema = Yup.object().shape({
     username: Yup.string()
@@ -16,7 +16,6 @@ function RegisterPageOne({ loginInfo, setLoginInfo }) {
   });
 
   const [validationErrors, setValidationErrors] = useState({});
-  const [isValid, setIsValid] = useState(true);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

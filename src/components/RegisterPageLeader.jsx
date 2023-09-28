@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as Yup from "yup"; // Import Yup for validation
 
-function RegisterPageLeader({ leaderFormData, setLeaderFormData }) {
+function RegisterPageLeader({ leaderFormData, setLeaderFormData, setIsValid }) {
   // Define validation schema using Yup
   const validationSchema = Yup.object().shape({
     nameWithInitials: Yup.string().required("Name with initials is required"),
@@ -19,7 +19,6 @@ function RegisterPageLeader({ leaderFormData, setLeaderFormData }) {
   });
 
   const [validationErrors, setValidationErrors] = useState({});
-  const [isValid, setIsValid] = useState(true);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

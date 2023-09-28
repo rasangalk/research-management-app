@@ -14,7 +14,7 @@ import RegisterThirdMember from "../../../components/RegisterThirdMember";
 
 import { useNavigate } from "react-router-dom";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { signup } from "../../../actions/user.actions";
 
@@ -23,7 +23,7 @@ import { compose } from "redux";
 
 function StudentRegister() {
   const [page, setPage] = useState(0);
-  console.log("page:", page);
+  const [isValid, setIsValid] = useState(false);
 
   const Forms = ["register", "leader", "member1", "member2", "member3"];
   const [loginInfo, setLoginInfo] = useState({
@@ -72,13 +72,18 @@ function StudentRegister() {
   const PageDisplay = () => {
     if (page === 0) {
       return (
-        <RegisterPageOne loginInfo={loginInfo} setLoginInfo={setLoginInfo} />
+        <RegisterPageOne
+          loginInfo={loginInfo}
+          setLoginInfo={setLoginInfo}
+          setIsValid={setIsValid}
+        />
       );
     } else if (page === 1) {
       return (
         <RegisterPageLeader
           leaderFormData={leaderFormData}
           setLeaderFormData={setLeaderFormData}
+          setIsValid={setIsValid}
         />
       );
     } else if (page === 2) {
@@ -86,6 +91,7 @@ function StudentRegister() {
         <RegisterFirstMember
           firstMemberFormData={firstMemberFormData}
           setFirstMemberFormData={setFirstMemberFormData}
+          setIsValid={setIsValid}
         />
       );
     } else if (page === 3) {
@@ -93,6 +99,7 @@ function StudentRegister() {
         <RegisterSecondMember
           secondMemberFormData={secondMemberFormData}
           setSecondMemberFormData={setSecondMemberFormData}
+          setIsValid={setIsValid}
         />
       );
     } else if (page === 4) {
@@ -100,6 +107,7 @@ function StudentRegister() {
         <RegisterThirdMember
           thirdMemberFormData={thirdMemberFormData}
           setThirdMemberFormData={setThirdMemberFormData}
+          setIsValid={setIsValid}
         />
       );
     } else if (page === 5) {
@@ -148,9 +156,14 @@ function StudentRegister() {
       },
     };
 
-    console.log(thirdMemberFormData);
-
     dispatch(signup(user));
+
+    // const res = useSelector((state) => state);
+    // console.log(res);
+    // if (res) {
+    //   console.log("HIIIIIII");
+    //   navigate("/student-home");
+    // }
   };
 
   return (
@@ -160,6 +173,7 @@ function StudentRegister() {
           {PageDisplay()}
 
           <button
+            disabled={!isValid}
             className='mt-5 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active disabled:opacity-75 disabled:hover:bg-regal-blue disabled:hover:opacity-75'
             onClick={() => {
               if (page === 4) {
