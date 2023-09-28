@@ -4,6 +4,7 @@ import * as Yup from "yup"; // Import Yup for validation
 function RegisterSecondMember({
   secondMemberFormData,
   setSecondMemberFormData,
+  setIsValid,
 }) {
   // Define validation schema using Yup
   const validationSchema = Yup.object().shape({
@@ -22,7 +23,6 @@ function RegisterSecondMember({
   });
 
   const [validationErrors, setValidationErrors] = useState({});
-  const [isValid, setIsValid] = useState(true);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

@@ -14,7 +14,7 @@ import RegisterThirdMember from "../../../components/RegisterThirdMember";
 
 import { useNavigate } from "react-router-dom";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { signup } from "../../../actions/user.actions";
 
@@ -23,7 +23,7 @@ import { compose } from "redux";
 
 function StudentRegister() {
   const [page, setPage] = useState(0);
-  const [isValid, setIsValid] = useState(false);
+  const [isValid, setIsValid] = useState(true);
 
   const Forms = ["register", "leader", "member1", "member2", "member3"];
   const [loginInfo, setLoginInfo] = useState({
@@ -157,13 +157,6 @@ function StudentRegister() {
     };
 
     dispatch(signup(user));
-
-    // const res = useSelector((state) => state);
-    // console.log(res);
-    // if (res) {
-    //   console.log("HIIIIIII");
-    //   navigate("/student-home");
-    // }
   };
 
   return (

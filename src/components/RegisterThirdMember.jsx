@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import * as Yup from "yup"; // Import Yup for validation
 
-function RegisterThirdMember({ thirdMemberFormData, setThirdMemberFormData }) {
+function RegisterThirdMember({
+  thirdMemberFormData,
+  setThirdMemberFormData,
+  setIsValid,
+}) {
   // Define validation schema using Yup
   const validationSchema = Yup.object().shape({
     nameWithInitials: Yup.string().required("Name with initials is required"),
@@ -19,7 +23,6 @@ function RegisterThirdMember({ thirdMemberFormData, setThirdMemberFormData }) {
   });
 
   const [validationErrors, setValidationErrors] = useState({});
-  const [isValid, setIsValid] = useState(true);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
