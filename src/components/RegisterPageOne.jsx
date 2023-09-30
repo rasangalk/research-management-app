@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useGoogleLogin } from "@react-oauth/google";
 import * as Yup from "yup"; // Import Yup for validation
 
-function RegisterPageOne({ loginInfo, setLoginInfo, page, setPage }) {
+function RegisterPageOne({
+  loginInfo,
+  setLoginInfo,
+  page,
+  setPage,
+  setIsValid,
+}) {
   const [validationErrors, setValidationErrors] = useState({});
 
   const googleLogin = useGoogleLogin({
