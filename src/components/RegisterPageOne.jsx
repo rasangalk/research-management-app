@@ -1,7 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
+import { useGoogleLogin } from "@react-oauth/google";
 import * as Yup from "yup"; // Import Yup for validation
 
-function RegisterPageOne({ loginInfo, setLoginInfo, setIsValid }) {
+function RegisterPageOne({ loginInfo, setLoginInfo, page, setPage }) {
+  const [validationErrors, setValidationErrors] = useState({});
+
+  const googleLogin = useGoogleLogin({
+    onSuccess: async ({ code }) => {
+      setLoginInfo({ ...loginInfo, code: code });
+      setPage(page + 1);
+    },
+    flow: "auth-code",
+    onError: (errorResponse) => console.log(errorResponse),
+  });
+  //
   // Define validation schema using Yup
   const validationSchema = Yup.object().shape({
     username: Yup.string()
@@ -14,8 +26,6 @@ function RegisterPageOne({ loginInfo, setLoginInfo, setIsValid }) {
       .required("Please confirm your password")
       .oneOf([Yup.ref("password"), null], "Passwords must match"),
   });
-
-  const [validationErrors, setValidationErrors] = useState({});
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -101,6 +111,14 @@ function RegisterPageOne({ loginInfo, setLoginInfo, setIsValid }) {
       {validationErrors.rePassword && (
         <div className='text-red-500'>{validationErrors.rePassword}</div>
       )}
+      <p className='font-Nunito mt-2'>
+        <button
+          className='font-Nunito font-bold hover:underline hover:underline-offset-1'
+          onClick={() => googleLogin()}
+        >
+          Or Click Here to Sign Up with Google
+        </button>
+      </p>
     </div>
   );
 }

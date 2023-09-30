@@ -4,9 +4,18 @@ import axios from "../helpers/axios";
 export const signup = (user) => {
   return async (dispatch) => {
     dispatch({ type: userConstants.USER_REGISTER_REQUEST });
-    const res = await axios.post("/student/signup", {
-      ...user,
-    });
+
+    let res;
+
+    if (user.code) {
+      res = await axios.post("/auth/google/signup", {
+        ...user,
+      });
+    } else {
+      res = await axios.post("/student/signup", {
+        ...user,
+      });
+    }
 
     if (res.status === 201) {
       const { message } = res.data;
