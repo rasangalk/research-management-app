@@ -17,6 +17,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { signup } from "../../../actions/user.actions";
+import bcrypt from "bcryptjs";
 
 import Login from "../../Signin/index";
 import { compose } from "redux";
@@ -120,13 +121,15 @@ function StudentRegister() {
 
   const dispatch = useDispatch();
 
-  const studentSignup = () => {
+  const studentSignup = async () => {
     console.log("inside");
+    const hash_password = await bcrypt.hash(loginInfo.password, 10);
+
     const user = {
       code: loginInfo.code,
       username: loginInfo.username,
-      password: loginInfo.password,
-      re_hash_password: loginInfo.rePassword,
+      password: hash_password,
+      re_hash_password: hash_password,
       role: "student",
       students: {
         leader: {
