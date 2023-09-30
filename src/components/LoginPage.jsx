@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { login } from "../actions/auth.actions";
 import { Navigate } from "react-router";
+import { useGoogleLogin } from '@react-oauth/google';
+import axios from "../helpers/axios";
+import { authConstants } from "../actions/constants";
 
 function RegisterPageOne() {
   const [username, setUsername] = useState("");
@@ -36,6 +39,38 @@ function RegisterPageOne() {
       return <Navigate to={"/staff/staff-pannel"} />;
     }
   }
+
+  const googleLogin = useGoogleLogin({
+    onSuccess: async ({ code }) => {
+      dispatch({ type: authConstants.LOGIN_REQUEST });
+
+      const response = await axios.post('/auth/google/signin', {
+        code,
+      });
+
+      if (response.status === 200) {
+        const { token, user } = response.data;
+        localStorage.setItem("token", token);
+        localStorage.setItem("user", JSON.stringify(user));
+        dispatch({
+          type: authConstants.LOGIN_SUCCESS,
+          payload: {
+            token,
+            user,
+          },
+        });
+      } else {
+        if (response.status === 400) {
+          dispatch({
+            type: authConstants.LOGIN_FAILURE,
+            payload: { error: response.data.error },
+          });
+        }
+      }
+    },
+    flow: 'auth-code',
+    onError: errorResponse => console.log(errorResponse),
+  });
 
   return (
     <div>
@@ -78,6 +113,11 @@ function RegisterPageOne() {
         Don't have an account?
         <button className="font-Nunito font-bold ml-2 hover:underline hover:underline-offset-1">
           Register
+        </button>
+      </p>
+      <p className="font-Nunito mt-2">
+        <button className="font-Nunito font-bold hover:underline hover:underline-offset-1" onClick={() => googleLogin()}>
+          Click Here to Sign In with Google
         </button>
       </p>
     </div>

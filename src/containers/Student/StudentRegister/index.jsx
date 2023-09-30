@@ -27,6 +27,7 @@ function StudentRegister() {
 
   const Forms = ['register', 'leader', 'member1', 'member2', 'member3'];
   const [loginInfo, setLoginInfo] = useState({
+    code: '',
     username: '',
     password: '',
     rePassword: '',
@@ -72,7 +73,7 @@ function StudentRegister() {
   const PageDisplay = () => {
     if (page === 0) {
       return (
-        <RegisterPageOne loginInfo={loginInfo} setLoginInfo={setLoginInfo} />
+        <RegisterPageOne loginInfo={loginInfo} setLoginInfo={setLoginInfo} page={page} setPage={setPage} />
       );
     } else if (page === 1) {
       return (
@@ -112,6 +113,7 @@ function StudentRegister() {
   const studentSignup = () => {
     console.log('inside');
     const user = {
+      code: loginInfo.code,
       username: loginInfo.username,
       password: loginInfo.password,
       re_hash_password: loginInfo.rePassword,
