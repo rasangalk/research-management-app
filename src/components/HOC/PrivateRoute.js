@@ -17,7 +17,6 @@ const PrivateWrapper = () => {
   } else {
     userRole = pathResult;
   }
-  console.log(userRole);
 
   let role;
   try {
