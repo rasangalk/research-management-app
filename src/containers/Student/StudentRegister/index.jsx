@@ -18,6 +18,8 @@ import { useDispatch } from 'react-redux';
 
 import { signup } from '../../../actions/user.actions';
 
+import { SHA256 } from 'crypto-js';
+
 import Login from '../../Signin/index';
 import { compose } from 'redux';
 
@@ -73,7 +75,12 @@ function StudentRegister() {
   const PageDisplay = () => {
     if (page === 0) {
       return (
-        <RegisterPageOne loginInfo={loginInfo} setLoginInfo={setLoginInfo} page={page} setPage={setPage} />
+        <RegisterPageOne
+          loginInfo={loginInfo}
+          setLoginInfo={setLoginInfo}
+          page={page}
+          setPage={setPage}
+        />
       );
     } else if (page === 1) {
       return (
@@ -115,8 +122,8 @@ function StudentRegister() {
     const user = {
       code: loginInfo.code,
       username: loginInfo.username,
-      password: loginInfo.password,
-      re_hash_password: loginInfo.rePassword,
+      password: SHA256(loginInfo.password).toString(),
+      re_hash_password: SHA256(loginInfo.rePassword).toString(),
       role: 'student',
       students: {
         leader: {

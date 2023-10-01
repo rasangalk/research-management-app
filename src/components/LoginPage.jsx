@@ -5,6 +5,7 @@ import { Navigate } from 'react-router';
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from '../helpers/axios';
 import { authConstants } from '../actions/constants';
+import { SHA256 } from 'crypto-js';
 
 function RegisterPageOne() {
   const [username, setUsername] = useState('');
@@ -16,7 +17,7 @@ function RegisterPageOne() {
   const userLogin = (e) => {
     const user = {
       username,
-      password,
+      password: SHA256(password).toString(),
     };
     dispatch(login(user));
   };
