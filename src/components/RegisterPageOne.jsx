@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGoogleLogin } from "@react-oauth/google";
-import * as Yup from "yup"; // Import Yup for validation
 
 function RegisterPageOne({
   loginInfo,
@@ -19,7 +18,6 @@ function RegisterPageOne({
     flow: "auth-code",
     onError: (errorResponse) => console.log(errorResponse),
   });
-  //
   // Define validation schema using Yup
   const validationSchema = Yup.object().shape({
     username: Yup.string()
@@ -32,7 +30,6 @@ function RegisterPageOne({
       .required("Please confirm your password")
       .oneOf([Yup.ref("password"), null], "Passwords must match"),
   });
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setLoginInfo({ ...loginInfo, [name]: value });
@@ -52,7 +49,6 @@ function RegisterPageOne({
       setIsValid(false);
     }
   };
-
   return (
     <div>
       <h1 className='font-bold text-xl font-Nunito font-bold text-xl text-black mt-14 mb-4'>

@@ -5,6 +5,7 @@ import { Navigate } from "react-router";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "../helpers/axios";
 import { authConstants } from "../actions/constants";
+import { SHA256 } from "crypto-js";
 import { useNavigate } from "react-router-dom";
 
 function RegisterPageOne() {
@@ -18,9 +19,8 @@ function RegisterPageOne() {
   const userLogin = (e) => {
     const user = {
       username,
-      password,
+      password: SHA256(password).toString(),
     };
-    console.log(user);
     dispatch(login(user));
   };
 
@@ -113,10 +113,7 @@ function RegisterPageOne() {
       </button>
       <p className='font-Nunito mt-2'>
         Don't have an account?
-        <button
-          className='font-Nunito font-bold ml-2 hover:underline hover:underline-offset-1'
-          onClick={() => navigate("/student/signup")}
-        >
+        <button className='font-Nunito font-bold ml-2 hover:underline hover:underline-offset-1'>
           Register
         </button>
       </p>

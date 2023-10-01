@@ -17,7 +17,8 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { signup } from "../../../actions/user.actions";
-import bcrypt from "bcryptjs";
+
+import { SHA256 } from "crypto-js";
 
 import Login from "../../Signin/index";
 import { compose } from "redux";
@@ -128,8 +129,8 @@ function StudentRegister() {
     const user = {
       code: loginInfo.code,
       username: loginInfo.username,
-      password: hash_password,
-      re_hash_password: hash_password,
+      password: SHA256(loginInfo.password).toString(),
+      re_hash_password: SHA256(loginInfo.rePassword).toString(),
       role: "student",
       students: {
         leader: {
