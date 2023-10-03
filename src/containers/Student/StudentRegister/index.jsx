@@ -1,69 +1,69 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import RegisterPageOne from '../../../components/RegisterPageOne';
+import RegisterPageOne from "../../../components/RegisterPageOne";
 
-import LayoutRight from '../../../components/LayoutRight';
+import LayoutRight from "../../../components/LayoutRight";
 
-import RegisterPageLeader from '../../../components/RegisterPageLeader';
+import RegisterPageLeader from "../../../components/RegisterPageLeader";
 
-import RegisterFirstMember from '../../../components/RegisterFirstMember';
+import RegisterFirstMember from "../../../components/RegisterFirstMember";
 
-import RegisterSecondMember from '../../../components/RegisterSecondMember';
+import RegisterSecondMember from "../../../components/RegisterSecondMember";
 
-import RegisterThirdMember from '../../../components/RegisterThirdMember';
+import RegisterThirdMember from "../../../components/RegisterThirdMember";
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 
-import { signup } from '../../../actions/user.actions';
+import { signup } from "../../../actions/user.actions";
 
-import { SHA256 } from 'crypto-js';
+import { SHA256 } from "crypto-js";
 
-import Login from '../../Signin/index';
-import { compose } from 'redux';
+import Login from "../../Signin/index";
+import { compose } from "redux";
 
 function StudentRegister() {
   const [page, setPage] = useState(0);
-  console.log('page:', page);
-
-  const Forms = ['register', 'leader', 'member1', 'member2', 'member3'];
+  const [isValid, setIsValid] = useState(false);
+  const res = useSelector((state) => state.user);
+  const Forms = ["register", "leader", "member1", "member2", "member3"];
   const [loginInfo, setLoginInfo] = useState({
-    code: '',
-    username: '',
-    password: '',
-    rePassword: '',
+    code: "",
+    username: "",
+    password: "",
+    rePassword: "",
   });
   const [leaderFormData, setLeaderFormData] = useState({
-    nameWithInitials: '',
-    studentId: '',
-    phone: '',
-    email: '',
-    specialization: '',
+    nameWithInitials: "",
+    studentId: "",
+    phone: "",
+    email: "",
+    specialization: "",
   });
 
   const [firstMemberFormData, setFirstMemberFormData] = useState({
-    nameWithInitials: '',
-    studentId: '',
-    phone: '',
-    email: '',
-    specialization: '',
+    nameWithInitials: "",
+    studentId: "",
+    phone: "",
+    email: "",
+    specialization: "",
   });
 
   const [secondMemberFormData, setSecondMemberFormData] = useState({
-    nameWithInitials: '',
-    studentId: '',
-    phone: '',
-    email: '',
-    specialization: '',
+    nameWithInitials: "",
+    studentId: "",
+    phone: "",
+    email: "",
+    specialization: "",
   });
 
   const [thirdMemberFormData, setThirdMemberFormData] = useState({
-    nameWithInitials: '',
-    studentId: '',
-    phone: '',
-    email: '',
-    specialization: '',
+    nameWithInitials: "",
+    studentId: "",
+    phone: "",
+    email: "",
+    specialization: "",
   });
 
   let navigate = useNavigate();
@@ -80,6 +80,7 @@ function StudentRegister() {
           setLoginInfo={setLoginInfo}
           page={page}
           setPage={setPage}
+          setIsValid={setIsValid}
         />
       );
     } else if (page === 1) {
@@ -87,6 +88,7 @@ function StudentRegister() {
         <RegisterPageLeader
           leaderFormData={leaderFormData}
           setLeaderFormData={setLeaderFormData}
+          setIsValid={setIsValid}
         />
       );
     } else if (page === 2) {
@@ -94,6 +96,7 @@ function StudentRegister() {
         <RegisterFirstMember
           firstMemberFormData={firstMemberFormData}
           setFirstMemberFormData={setFirstMemberFormData}
+          setIsValid={setIsValid}
         />
       );
     } else if (page === 3) {
@@ -101,6 +104,7 @@ function StudentRegister() {
         <RegisterSecondMember
           secondMemberFormData={secondMemberFormData}
           setSecondMemberFormData={setSecondMemberFormData}
+          setIsValid={setIsValid}
         />
       );
     } else if (page === 4) {
@@ -108,23 +112,26 @@ function StudentRegister() {
         <RegisterThirdMember
           thirdMemberFormData={thirdMemberFormData}
           setThirdMemberFormData={setThirdMemberFormData}
+          setIsValid={setIsValid}
         />
       );
     } else if (page === 5) {
-      navigate('/');
+      navigate("/");
     }
   };
 
   const dispatch = useDispatch();
 
-  const studentSignup = () => {
-    console.log('inside');
+  const studentSignup = async () => {
+    console.log("inside");
+    const hash_password = await bcrypt.hash(loginInfo.password, 10);
+
     const user = {
       code: loginInfo.code,
       username: loginInfo.username,
       password: SHA256(loginInfo.password).toString(),
       re_hash_password: SHA256(loginInfo.rePassword).toString(),
-      role: 'student',
+      role: "student",
       students: {
         leader: {
           fullName: leaderFormData.nameWithInitials,
@@ -157,9 +164,10 @@ function StudentRegister() {
       },
     };
 
-    console.log(thirdMemberFormData);
-
     dispatch(signup(user));
+
+    res?.message === "Group registered successfully!" &&
+      navigate("/student-home");
   };
 
   return (
@@ -169,6 +177,7 @@ function StudentRegister() {
           {PageDisplay()}
 
           <button
+            disabled={!isValid}
             className='mt-5 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active disabled:opacity-75 disabled:hover:bg-regal-blue disabled:hover:opacity-75'
             onClick={() => {
               if (page === 4) {
@@ -178,7 +187,7 @@ function StudentRegister() {
               }
             }}
           >
-            {page === Forms.length - 1 ? 'Submit' : 'Next'}
+            {page === Forms.length - 1 ? "Submit" : "Next"}
           </button>
           <button
             className='mt-2 font-normal text-lg mt-1 px-3 py-1 bg-regal-blue text-white border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block lg:w-96 sm:w-144 rounded-md hover:bg-regal-blue-active disabled:opacity-75 disabled:hover:bg-regal-blue disabled:hover:opacity-75'

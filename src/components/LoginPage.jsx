@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { login } from '../actions/auth.actions';
-import { Navigate } from 'react-router';
-import { useGoogleLogin } from '@react-oauth/google';
-import axios from '../helpers/axios';
-import { authConstants } from '../actions/constants';
-import { SHA256 } from 'crypto-js';
+import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { login } from "../actions/auth.actions";
+import { Navigate } from "react-router";
+import { useGoogleLogin } from "@react-oauth/google";
+import axios from "../helpers/axios";
+import { authConstants } from "../actions/constants";
+import { SHA256 } from "crypto-js";
+import { useNavigate } from "react-router-dom";
 
 function RegisterPageOne() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  let navigate = useNavigate();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -23,20 +25,20 @@ function RegisterPageOne() {
   };
 
   if (auth.authenticate) {
-    const user = window.localStorage.getItem('user');
+    const user = window.localStorage.getItem("user");
     const userRole = JSON.parse(user).role;
     const userName = JSON.parse(user).username;
 
-    if (userRole == 'supervisor' && userName == 'randika.m') {
-      return <Navigate to={'/coSupervisor/topics'} />;
-    } else if (userRole == 'supervisor') {
-      return <Navigate to={'/supervisor/topics'} />;
-    } else if (userRole == 'student') {
-      return <Navigate to={'/student-home'} />;
-    } else if (userRole == 'admin') {
-      return <Navigate to={'/admin/members'} />;
-    } else if (userRole == 'staff') {
-      return <Navigate to={'/staff/staff-pannel'} />;
+    if (userRole == "supervisor" && userName == "randika.m") {
+      return <Navigate to={"/coSupervisor/topics"} />;
+    } else if (userRole == "supervisor") {
+      return <Navigate to={"/supervisor/topics"} />;
+    } else if (userRole == "student") {
+      return <Navigate to={"/student-home"} />;
+    } else if (userRole == "admin") {
+      return <Navigate to={"/admin/members"} />;
+    } else if (userRole == "staff") {
+      return <Navigate to={"/staff/staff-pannel"} />;
     }
   }
 
@@ -44,14 +46,14 @@ function RegisterPageOne() {
     onSuccess: async ({ code }) => {
       dispatch({ type: authConstants.LOGIN_REQUEST });
 
-      const response = await axios.post('/auth/google/signin', {
+      const response = await axios.post("/auth/google/signin", {
         code,
       });
 
       if (response.status === 200) {
         const { token, user } = response.data;
-        localStorage.setItem('token', token);
-        localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem("token", token);
+        localStorage.setItem("user", JSON.stringify(user));
         dispatch({
           type: authConstants.LOGIN_SUCCESS,
           payload: {
@@ -68,7 +70,7 @@ function RegisterPageOne() {
         }
       }
     },
-    flow: 'auth-code',
+    flow: "auth-code",
     onError: (errorResponse) => console.log(errorResponse),
   });
 

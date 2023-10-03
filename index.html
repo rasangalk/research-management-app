@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <title>SLIIT Research Tool</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="img-src 'self' img.example.com"
+    />
+    <script>
+      if (top != window) {
+        top.location = window.location;
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>
