@@ -6,10 +6,12 @@ import { useGoogleLogin } from '@react-oauth/google';
 import axios from '../helpers/axios';
 import { authConstants } from '../actions/constants';
 import { SHA256 } from 'crypto-js';
+import { useNavigate } from 'react-router-dom';
 
 function RegisterPageOne() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -32,7 +34,8 @@ function RegisterPageOne() {
     } else if (userRole == 'supervisor') {
       return <Navigate to={'/supervisor/topics'} />;
     } else if (userRole == 'student') {
-      return <Navigate to={'/student-home'} />;
+      return navigate('/student-home');
+      // return <Navigate to={'/student-home'} />;
     } else if (userRole == 'admin') {
       return <Navigate to={'/admin/members'} />;
     } else if (userRole == 'staff') {
